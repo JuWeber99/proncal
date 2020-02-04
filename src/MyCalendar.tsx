@@ -2,8 +2,9 @@ import React, {FunctionComponent, Suspense, useEffect, useState} from 'react';
 import {Calendar, momentLocalizer} from "react-big-calendar";
 import moment from "moment";
 import "react-big-calendar/lib/css/react-big-calendar.css"
-import {MyEvent} from "./EventModel";
+import {MyEvent} from "./model/EventModel";
 import {dummyData} from "./hwr-wi-b-6"
+import {IntraDayTime} from "./model/IntraDayTime";
 
 interface PronCalendarProps {
 
@@ -59,6 +60,8 @@ const MyCalendar: FunctionComponent<PronCalendarProps> = () => {
 
     const localizer = momentLocalizer(moment);
 
+    console.log(new IntraDayTime(9, 1).toString());
+
     return (
         <Suspense fallback={<p> Loading </p>}>
             <Calendar
@@ -70,7 +73,6 @@ const MyCalendar: FunctionComponent<PronCalendarProps> = () => {
                         start: moment(event.dtstart).toDate(),
                         end: moment(event.dtend).toDate()
                     };
-                    console.log(event.dtstart.substring(0, 4) + " " + event.dtstart.substring(4, 6) + " " + event.dtstart.substring(6, 8) + " " + event.dtstart.substring(9, 11) + " " + event.dtstart.substring(11, 13));
                     return parsed;
                 })}
                 defaultView={"week"}

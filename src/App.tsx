@@ -1,11 +1,15 @@
 import React from 'react';
 import './App.css';
 import MyCalendar from "./MyCalendar";
+import CustomTableCalendar from "./CustomTableCalendar";
 
 const App = () => {
     return (
         <div className={"App"}>
-            <MyCalendar/>
+{/*
+           { <MyCalendar/>}
+*/}
+           {<CustomTableCalendar/>}
         </div>
     );
 };
