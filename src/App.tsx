@@ -1,26 +1,25 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import MyCalendar from "./MyCalendar";
 
 const App = () => {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+    return (
+        <MyCalendar/>
+    );
+};
+
+
+const DateParser = (dateStr: string = "20200202T201126Z"): Date | Error => {
+    if (dateStr.match("[0-9]*T[0-9]*Z") && dateStr.length === 16) {
+        return new Date(
+            Number(dateStr.substring(0, 3)),
+            Number(dateStr.substring(4, 5)),
+            Number(dateStr.substring(6, 7)),
+            Number(dateStr.substring(9, 10)),
+            Number(dateStr.substring(11, 12)),
+            Number(dateStr.substring(13, 14)));
+    }
+    return new Error("could not parse Date");
+};
 
 export default App;
