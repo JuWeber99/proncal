@@ -3,6 +3,8 @@ import {Container, Table} from 'react-bootstrap';
 import moment from "moment";
 import {DateMapper} from "./model/DateEnums";
 import {IntraDayTime} from "./model/IntraDayTime";
+import {dummyData} from "./hwr-wi-b-6";
+import EventCard from "./EventCard";
 
 const HwrCalendarClock = [
     new IntraDayTime(8, 0),
@@ -27,6 +29,8 @@ const CustomTableCalendar = () => {
         new Date(moment().year(), moment().month(), moment().date(), moment().hours())
     );
     const [weekdays, setWeekdays] = useState([today.getDay()]);
+
+    const test = dummyData.vcalendar.vevent[0];
 
     useEffect(() => {
         setWeekdays([
@@ -56,7 +60,7 @@ const CustomTableCalendar = () => {
                         weekdays.map((day, key: number) => {
                             console.log(today.getDate());
                             return (
-                                <th>{today.getDate() + key}  - {new DateMapper(moment().date(day).weekday()+1).mapToDate().slice(0, 3)} </th>
+                                <th>{today.getDate() + key} - {new DateMapper(moment().date(day).weekday() + 1).mapToDate().slice(0, 3)} </th>
                             )
                         })
                     }
@@ -71,15 +75,12 @@ const CustomTableCalendar = () => {
                             <td>{item.toString()}</td>
                             {
                                 Array(7).fill(
-                                    <td>test</td>
+                                    <td><EventCard event={test}/></td>
                                 )
                             }
-
                         </tr>
                     )
                 })}
-
-
                 </tbody>
             </Table>
         </Container>
