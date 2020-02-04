@@ -2,14 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6308aefc-c47f-44cb-877c-3b6bb05d24de" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/EventModel.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MyCalendar.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/EventModel.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/EventModel.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MyCalendar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyCalendar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hwr-wi-b-6.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/hwr-wi-b-6.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,22 +67,22 @@
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="spring.boot" />
-    <property name="ts.external.directory.path" value="C:\Users\JuWeber\IdeaProjects\resch1\node_modules\typescript\lib" />
+    <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
   </component>
-  <component name="RunManager" selected="npm.npm start">
+  <component name="RunManager" selected="npm.start">
     <configuration name="Debug Application" type="JavascriptDebugType" uri="http://localhost:3000">
       <method v="2" />
     </configuration>
-    <configuration name="npm start" type="js.build_tools.npm">
+    <configuration name="start" type="js.build_tools.npm">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="start" />
-      <node-interpreter value="C:/Program Files/nodejs/node" />
+      <node-interpreter value="node" />
       <envs />
       <method v="2" />
     </configuration>
     <list>
       <item itemvalue="JavaScript Debug.Debug Application" />
-      <item itemvalue="npm.npm start" />
+      <item itemvalue="npm.start" />
     </list>
   </component>
   <component name="ServiceViewManager">
@@ -110,6 +108,7 @@
       <option name="presentableId" value="Default" />
       <updated>1580801301110</updated>
       <workItem from="1580801303766" duration="17171000" />
+      <workItem from="1580840469485" duration="1299000" />
     </task>
     <servers />
   </component>
@@ -121,22 +120,30 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="254" y="86" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1600.860@0.0.1600.860" timestamp="1580801554379" />
-    <state width="1559" height="2" key="GridCell.Tab.0.bottom" timestamp="1580803626524">
-      <screen x="0" y="0" width="1600" height="860" />
+    <state x="638" y="248" key="#npm_start" timestamp="1580840931652">
+      <screen x="0" y="42" width="1920" height="1038" />
+    </state>
+    <state x="638" y="248" key="#npm_start/0.42.1920.1038/1920.0.1920.1080@0.42.1920.1038" timestamp="1580840931652" />
+    <state width="1874" height="276" key="GridCell.Tab.0.bottom" timestamp="1580841764102">
+      <screen x="0" y="42" width="1920" height="1038" />
     </state>
     <state width="1559" height="2" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1580803626524" />
-    <state width="1559" height="2" key="GridCell.Tab.0.center" timestamp="1580803626524">
-      <screen x="0" y="0" width="1600" height="860" />
+    <state width="1874" height="276" key="GridCell.Tab.0.bottom/0.42.1920.1038/1920.0.1920.1080@0.42.1920.1038" timestamp="1580841764102" />
+    <state width="1874" height="276" key="GridCell.Tab.0.center" timestamp="1580841764102">
+      <screen x="0" y="42" width="1920" height="1038" />
     </state>
     <state width="1559" height="2" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1580803626524" />
-    <state width="1559" height="2" key="GridCell.Tab.0.left" timestamp="1580803626524">
-      <screen x="0" y="0" width="1600" height="860" />
+    <state width="1874" height="276" key="GridCell.Tab.0.center/0.42.1920.1038/1920.0.1920.1080@0.42.1920.1038" timestamp="1580841764102" />
+    <state width="1874" height="276" key="GridCell.Tab.0.left" timestamp="1580841764101">
+      <screen x="0" y="42" width="1920" height="1038" />
     </state>
     <state width="1559" height="2" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1580803626524" />
-    <state width="1559" height="2" key="GridCell.Tab.0.right" timestamp="1580803626524">
-      <screen x="0" y="0" width="1600" height="860" />
+    <state width="1874" height="276" key="GridCell.Tab.0.left/0.42.1920.1038/1920.0.1920.1080@0.42.1920.1038" timestamp="1580841764101" />
+    <state width="1874" height="276" key="GridCell.Tab.0.right" timestamp="1580841764102">
+      <screen x="0" y="42" width="1920" height="1038" />
     </state>
     <state width="1559" height="2" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1580803626524" />
+    <state width="1874" height="276" key="GridCell.Tab.0.right/0.42.1920.1038/1920.0.1920.1080@0.42.1920.1038" timestamp="1580841764102" />
     <state x="454" y="256" key="com.intellij.ide.util.TipDialog" timestamp="1580801304125">
       <screen x="0" y="0" width="1600" height="860" />
     </state>

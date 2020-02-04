@@ -18,19 +18,34 @@ async function fetchEventData(uri: string = "http://www.test.de/api/endpunkt"): 
 
 const MyCalendar: FunctionComponent<PronCalendarProps> = () => {
 
-    const [eventData, setEventData] = useState<MyEvent[] | any>();
+    const [eventData, setEventData] = useState<MyEvent[]>([{
+        dtstamp: "20200202T201126Z",
+        transp: "OPAQUE",
+        sequence: 0,
+        uid: "sked.de937323",
+        summary: "PC\\;WI-204 Vert.- E-Business\\;Prof. Dr. Resch",
+        location: "CL: 6B.368 (WIL3)",
+        description: "WI-204 Vert.- E-Business " +
+            "Dozent: Prof. Dr. Resch\\nRaum: CL: 6B.368 (WIL3)",
+        dtstart: "20200203T094500",
+        dtend: "20200203T111500",
+        priority: 5,
+        class: "PUBLIC"
+    }]);
 
     useEffect(() => {
-        setEventData(fetchEventData("test").then((data: MyEvent[]) => {
-            return data
-        }));
+        /*    setEventData(fetchEventData("test").then((data: MyEvent[]) => {
+                return data
+            }));*/
+        setEventData(dummyData.vcalendar.vevent);
+        console.log(JSON.stringify(eventData))
     }, []);
 
     const dummy: MyEvent[] =
         [{
             dtstamp: "20200202T201126Z",
             transp: "OPAQUE",
-            sequence: 0 ,
+            sequence: 0,
             uid: "sked.de937323",
             summary: "PC\\;WI-204 Vert.- E-Business\\;Prof. Dr. Resch",
             location: "CL: 6B.368 (WIL3)",
@@ -41,13 +56,14 @@ const MyCalendar: FunctionComponent<PronCalendarProps> = () => {
             priority: 5,
             class: "PUBLIC"
         }];
+
     const localizer = momentLocalizer(moment);
 
     return (
         <Suspense fallback={<p> Loading </p>}>
             <Calendar
                 localizer={localizer}
-                events={dummy.map((event: MyEvent) => {
+                events={eventData.map((event: MyEvent) => {
                     const parsed = {
                         allDay: false,
                         title: event.summary.replace(/\\;/g, " | "),
@@ -58,6 +74,7 @@ const MyCalendar: FunctionComponent<PronCalendarProps> = () => {
                     return parsed;
                 })}
                 defaultView={"week"}
+                views={["day", "week", "agenda"]}
                 endAccessor={"end"}
                 startAccessor={"start"}
             />

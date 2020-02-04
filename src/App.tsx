@@ -4,7 +4,9 @@ import MyCalendar from "./MyCalendar";
 
 const App = () => {
     return (
-        <MyCalendar/>
+        <div className={"App"}>
+            <MyCalendar/>
+        </div>
     );
 };
 

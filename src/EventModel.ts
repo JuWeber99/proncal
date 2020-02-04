@@ -18,7 +18,7 @@ export interface MyEvent {
 }
 
 export interface HwrCalendarFormat {
-    vcalendar: [{
+    vcalendar: {
         prodid: string
         "x-sked-version-terminsync": string,
         "x-sked-sync-dtstart": string,
@@ -53,5 +53,5 @@ export interface HwrCalendarFormat {
             }
         ],
         vevent: MyEvent[]
-    }]
+    }
 }

@@ -1,7 +1,7 @@
 import {HwrCalendarFormat} from "./EventModel";
 
 export const dummyData: HwrCalendarFormat = {
-    "vcalendar": [
+    "vcalendar":
         {
             "prodid": "-//www.sked.de//EN",
             "x-sked-version-terminsync": "3.0",
@@ -1860,5 +1860,4 @@ export const dummyData: HwrCalendarFormat = {
                 }
             ]
         }
-    ]
 };
