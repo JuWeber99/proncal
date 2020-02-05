@@ -2,17 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6308aefc-c47f-44cb-877c-3b6bb05d24de" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/calendar/WeeklyEventCalendar.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/DateConverter.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/MonthDayDateConverter.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/MyCalendar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MyCalendar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/calendar/CustomTableCalendar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/calendar/CustomTableCalendar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/DateContextProvider.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/DateContextProvider.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/DateEnums.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/DateEnums.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/DateMapper.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/DateMapper.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/IntraDayTime.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/IntraDayTimeConverter.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/service/DateService.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/DateService.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -182,15 +173,15 @@
       <screen x="0" y="42" width="1920" height="1038" />
     </state>
     <state x="638" y="248" key="#npm_start/0.42.1920.1038/1920.0.1920.1080@0.42.1920.1038" timestamp="1580840931652" />
-    <state x="337" y="50" key="CommitChangelistDialog2" timestamp="1580908493079">
-      <screen x="0" y="0" width="1600" height="860" />
-    </state>
-    <state x="337" y="50" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1580908493079" />
-    <state x="524" y="102" key="CommitChangelistDialog2/0.42.1920.1038/1920.0.1920.1080@0.42.1920.1038" timestamp="1580859805147" />
-    <state x="99" y="138" width="1722" height="843" key="DiffContextDialog" timestamp="1580859947377">
+    <state x="524" y="102" key="CommitChangelistDialog2" timestamp="1580917688191">
       <screen x="0" y="42" width="1920" height="1038" />
     </state>
-    <state x="99" y="138" width="1722" height="843" key="DiffContextDialog/0.42.1920.1038/1920.0.1920.1080@0.42.1920.1038" timestamp="1580859947377" />
+    <state x="337" y="50" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1580908493079" />
+    <state x="524" y="102" key="CommitChangelistDialog2/0.42.1920.1038/1920.0.1920.1080@0.42.1920.1038" timestamp="1580917688191" />
+    <state x="99" y="138" width="1722" height="843" key="DiffContextDialog" timestamp="1580917646863">
+      <screen x="0" y="42" width="1920" height="1038" />
+    </state>
+    <state x="99" y="138" width="1722" height="843" key="DiffContextDialog/0.42.1920.1038/1920.0.1920.1080@0.42.1920.1038" timestamp="1580917646863" />
     <state width="1542" height="2" key="GridCell.Tab.0.bottom" timestamp="1580915432702">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -237,10 +228,10 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="456" y="195" key="run.anything.popup/0.0.1600.860@0.0.1600.860" timestamp="1580828631027" />
-    <state x="463" y="180" width="672" height="678" key="search.everywhere.popup" timestamp="1580916397630">
-      <screen x="0" y="0" width="1600" height="860" />
+    <state x="556" y="259" width="807" height="819" key="search.everywhere.popup" timestamp="1580917665646">
+      <screen x="0" y="42" width="1920" height="1038" />
     </state>
     <state x="463" y="180" width="672" height="678" key="search.everywhere.popup/0.0.1600.860@0.0.1600.860" timestamp="1580916397630" />
-    <state x="556" y="259" width="807" height="819" key="search.everywhere.popup/0.42.1920.1038/1920.0.1920.1080@0.42.1920.1038" timestamp="1580846665786" />
+    <state x="556" y="259" width="807" height="819" key="search.everywhere.popup/0.42.1920.1038/1920.0.1920.1080@0.42.1920.1038" timestamp="1580917665646" />
   </component>
 </project>
