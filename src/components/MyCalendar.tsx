@@ -30,7 +30,7 @@ const MyCalendar: FunctionComponent<PronCalendarProps> = () => {
     console.log("first weekday of the month: " + dateService.firstDayOfMonth());
     console.log("current weekday in month: " + new MonthDayDateConverter(dateService.currentDay(), dateService.dateContext).toString());
     console.log("days in the month: " + dateService.daysInMonth());
-    console.log("week range start: " + new MonthDayDateConverter(dateService.dateContext.startOf("week").weekday(), dateService.dateContext.startOf("week")));
+    console.log("week range start: " + new MonthDayDateConverter(dateService.dateContext.date(dateContext.state.today).startOf("week").weekday(), dateService.dateContext.startOf("week")));
     console.log("week range start: " + new MonthDayDateConverter(dateService.dateContext.endOf("week").weekday(), dateService.dateContext.endOf("week")));
     console.log("month-day-date: " + new MonthDayDateConverter(dateService.dateContext.date(dateContext.state.today).weekday(), dateContext.state.dateContext));
     console.log("dateContext:" + JSON.stringify(dateContext.state.dateContext));
