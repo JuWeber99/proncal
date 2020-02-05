@@ -16,13 +16,13 @@ export interface DateContext {
     }
 }
 
-const momentProvider = moment();
+const momentProvider = moment().locale("en");
 
 const initalContext: DateContext = {
     state: {
         dateContext: momentProvider,
         today: momentProvider.date(),
-        month: momentProvider.month(),
+        month: momentProvider.month()+1,
         year: momentProvider.year(),
     },
     setState: {

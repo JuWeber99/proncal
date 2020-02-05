@@ -1,6 +1,7 @@
-import {min} from "moment";
+import {DateContext} from "./DateContextProvider";
+import {DateConverter} from "./DateConverter";
 
-export class IntraDayTime {
+export class IntraDayTimeConverter extends DateConverter{
 
     private readonly _hour: number;
     private readonly _minute: number;
@@ -14,6 +15,7 @@ export class IntraDayTime {
     }
 
     constructor(hour: number, minute: number) {
+        super();
         this._hour = hour;
         this._minute = minute;
     }

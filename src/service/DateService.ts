@@ -9,13 +9,17 @@ interface DateServiceCapable {
 
     getMonths(): number
 
-    currentDay(): string
+    currentDay(): number
 
     daysInMonth(): number
 
     currentDate(): number
 
     firstDayOfMonth(): number
+
+    startOfWeekMoment(): Moment
+
+    endOfWeekMoment(): Moment
 }
 
 
@@ -26,7 +30,7 @@ export class DateService implements DateServiceCapable {
         return this._dateContext
     }
 
-    set dateContext(newContext: Moment)  {
+    set dateContext(newContext: Moment) {
         this._dateContext = newContext;
     }
 
@@ -39,7 +43,7 @@ export class DateService implements DateServiceCapable {
     }
 
     getMonths(): number {
-    return this.dateContext.month();
+        return this.dateContext.month();
     }
 
     getMonth(): string {
@@ -54,11 +58,22 @@ export class DateService implements DateServiceCapable {
         return this.dateContext.date();
     }
 
-    currentDay(): string {
-        return this.dateContext.format("D");
+    currentDay(): number {
+        return this.dateContext.day();
     }
 
     firstDayOfMonth(): number {
         return moment(this.dateContext).startOf("month").weekday();
     }
+
+    endOfWeekMoment(): Moment {
+        return this.dateContext.endOf("week")
+
+    }
+
+    startOfWeekMoment(): Moment {
+        return this.dateContext.startOf("week");
+    }
+
+
 }
