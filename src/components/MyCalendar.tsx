@@ -2,9 +2,9 @@ import React, {FunctionComponent, Suspense, useEffect, useState} from 'react';
 import {Calendar, momentLocalizer} from "react-big-calendar";
 import moment from "moment";
 import "react-big-calendar/lib/css/react-big-calendar.css"
-import {MyEvent} from "./model/EventModel";
-import {dummyData} from "./hwr-wi-b-6"
-import {IntraDayTime} from "./model/IntraDayTime";
+import {MyEvent} from "../model/EventModel";
+import {dummyData} from "../resources/hwr-wi-b-6"
+import {IntraDayTime} from "../model/IntraDayTime";
 
 interface PronCalendarProps {
 

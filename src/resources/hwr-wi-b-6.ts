@@ -1,4 +1,4 @@
-import {HwrCalendarFormat} from "./model/EventModel";
+import {HwrCalendarFormat} from "../model/EventModel";
 
 export const dummyData: HwrCalendarFormat = {
     "vcalendar":

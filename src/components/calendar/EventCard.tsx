@@ -1,6 +1,6 @@
 import React, {FunctionComponent} from 'react';
-import { Card } from 'react-bootstrap';
-import {MyEvent} from "./model/EventModel";
+import {Card} from 'react-bootstrap';
+import {MyEvent} from "../../model/EventModel";
 
 interface EventCardProps {
     event: MyEvent

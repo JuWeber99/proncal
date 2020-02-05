@@ -1,10 +1,10 @@
 import React, {useEffect, useState} from 'react';
 import {Button, Container, Table} from 'react-bootstrap';
 import moment from "moment";
-import {IntraDayTime} from "./model/IntraDayTime";
-import {dummyData} from "./hwr-wi-b-6";
+import {IntraDayTime} from "../../model/IntraDayTime";
+import {dummyData} from "../../resources/hwr-wi-b-6";
 import EventCard from "./EventCard";
-import {DateMapper} from "./model/DateMapper";
+import {DateMapper} from "../../model/DateMapper";
 
 const HwrCalendarClock = [
     new IntraDayTime(8, 0),

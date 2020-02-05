@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
-import MyCalendar from "./MyCalendar";
-import CustomTableCalendar from "./CustomTableCalendar";
+import MyCalendar from "./components/MyCalendar";
+import CustomTableCalendar from "./components/calendar/CustomTableCalendar";
 import {DateContext, DateContextProvider} from "./model/DateContextProvider";
 
 const App = () => {
