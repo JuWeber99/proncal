@@ -1,10 +1,10 @@
 import React, {useEffect, useState} from 'react';
-import {Container, Table} from 'react-bootstrap';
+import {Button, Container, Table} from 'react-bootstrap';
 import moment from "moment";
-import {DateMapper} from "./model/DateEnums";
 import {IntraDayTime} from "./model/IntraDayTime";
 import {dummyData} from "./hwr-wi-b-6";
 import EventCard from "./EventCard";
+import {DateMapper} from "./model/DateMapper";
 
 const HwrCalendarClock = [
     new IntraDayTime(8, 0),
@@ -25,12 +25,17 @@ const HwrCalendarClock = [
 
 const CustomTableCalendar = () => {
 
+    const [dateContext, setDateContext] = useState(moment(moment.now()));
+
     const [today, setToday] = useState(
         new Date(moment().year(), moment().month(), moment().date(), moment().hours())
     );
+
     const [weekdays, setWeekdays] = useState([today.getDay()]);
 
     const test = dummyData.vcalendar.vevent[0];
+    const weekdaysShort = moment.weekdaysShort();
+    const weekd = moment.weekdays();
 
     useEffect(() => {
         setWeekdays([
@@ -41,9 +46,23 @@ const CustomTableCalendar = () => {
             (moment().date(today.getDate() + 4).day()),
             (moment().date(today.getDate() + 5).day()),
             (moment().date(today.getDate() + 6).day())
-        ]);
+            ]);
+        console.log(weekdaysShort);
+        console.log(weekd)
     }, [today]);
 
+    const weekbar = () => {
+        return weekdays.map((day, key: number) => {
+            console.log(today.getDate());
+            return (
+                <th>{today.getDate() + key} - {new DateMapper(moment().date(day).weekday() + 1).mapToDate().slice(0, 3)} </th>
+            )
+        })
+    };
+
+    const nextWeek = () => {
+
+    }
 
     /*
     *  "focus" the current date (style it)
@@ -52,18 +71,12 @@ const CustomTableCalendar = () => {
 
     return (
         <Container>
+            <Button onClick={() => nextWeek()}></Button>
             <Table striped bordered hover size={"sm"} responsive>
                 <thead>
                 <tr>
                     <th>Zeit</th>
-                    {
-                        weekdays.map((day, key: number) => {
-                            console.log(today.getDate());
-                            return (
-                                <th>{today.getDate() + key} - {new DateMapper(moment().date(day).weekday() + 1).mapToDate().slice(0, 3)} </th>
-                            )
-                        })
-                    }
+                    {weekbar()}
                 </tr>
                 </thead>
                 <tbody>
