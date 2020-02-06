@@ -7,7 +7,7 @@ import EventCard from "./EventCard";
 import {DateMapper} from "../../model/DateMapper";
 import {DateConverter} from "../../model/DateConverter";
 import {MonthDayDateConverter} from "../../model/MonthDayDateConverter";
-import {DateContext} from "../../model/DateContextProvider";
+import {CalendarContext} from "../../model/DateContextProvider";
 import {DateService} from "../../service/DateService";
 
 const HwrCalendarClock = [
@@ -36,12 +36,25 @@ const HwrCalendarClock = [
     })
 };*/
 
-const CustomTableCalendar = () => {
+export const WeeklyeventCalendar = () => {
 
-    const dateContext = useContext<DateContext>(DateContext);
-    const dateService = new DateService(dateContext.state.dateContext);
+    let calendarContext = useContext<CalendarContext>(CalendarContext);
+    const dateService: DateService = new DateService(calendarContext.state.dateContext);
 
-    const weekdays = [];
+    moment.locale("de");
+    const currentDate = calendarContext.state.dateContext.date();
+    const firstWeekdayOfMonth = dateService.firstDayOfMonth();
+    const currentWeekDayInMonth = new MonthDayDateConverter(dateService.currentDay(), dateService.dateContext).toString();
+    const daysInMonth = dateService.daysInMonth();
+    const weekRangeStart = new MonthDayDateConverter(calendarContext.state.dateContext.date(calendarContext.state.today).startOf("week").weekday(), dateService.dateContext.startOf("week"));
+    const weekRangeEnd = new MonthDayDateConverter(calendarContext.state.dateContext.endOf("week").weekday(), calendarContext.state.dateContext.endOf("week"));
+    const montDayDate = new MonthDayDateConverter(calendarContext.state.dateContext.date(calendarContext.state.today).weekday(), calendarContext.state.dateContext);
+    const today = calendarContext.state.today;
+    const month = calendarContext.state.month;
+    const year = calendarContext.state.year;
+    const tomorrow = calendarContext.state.dateContext.date(currentDate).subtract(1, "week");
+    console.log(tomorrow);
+
 
 
     return (
@@ -73,5 +86,3 @@ const CustomTableCalendar = () => {
         </Container>
     );
 };
-
-export default CustomTableCalendar;

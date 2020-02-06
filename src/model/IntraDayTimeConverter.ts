@@ -1,4 +1,4 @@
-import {DateContext} from "./DateContextProvider";
+import {CalendarContext} from "./DateContextProvider";
 import {DateConverter} from "./DateConverter";
 
 export class IntraDayTimeConverter extends DateConverter{

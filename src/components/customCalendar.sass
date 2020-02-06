@@ -1,0 +1,39 @@
+@import 'node_modules/react-big-calendar/lib/sass/styles'
+
+$hwr-color: #D50C2F
+$hwr-color-active: rgba(0, 0, 135, 0.71)
+
+.rbc-day-slot .rbc-event
+  border: 2px white solid
+
+.rbc-event
+  background-color: $hwr-color
+  box-shadow: 0px 0px 2px 1px #748296
+  color: rgb(255, 255, 255)
+  word-break: break-word
+  font-size: 10px
+  font-weight: bolder
+
+.rbc-event-content
+  margin-top: 1%
+
+.rbc-today
+  background-color: rgba(245, 222, 179, 0.47)
+
+.rbc-event.rbc-selected
+  background-color: $hwr-color-active
+  transform: scale(1.01)
+  font-size: 12px
+
+.rbc-time-view
+  border-radius: 10px
+
+
+
+
+.rbc-btn-group
+  button
+    background-color: $hwr-color
+    color: white
+  button.rbc-active
+    background-color: $hwr-color-active

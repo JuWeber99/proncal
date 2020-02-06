@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import MyCalendar from "./components/MyCalendar";
 import CustomTableCalendar from "./components/calendar/CustomTableCalendar";
-import {DateContext, DateContextProvider} from "./model/DateContextProvider";
+import {CalendarContext, DateContextProvider} from "./model/DateContextProvider";
 
 const App = () => {
     return (

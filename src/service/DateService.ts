@@ -1,6 +1,6 @@
 import moment, {Moment} from "moment";
 
-interface DateServiceCapable {
+interface DateServiceCapable { // TODO NOT GOOD SINCE THE OBJECTS CREATE A NEW, OWN STATE
     _dateContext: Moment
 
     getYear(): string

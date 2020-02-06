@@ -1,7 +1,7 @@
 import moment, {Moment} from "moment";
-import React, {Dispatch, FunctionComponent, ReactNode, SetStateAction, useContext, useState} from "react";
+import React, {Dispatch, FunctionComponent, ReactNode, SetStateAction, useState} from "react";
 
-export interface DateContext {
+export interface CalendarContext {
     state: {
         dateContext: moment.Moment
         today: number
@@ -16,9 +16,9 @@ export interface DateContext {
     }
 }
 
-const momentProvider = moment().locale("en");
+const momentProvider = moment().locale("de");
 
-const initalContext: DateContext = {
+const initalContext: CalendarContext = {
     state: {
         dateContext: momentProvider,
         today: momentProvider.date(),
@@ -33,15 +33,15 @@ const initalContext: DateContext = {
     }
 };
 
-export const DateContext = React.createContext<DateContext>(initalContext);
+export const CalendarContext = React.createContext<CalendarContext>(initalContext);
 
 export const DateContextProvider:FunctionComponent<{children: ReactNode}> = ({children}) => {
-    const [value] = useState<DateContext>(initalContext);
+    const [value] = useState<CalendarContext>(initalContext);
 
     return (
-        <DateContext.Provider
+        <CalendarContext.Provider
         value={value}>
             {children}
-        </DateContext.Provider>
+        </CalendarContext.Provider>
     )
 };
