@@ -1,17 +1,13 @@
 import React from 'react';
-import './App.css';
 import MyCalendar from "./components/MyCalendar";
-import CustomTableCalendar from "./components/calendar/CustomTableCalendar";
-import {CalendarContext, DateContextProvider} from "./model/DateContextProvider";
+import {DateContextProvider} from "./model/DateContextProvider";
 
 const App = () => {
     return (
-        <div className={"App"}>
             <DateContextProvider>
                 <MyCalendar/>
                 {/* {<CustomTableCalendar/>}*/}
             </DateContextProvider>
-        </div>
     );
 };
 

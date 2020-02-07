@@ -1,13 +1,15 @@
 import React, {FunctionComponent, Suspense, useContext, useEffect, useState} from 'react';
-import {Calendar, momentLocalizer} from "react-big-calendar";
+import {Calendar, EventProps, EventWrapperProps, momentLocalizer} from "react-big-calendar";
 import moment from "moment";
 import "react-big-calendar/lib/css/react-big-calendar.css"
 import {MyEvent} from "../model/EventModel";
-import {IntraDayTimeConverter} from "../model/IntraDayTimeConverter";
 import {CalendarContext} from "../model/DateContextProvider";
 import "./customCalendar.sass"
-import axios, {AxiosError, AxiosResponse} from "axios"
+import axios, {AxiosResponse} from "axios"
 import {dummyData} from "../resources/hwr-wi-b-6";
+import "moment/locale/de"
+import {Jumbotron} from "react-bootstrap"
+import EventCard from "./calendar/EventCard";
 
 async function fetchEventData(uri: string = "http://www.test.de/api/endpunkt"): Promise<MyEvent[]> {
     return await fetch(uri).then((response => response.json().then((data: MyEvent[]) => {
@@ -15,10 +17,33 @@ async function fetchEventData(uri: string = "http://www.test.de/api/endpunkt"): 
     })));
 }
 
-function fetchData(uri: string = "https://hwr-wi-204.sagebiels.org/api/v1/events"): Promise<any> {
-    const response = fetch(uri).then((response) => response.json()).catch((error) => console.log(error))
-    return response;
-}
+/*function fetchData(uri: string = "https://hwr-wi-204.sagebiels.org/api/v1/events"): Promise<any> {
+    /!*    const response: Promise<MyEvent[]> = axios.get("http://hwr-wi-204.sagebiels.org/api/v1/events")
+                .then((response: AxiosResponse<MyEvent[]>) => response.data)
+                .then((data: MyEvent[]) => {
+                    return data
+                });
+            console.log(response.then((data) => {
+                return data
+            }));*!/
+}*/
+
+const mergeAssociatedEvents = (data: MyEvent[]): void => {
+    data.forEach((item: MyEvent, i: number) => {
+        if (i === data.length || i === 0) {
+            return
+        }
+        while (
+            (
+                (data[i].summary === data[i - 1].summary)
+                && (moment(data[i].dtend).date() === moment(data[i - 1].dtend).date())
+            )
+            ) {
+            data[i - 1].dtend = data[i].dtend;
+            data.splice(i, 1);
+        }
+    });
+};
 
 const MyCalendar: FunctionComponent = () => {
         const calendarContext = useContext<CalendarContext>(CalendarContext);
@@ -41,6 +66,7 @@ const MyCalendar: FunctionComponent = () => {
             class: "PUBLIC"
         }]);
 
+
         useEffect(() => {
             const response: Promise<MyEvent[]> = axios.get("http://hwr-wi-204.sagebiels.org/api/v1/events")
                 .then((response: AxiosResponse<MyEvent[]>) => response.data)
@@ -51,53 +77,39 @@ const MyCalendar: FunctionComponent = () => {
                 return data
             }));
             let data = dummyData.vcalendar.vevent;
-            data.forEach((item: MyEvent, i: number) => {
-                if (i === data.length || i === 0) {
-                    return
-                }
-                while (
-                    (
-                        (data[i].description === data[i - 1].description)
-                        && (moment(data[i].dtend).date() === moment(data[i - 1].dtend).date())
-                    )
-                    ) {
-                    data[i - 1].dtend = data[i].dtend;
-                }
-            });
+            mergeAssociatedEvents(data);
             setEventData(data);
-            console.log(JSON.stringify(dummyData.vcalendar.vevent))
         }, []);
 
         const localizer = momentLocalizer(moment);
 
-        console.log(new IntraDayTimeConverter(9, 1).toString());
-
         return (
-            <Suspense fallback={<p> Loading </p>}>
-                <div style={{
-                    margin: "5vmin",
-                    border: "2px solid rgba(0,13,150,0.8)",
-                    padding: "5vmin",
-                    borderRadius: "10px",
-                    boxShadow: "0px 0px 25px 1px"
-                }}>
+            <Suspense fallback={<p>Load</p>}>
+                <Jumbotron>
                     <Calendar
                         localizer={localizer}
                         events={eventData.map((event: MyEvent) => {
-                            const parsed = {
+                            return {
                                 allDay: false,
                                 title: event.summary.replace(/\\;/g, " | "),
                                 start: moment(event.dtstart).toDate(),
                                 end: moment(event.dtend).toDate()
                             };
-                            return parsed;
                         })}
                         defaultView={"week"}
-                        views={["day", "week", "agenda"]}
+                        views={["day", "week"]}
                         endAccessor={"end"}
                         startAccessor={"start"}
+                        timeslots={5}
+                        step={15}
+                        min={new Date(1, 1, 1, 8)}
+                        max={new Date(1, 1, 1, 21)}
+                        components={{
+                            event: ((event: EventProps) => EventCard(event)),
+                            eventContainerWrapper: props => (<Jumbotron> {props.children} </Jumbotron>),
+                        }}
                     />
-                </div>
+                </Jumbotron>
             </Suspense>
         )
             ;
@@ -105,3 +117,7 @@ const MyCalendar: FunctionComponent = () => {
 ;
 
 export default MyCalendar;
+
+
+
+

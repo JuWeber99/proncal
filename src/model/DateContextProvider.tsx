@@ -16,13 +16,14 @@ export interface CalendarContext {
     }
 }
 
-const momentProvider = moment().locale("de");
+const momentProvider = moment();
+momentProvider.locale("de");
 
 const initalContext: CalendarContext = {
     state: {
         dateContext: momentProvider,
         today: momentProvider.date(),
-        month: momentProvider.month()+1,
+        month: momentProvider.month() + 1,
         year: momentProvider.year(),
     },
     setState: {
@@ -35,12 +36,12 @@ const initalContext: CalendarContext = {
 
 export const CalendarContext = React.createContext<CalendarContext>(initalContext);
 
-export const DateContextProvider:FunctionComponent<{children: ReactNode}> = ({children}) => {
+export const DateContextProvider: FunctionComponent<{ children: ReactNode }> = ({children}) => {
     const [value] = useState<CalendarContext>(initalContext);
 
     return (
         <CalendarContext.Provider
-        value={value}>
+            value={value}>
             {children}
         </CalendarContext.Provider>
     )

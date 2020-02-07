@@ -1,23 +1,16 @@
 import React, {FunctionComponent} from 'react';
-import {Card} from 'react-bootstrap';
-import {MyEvent} from "../../model/EventModel";
+import {Badge, Card} from 'react-bootstrap';
+import  {EventProps} from "react-big-calendar"
 
-interface EventCardProps {
-    event: MyEvent
-}
 
-const EventCard:FunctionComponent<EventCardProps> = ({event}) => {
+const EventCard:FunctionComponent<EventProps> = (props: EventProps) => {
     return (
-        <Card style={{
-            backgroundColor: "lightblue"
+        <div style={{
+            display: "flex",
+            textAlign: "match-parent",
         }}>
-            <Card.Body style={{
-                fontWeight: "bold"
-            }}>
-                <Card.Text>{event.location}</Card.Text>
-                <Card.Text>{event.summary.replace(/\\;/g, " | ")}</Card.Text>
-            </Card.Body>
-        </Card>
+                <p>{props.title}</p>
+        </div>
     );
 };
 
