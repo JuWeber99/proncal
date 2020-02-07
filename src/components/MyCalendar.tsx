@@ -1,15 +1,16 @@
 import React, {FunctionComponent, Suspense, useContext, useEffect, useState} from 'react';
-import {Calendar, EventProps, EventWrapperProps, momentLocalizer} from "react-big-calendar";
+import {Calendar, EventProps, momentLocalizer} from "react-big-calendar";
 import moment from "moment";
 import "react-big-calendar/lib/css/react-big-calendar.css"
 import {MyEvent} from "../model/EventModel";
 import {CalendarContext} from "../model/DateContextProvider";
 import "./customCalendar.sass"
-import axios, {AxiosResponse} from "axios"
+import axios, {AxiosError, AxiosResponse} from "axios"
 import {dummyData} from "../resources/hwr-wi-b-6";
 import "moment/locale/de"
 import {Jumbotron} from "react-bootstrap"
 import EventCard from "./calendar/EventCard";
+import {json2csv} from "json-2-csv"
 
 async function fetchEventData(uri: string = "http://www.test.de/api/endpunkt"): Promise<MyEvent[]> {
     return await fetch(uri).then((response => response.json().then((data: MyEvent[]) => {
@@ -51,6 +52,17 @@ const MyCalendar: FunctionComponent = () => {
         console.log(tomorrow);
         console.log(calendarContext.state.dateContext.date());
 
+        const exportToLocalCsvRequest = (data: MyEvent[]) => {
+            axios.request({
+                method: "POST",
+                url: "https://hwr-wi-204.sagebiels.org/api/v1/events/getCsv",
+                data: json2csv(data, (error, csv) => {
+                    console.log(error);
+                    console.log(csv);
+                }, {expandArrayObjects: true})
+            }).then(response => response).catch((error) => error)
+        };
+
         const [eventData, setEventData] = useState<MyEvent[]>([{
             dtstamp: "20200202T201126Z",
             transp: "OPAQUE",
@@ -68,14 +80,18 @@ const MyCalendar: FunctionComponent = () => {
 
 
         useEffect(() => {
-            const response: Promise<MyEvent[]> = axios.get("http://hwr-wi-204.sagebiels.org/api/v1/events")
-                .then((response: AxiosResponse<MyEvent[]>) => response.data)
-                .then((data: MyEvent[]) => {
-                    return data
-                });
-            console.log(response.then((data) => {
-                return data
-            }));
+            const response: Promise<MyEvent[]> = axios(
+                {
+                    method: "GET",
+                    url: "https://hwr-wi-204.sagebiels.org/api/v1/events",
+                    baseURL: "https://hwr-wi-204.sagebiels.org/api/v1/",
+                })
+                .then((response: AxiosResponse<any>) => {
+                    console.log(response.status);
+                    console.log(response.data);
+                    return response.data
+                }).catch((error: AxiosError) => console.log(error.response));
+
             let data = dummyData.vcalendar.vevent;
             mergeAssociatedEvents(data);
             setEventData(data);
@@ -85,9 +101,7 @@ const MyCalendar: FunctionComponent = () => {
 
         return (
             <Suspense fallback={<p>Load</p>}>
-                <Jumbotron style={
-                    {maxHeight: "100%"}
-                }>
+                <Jumbotron>
                     <Calendar
                         localizer={localizer}
                         events={eventData.map((event: MyEvent) => {
@@ -102,14 +116,14 @@ const MyCalendar: FunctionComponent = () => {
                         views={["day", "week"]}
                         endAccessor={"end"}
                         startAccessor={"start"}
-                        timeslots={3}
-                        step={20}
+                        timeslots={12}
+                        step={5}
                         min={new Date(1, 1, 1, 8)}
-                        max={new Date(1, 1, 1, 21)}
+                        max={new Date(1, 1, 1, 22)}
                         components={{
                             event: ((event: EventProps) => EventCard(event)),
-                            eventContainerWrapper: Jumbotron
-
+                            eventContainerWrapper:
+                                (props) => <>{props.children}</>
                         }}
                     />
                 </Jumbotron>

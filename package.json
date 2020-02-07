@@ -13,6 +13,7 @@
     "@types/react-bootstrap": "^0.32.20",
     "@types/react-dom": "^16.9.0",
     "axios": "^0.19.2",
+    "json-2-csv": "^3.5.9",
     "moment": "^2.24.0",
     "node-sass": "^4.13.1",
     "react": "^16.12.0",

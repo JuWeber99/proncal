@@ -4,14 +4,14 @@ $hwr-color: #D50C2F
 $hwr-color-active: rgba(0, 0, 135, 0.71)
 
 .rbc-day-slot .rbc-event
-  border: 2px white solid
+  border: 0.1rem white solid
 
 .rbc-event
   background-color: $hwr-color
   box-shadow: 0px 0px 2px 1px #748296
   color: rgb(255, 255, 255)
   word-break: break-word
-  font-size: 10px
+  font-size: 0.7rem
   font-weight: bolder
 
 .rbc-event-content
@@ -22,9 +22,8 @@ $hwr-color-active: rgba(0, 0, 135, 0.71)
 
 .rbc-event.rbc-selected
   background-color: $hwr-color-active
-  transform: scale(1.01)
   font-size: 12px
-
+  z-index: 9999
 .rbc-time-view
   border-radius: 10px
 
