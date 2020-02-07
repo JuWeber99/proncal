@@ -3,22 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="6308aefc-c47f-44cb-877c-3b6bb05d24de" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.test.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/MyCalendar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MyCalendar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/calendar/CustomTableCalendar.tsx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/calendar/EventCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/calendar/EventCard.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/calendar/WeeklyEventCalendar.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/DateContextProvider.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/DateContextProvider.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/DateConverter.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/DateEnums.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/DateMapper.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/IntraDayTimeConverter.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/MonthDayDateConverter.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/service/DateService.ts" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,6 +99,7 @@
   </component>
   <component name="RustProjectSettings">
     <option name="toolchainHomeDirectory" value="/usr/bin" />
+    <option name="version" value="2" />
   </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
@@ -210,7 +197,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
@@ -252,25 +241,25 @@
       <screen x="0" y="42" width="1920" height="1038" />
     </state>
     <state x="99" y="138" width="1722" height="843" key="DiffContextDialog/0.42.1920.1038/1920.0.1920.1080@0.42.1920.1038" timestamp="1581039871678" />
-    <state width="1874" height="276" key="GridCell.Tab.0.bottom" timestamp="1581047238590">
-      <screen x="0" y="42" width="1920" height="1038" />
+    <state width="1559" height="59" key="GridCell.Tab.0.bottom" timestamp="1581066843016">
+      <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1542" height="2" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1580915432702" />
+    <state width="1559" height="59" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1581066843016" />
     <state width="1874" height="276" key="GridCell.Tab.0.bottom/0.42.1920.1038/1920.0.1920.1080@0.42.1920.1038" timestamp="1581047238590" />
-    <state width="1874" height="276" key="GridCell.Tab.0.center" timestamp="1581047238590">
-      <screen x="0" y="42" width="1920" height="1038" />
+    <state width="1559" height="59" key="GridCell.Tab.0.center" timestamp="1581066843016">
+      <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1542" height="2" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1580915432702" />
+    <state width="1559" height="59" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1581066843016" />
     <state width="1874" height="276" key="GridCell.Tab.0.center/0.42.1920.1038/1920.0.1920.1080@0.42.1920.1038" timestamp="1581047238590" />
-    <state width="1874" height="276" key="GridCell.Tab.0.left" timestamp="1581047238590">
-      <screen x="0" y="42" width="1920" height="1038" />
+    <state width="1559" height="59" key="GridCell.Tab.0.left" timestamp="1581066843016">
+      <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1542" height="2" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1580915432702" />
+    <state width="1559" height="59" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1581066843016" />
     <state width="1874" height="276" key="GridCell.Tab.0.left/0.42.1920.1038/1920.0.1920.1080@0.42.1920.1038" timestamp="1581047238590" />
-    <state width="1874" height="276" key="GridCell.Tab.0.right" timestamp="1581047238590">
-      <screen x="0" y="42" width="1920" height="1038" />
+    <state width="1559" height="59" key="GridCell.Tab.0.right" timestamp="1581066843016">
+      <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1542" height="2" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1580915432702" />
+    <state width="1559" height="59" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1581066843016" />
     <state width="1874" height="276" key="GridCell.Tab.0.right/0.42.1920.1038/1920.0.1920.1080@0.42.1920.1038" timestamp="1581047238590" />
     <state x="808" y="477" key="VCS.ChangelistChooser" timestamp="1580859913967">
       <screen x="0" y="42" width="1920" height="1038" />

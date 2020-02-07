@@ -85,7 +85,9 @@ const MyCalendar: FunctionComponent = () => {
 
         return (
             <Suspense fallback={<p>Load</p>}>
-                <Jumbotron>
+                <Jumbotron style={
+                    {maxHeight: "100%"}
+                }>
                     <Calendar
                         localizer={localizer}
                         events={eventData.map((event: MyEvent) => {
@@ -100,13 +102,14 @@ const MyCalendar: FunctionComponent = () => {
                         views={["day", "week"]}
                         endAccessor={"end"}
                         startAccessor={"start"}
-                        timeslots={5}
-                        step={15}
+                        timeslots={3}
+                        step={20}
                         min={new Date(1, 1, 1, 8)}
                         max={new Date(1, 1, 1, 21)}
                         components={{
                             event: ((event: EventProps) => EventCard(event)),
-                            eventContainerWrapper: props => (<Jumbotron> {props.children} </Jumbotron>),
+                            eventContainerWrapper: Jumbotron
+
                         }}
                     />
                 </Jumbotron>
