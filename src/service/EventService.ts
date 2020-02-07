@@ -1,5 +1,6 @@
-import {MyEvent} from "./model/EventModel";
 import moment from "moment";
+import {Event} from "react-big-calendar";
+import {MyEvent} from "../model/EventModel";
 
 export class EventService {
 
@@ -23,4 +24,16 @@ export class EventService {
         });
         return data;
     };
+
+    static transformToApiEvent<T extends MyEvent>(events: T[]): Event[] {
+        return events.map((event: T) => {
+            return {
+                allDay: false,
+                title: event.summary.replace(/\\;/g, " | "),
+                start: moment(event.dtstart).toDate(),
+                end: moment(event.dtend).toDate()
+            }
+        });
+
+    }
 }

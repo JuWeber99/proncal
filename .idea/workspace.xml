@@ -2,10 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6308aefc-c47f-44cb-877c-3b6bb05d24de" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/EventService.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/service/ApiService.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/EventService.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/EventService.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/MyCalendar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MyCalendar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/DateContextProvider.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/DateContextProvider.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/calendar/CalendarMetadata.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/calendar/CalendarMetadata.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,14 +80,14 @@
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\JuWeber\IdeaProjects\resch1\src\components\calendar" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\JuWeber\IdeaProjects\resch1\src\service" />
       <recent name="$PROJECT_DIR$/src/old" />
       <recent name="C:\Users\JuWeber\IdeaProjects\resch1\src\components" />
       <recent name="C:\Users\JuWeber\IdeaProjects\resch1\src\resources" />
-      <recent name="C:\Users\JuWeber\IdeaProjects\resch1\src\components\calendar" />
-      <recent name="$PROJECT_DIR$/src/model" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\JuWeber\IdeaProjects\resch1\src\components\calendar" />
     </key>
   </component>
@@ -137,7 +139,7 @@
       <workItem from="1580937830238" duration="4070000" />
       <workItem from="1580989617066" duration="13863000" />
       <workItem from="1581038270348" duration="8862000" />
-      <workItem from="1581078125376" duration="14279000" />
+      <workItem from="1581078125376" duration="17653000" />
     </task>
     <task id="LOCAL-00001" summary="ez">
       <created>1580841777541</created>
@@ -216,7 +218,14 @@
       <option name="project" value="LOCAL" />
       <updated>1581087957959</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="metadata component in progress">
+      <created>1581094651428</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1581094651428</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -263,10 +272,10 @@
       <screen x="0" y="42" width="1920" height="1038" />
     </state>
     <state x="638" y="248" key="#npm_start/0.42.1920.1038/1920.0.1920.1080@0.42.1920.1038" timestamp="1580840931652" />
-    <state x="337" y="50" key="CommitChangelistDialog2" timestamp="1581087956599">
+    <state x="337" y="50" key="CommitChangelistDialog2" timestamp="1581094650537">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="337" y="50" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1581087956599" />
+    <state x="337" y="50" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1581094650537" />
     <state x="524" y="102" key="CommitChangelistDialog2/0.42.1920.1038/1920.0.1920.1080@0.42.1920.1038" timestamp="1581038151806" />
     <state x="83" y="80" width="1435" height="699" key="DiffContextDialog" timestamp="1581077508778">
       <screen x="0" y="0" width="1600" height="860" />
@@ -320,10 +329,10 @@
     <state x="454" y="256" key="com.intellij.ide.util.TipDialog/0.0.1600.860@0.0.1600.860" timestamp="1581078124985" />
     <state x="545" y="351" key="com.intellij.ide.util.TipDialog/0.42.1920.1038/1920.0.1920.1080@0.42.1920.1038" timestamp="1581038270276" />
     <state x="2465" y="322" key="com.intellij.ide.util.TipDialog/0.42.1920.1038/1920.0.1920.1080@1920.0.1920.1080" timestamp="1580989622137" />
-    <state x="468" y="172" width="664" height="516" key="find.popup" timestamp="1581078045301">
+    <state x="468" y="172" width="664" height="516" key="find.popup" timestamp="1581095766078">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="468" y="172" width="664" height="516" key="find.popup/0.0.1600.860@0.0.1600.860" timestamp="1581078045301" />
+    <state x="468" y="172" width="664" height="516" key="find.popup/0.0.1600.860@0.0.1600.860" timestamp="1581095766078" />
     <state x="562" y="250" width="797" height="623" key="find.popup/0.42.1920.1038/1920.0.1920.1080@0.42.1920.1038" timestamp="1581046015590" />
     <state x="456" y="195" key="run.anything.popup" timestamp="1581091940065">
       <screen x="0" y="0" width="1600" height="860" />
