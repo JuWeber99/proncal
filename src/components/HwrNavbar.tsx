@@ -7,7 +7,10 @@ export const HwrNavbar = () => {
         <Navbar bg="dark" variant="dark"
                 sticky={"top"}
                 as={"div"}
-                style={{padding: "2vmin"}}
+                style={{
+                    padding: "1rem",
+                    boxShadow: "0 0.2rem 0.5rem 0 "
+                }}
         >
             <Navbar.Brand href="#home">
                 <img
