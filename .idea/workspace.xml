@@ -2,16 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6308aefc-c47f-44cb-877c-3b6bb05d24de" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/HwrNavbar.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/calendar/MyCalendar.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/service/WetherService.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/app.sass" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/MyCalendar.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/calendar/CalendarMetadata.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/calendar/CalendarMetadata.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/calendar/EventCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/calendar/EventCard.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/customCalendar.sass" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/customCalendar.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/calendar/MyCalendar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/calendar/MyCalendar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/customCalendar.sass" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/customCalendar.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/app.sass" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/app.sass" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,11 +83,11 @@
       <recent name="C:\Users\JuWeber\IdeaProjects\resch1\src\components\calendar" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/styles" />
       <recent name="$PROJECT_DIR$/src/service" />
       <recent name="$PROJECT_DIR$/src/components/calendar" />
       <recent name="C:\Users\JuWeber\IdeaProjects\resch1\src\service" />
       <recent name="$PROJECT_DIR$/src/old" />
-      <recent name="C:\Users\JuWeber\IdeaProjects\resch1\src\components" />
     </key>
   </component>
   <component name="RunManager" selected="npm.start">
@@ -145,7 +139,7 @@
       <workItem from="1580989617066" duration="13863000" />
       <workItem from="1581038270348" duration="8862000" />
       <workItem from="1581078125376" duration="17653000" />
-      <workItem from="1581159788866" duration="19124000" />
+      <workItem from="1581159788866" duration="19689000" />
     </task>
     <task id="LOCAL-00001" summary="ez">
       <created>1580841777541</created>
@@ -238,7 +232,21 @@
       <option name="project" value="LOCAL" />
       <updated>1581179628596</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="styling and icons">
+      <created>1581186624812</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1581186624812</updated>
+    </task>
+    <task id="LOCAL-00015" summary="styling and icons">
+      <created>1581186641881</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1581186641881</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -266,7 +274,8 @@
     <MESSAGE value="merging events" />
     <MESSAGE value="metadata component in progress" />
     <MESSAGE value="fixed control flow" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed control flow" />
+    <MESSAGE value="styling and icons" />
+    <option name="LAST_COMMIT_MESSAGE" value="styling and icons" />
   </component>
   <component name="WindowStateProjectService">
     <state x="254" y="86" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1580801554379">
@@ -286,36 +295,36 @@
       <screen x="0" y="42" width="1920" height="1038" />
     </state>
     <state x="638" y="248" key="#npm_start/0.42.1920.1038/1920.0.1920.1080@0.42.1920.1038" timestamp="1580840931652" />
-    <state x="524" y="102" key="CommitChangelistDialog2" timestamp="1581179628511">
+    <state x="524" y="102" key="CommitChangelistDialog2" timestamp="1581186641850">
       <screen x="0" y="42" width="1920" height="1038" />
     </state>
     <state x="337" y="50" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1581094650537" />
-    <state x="524" y="102" key="CommitChangelistDialog2/0.42.1920.1038/1920.0.1920.1080@0.42.1920.1038" timestamp="1581179628511" />
+    <state x="524" y="102" key="CommitChangelistDialog2/0.42.1920.1038/1920.0.1920.1080@0.42.1920.1038" timestamp="1581186641850" />
     <state x="83" y="80" width="1435" height="699" key="DiffContextDialog" timestamp="1581077508778">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="83" y="80" width="1435" height="699" key="DiffContextDialog/0.0.1600.860@0.0.1600.860" timestamp="1581077508778" />
     <state x="99" y="138" width="1722" height="843" key="DiffContextDialog/0.42.1920.1038/1920.0.1920.1080@0.42.1920.1038" timestamp="1581039871678" />
-    <state width="1874" height="276" key="GridCell.Tab.0.bottom" timestamp="1581186508102">
+    <state width="1874" height="276" key="GridCell.Tab.0.bottom" timestamp="1581187096055">
       <screen x="0" y="42" width="1920" height="1038" />
     </state>
     <state width="1559" height="222" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1581094303672" />
-    <state width="1874" height="276" key="GridCell.Tab.0.bottom/0.42.1920.1038/1920.0.1920.1080@0.42.1920.1038" timestamp="1581186508102" />
-    <state width="1874" height="276" key="GridCell.Tab.0.center" timestamp="1581186508101">
+    <state width="1874" height="276" key="GridCell.Tab.0.bottom/0.42.1920.1038/1920.0.1920.1080@0.42.1920.1038" timestamp="1581187096055" />
+    <state width="1874" height="276" key="GridCell.Tab.0.center" timestamp="1581187096054">
       <screen x="0" y="42" width="1920" height="1038" />
     </state>
     <state width="1559" height="222" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1581094303672" />
-    <state width="1874" height="276" key="GridCell.Tab.0.center/0.42.1920.1038/1920.0.1920.1080@0.42.1920.1038" timestamp="1581186508101" />
-    <state width="1874" height="276" key="GridCell.Tab.0.left" timestamp="1581186508101">
+    <state width="1874" height="276" key="GridCell.Tab.0.center/0.42.1920.1038/1920.0.1920.1080@0.42.1920.1038" timestamp="1581187096054" />
+    <state width="1874" height="276" key="GridCell.Tab.0.left" timestamp="1581187096054">
       <screen x="0" y="42" width="1920" height="1038" />
     </state>
     <state width="1559" height="222" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1581094303672" />
-    <state width="1874" height="276" key="GridCell.Tab.0.left/0.42.1920.1038/1920.0.1920.1080@0.42.1920.1038" timestamp="1581186508101" />
-    <state width="1874" height="276" key="GridCell.Tab.0.right" timestamp="1581186508102">
+    <state width="1874" height="276" key="GridCell.Tab.0.left/0.42.1920.1038/1920.0.1920.1080@0.42.1920.1038" timestamp="1581187096054" />
+    <state width="1874" height="276" key="GridCell.Tab.0.right" timestamp="1581187096055">
       <screen x="0" y="42" width="1920" height="1038" />
     </state>
     <state width="1559" height="222" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1581094303672" />
-    <state width="1874" height="276" key="GridCell.Tab.0.right/0.42.1920.1038/1920.0.1920.1080@0.42.1920.1038" timestamp="1581186508102" />
+    <state width="1874" height="276" key="GridCell.Tab.0.right/0.42.1920.1038/1920.0.1920.1080@0.42.1920.1038" timestamp="1581187096055" />
     <state x="660" y="213" key="RollbackChangesDialog" timestamp="1581182891258">
       <screen x="0" y="42" width="1920" height="1038" />
     </state>
@@ -329,11 +338,11 @@
       <screen x="0" y="42" width="1920" height="1038" />
     </state>
     <state x="833" y="478" key="VCS.EditChangelistDialog/0.42.1920.1038/1920.0.1920.1080@0.42.1920.1038" timestamp="1581177783743" />
-    <state x="466" y="211" key="Vcs.Push.Dialog.v2" timestamp="1581087959933">
-      <screen x="0" y="0" width="1600" height="860" />
+    <state x="559" y="297" key="Vcs.Push.Dialog.v2" timestamp="1581186642622">
+      <screen x="0" y="42" width="1920" height="1038" />
     </state>
     <state x="466" y="211" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1581087959933" />
-    <state x="559" y="297" key="Vcs.Push.Dialog.v2/0.42.1920.1038/1920.0.1920.1080@0.42.1920.1038" timestamp="1581038153951" />
+    <state x="559" y="297" key="Vcs.Push.Dialog.v2/0.42.1920.1038/1920.0.1920.1080@0.42.1920.1038" timestamp="1581186642622" />
     <state x="99" y="138" width="1722" height="843" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1581039914307">
       <screen x="0" y="42" width="1920" height="1038" />
     </state>

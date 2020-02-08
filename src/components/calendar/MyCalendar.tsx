@@ -3,7 +3,7 @@ import {Calendar, Event, EventProps, momentLocalizer} from "react-big-calendar";
 import moment from "moment";
 import "react-big-calendar/lib/css/react-big-calendar.css"
 import {useCalendarContext} from "../../model/DateContextProvider";
-import "../customCalendar.sass"
+import "../../styles/customCalendar.sass"
 import "moment/locale/de"
 import "../../styles/app.sass"
 import {EventService} from "../../service/EventService";
