@@ -1,10 +1,9 @@
-import React, {useContext, useEffect, useState} from 'react';
-import {CalendarContext, useCalendarContext} from "../../model/DateContextProvider";
+import React, {useEffect, useState} from 'react';
+import {useCalendarContext} from "../../model/DateContextProvider";
 import moment, {Moment} from "moment";
 
-const CalendarMetadata = () => {
-    const {eventData, setEventData} = useCalendarContext()
-    ;
+export const CalendarMetadata = () => {
+    const {eventData, isLoading} = useCalendarContext();
     const [semesterStart, setSemesterStart] = useState<Moment>();
     const [semesterEnd, setSemesterEnd] = useState<Moment>();
     const [semesterTimeLeft, setSemesterTimeLeft] = useState<string>();
@@ -20,32 +19,26 @@ const CalendarMetadata = () => {
     };
 
     useEffect(() => {
-        if (eventData) {
+        if (eventData[0] !== undefined) {
             setSemesterStart(moment(eventData[0].dtstart));
             setSemesterEnd(moment(eventData[eventData.length - 1].dtend));
-            setSemesterTimeLeft(semesterEnd?.from(semesterStart, true));
-            console.log(eventData)
+            setSemesterTimeLeft(moment(eventData[eventData.length - 1].dtend).from(moment(eventData[0].dtstart), true))
         }
-    }, [eventData]);
-
-
-    useEffect(() => {
-        console.log("update meta");
-        return function cleanup() {
-            console.log("cleanup meta")
-        }
-    });
+    }, [isLoading, eventData]);
 
     return (
         <div>
             {console.log("paint meta")}
-            <h3>Start des Semesters: {semesterStart?.format("DD.MM.YYYY")}</h3>
-            <h3>Ende des Semesters: {semesterEnd?.format("DD.MM.YYYY")}</h3>
-            <h3> Zeit bis zum Semesterende: {semesterTimeLeft}</h3>
-            <p>{calculateWeeklyHours()}</p>
-            <p>{moment.duration(moment(eventData[0].dtend).diff(eventData[0].dtstart)).asHours()}</p>
+            {console.log(semesterTimeLeft)}
+            {
+                (!isLoading && semesterEnd !== undefined && semesterStart !== undefined) &&
+                <div className={"calendar-metadata-container"}>
+                    <h5>Semesterstart: <b>{semesterStart?.format("DD.MM.YYYY")}</b></h5> |
+                    <h5>Semesterende: <b>{semesterEnd?.format("DD.MM.YYYY")}</b></h5> |
+                    <h5>Zeit bis zum Semesterende: <b>{semesterTimeLeft}</b></h5>
+                    {/*<p>{moment.duration(moment(eventData[0].dtend).diff(eventData[0].dtstart)).asHours()}</p>*/}
+                </div>
+            }
         </div>
     );
 };
-
-export default CalendarMetadata;

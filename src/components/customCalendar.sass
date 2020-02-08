@@ -2,6 +2,11 @@
 
 $hwr-color: #D50C2F
 $hwr-color-active: rgba(0, 0, 135, 0.71)
+$dark-bt-color: #343a40
+$current-time-color: $dark-bt-color
+
+h5
+  margin-bottom: 0!important
 
 .rbc-day-slot .rbc-event
   border: 0.1rem white solid
@@ -22,16 +27,23 @@ $hwr-color-active: rgba(0, 0, 135, 0.71)
 
 .rbc-event.rbc-selected
   background-color: $hwr-color-active
-  font-size: 12px
+  font-size: 0.8rem
   z-index: 9999
+
 .rbc-time-view
   border-radius: 10px
 
-
-
+.rbc-toolbar
+  font-weight: bolder!important
+  color: whitesmoke
+  background-color: $hwr-color-active
+  border-radius: 10px
+  padding: 0.8rem
 
 .rbc-btn-group
+  margin: 0 1rem
   button
+    border-radius: 10px
     background-color: $hwr-color
     color: white
   button.rbc-active
