@@ -12,7 +12,7 @@ export const HwrNavbar = () => {
                     boxShadow: "0 0.2rem 0.5rem 0 "
                 }}
         >
-            <Navbar.Brand href="#home">
+            <Navbar.Brand href="/">
                 <img
                     alt="failed to load logo"
                     src={hwrLogo}

@@ -3,23 +3,27 @@ import {MyCalendar} from "./components/calendar/MyCalendar";
 import {DateContextProvider} from "./model/DateContextProvider";
 import {CalendarMetadata} from "./components/calendar/CalendarMetadata";
 import {HwrNavbar} from "./components/HwrNavbar";
-import {Collapse} from "react-bootstrap";
+import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
+import {Homepage} from "./components/Homepage";
 
 const App = () => {
     return (
         <div style={{height: "100vh"}}>
             <HwrNavbar/>
-            <Collapse in timeout={1500}>
-                <div>
+            <Router>
+                <Switch>
+                    <Route exact path={"/"}> <Homepage/> </Route>
+                    <Route exact path={"/calendar"}>
+                        <div className={"calendar-container"}>
+                            <DateContextProvider>
+                                <CalendarMetadata/>
+                                <MyCalendar/>
+                            </DateContextProvider>
+                        </div>
+                    </Route>
+                </Switch>
+            </Router>
 
-                    <div className={"calendar-container"}>
-                        <DateContextProvider>
-                            <CalendarMetadata/>
-                            <MyCalendar/>
-                        </DateContextProvider>
-                    </div>
-                </div>
-            </Collapse>
         </div>
     );
 };
