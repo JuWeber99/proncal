@@ -3,28 +3,26 @@ import {MyCalendar} from "./components/calendar/MyCalendar";
 import {DateContextProvider} from "./model/DateContextProvider";
 import {CalendarMetadata} from "./components/calendar/CalendarMetadata";
 import {HwrNavbar} from "./components/HwrNavbar";
-import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
-import {Homepage} from "./components/Homepage";
+import Homepage from "./components/Homepage";
+import {Carousel} from "react-bootstrap";
+import CarouselWrapper, {CarouselContextProvider} from "./components/CarouselWrapper";
+
+const carouselContent = [
+    <Homepage/>,
+    <DateContextProvider>
+        <MyCalendar/>
+        <CalendarMetadata/>
+    </DateContextProvider>
+];
 
 const App = () => {
     return (
-        <div style={{height: "100vh"}}>
-            <HwrNavbar/>
-            <Router>
-                <Switch>
-                    <Route exact path={"/"}> <Homepage/> </Route>
-                    <Route exact path={"/calendar"}>
-                        <div className={"calendar-container"}>
-                            <DateContextProvider>
-                                <CalendarMetadata/>
-                                <MyCalendar/>
-                            </DateContextProvider>
-                        </div>
-                    </Route>
-                </Switch>
-            </Router>
-
-        </div>
+        <CarouselContextProvider>
+            <React.Fragment>
+                <HwrNavbar/>
+                <CarouselWrapper content={carouselContent}/>
+            </React.Fragment>
+        </CarouselContextProvider>
     );
 };
 export default App;

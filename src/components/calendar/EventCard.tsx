@@ -4,6 +4,8 @@ import {EventProps} from "react-big-calendar"
 
 export const EventCard:FunctionComponent<EventProps> = (props: EventProps) => {
     return (
-                <>{props.title}</>
+                <div className={"event-card"}>
+                    {props.title}
+                </div>
     );
 };

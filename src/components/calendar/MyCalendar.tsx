@@ -8,6 +8,7 @@ import "moment/locale/de"
 import "../../styles/app.sass"
 import {EventService} from "../../service/EventService";
 import {EventCard} from "./EventCard";
+import {CalendarMetadata} from "./CalendarMetadata";
 
 export const MyCalendar: FunctionComponent = () => {
     const {eventData} = useCalendarContext();
@@ -22,24 +23,26 @@ export const MyCalendar: FunctionComponent = () => {
         <div>
             {
                 transformedEvents &&
-                <Calendar
-                    localizer={localizer}
-                    events={transformedEvents}
-                    defaultView={"week"}
-                    views={["day", "week"]}
-                    endAccessor={"end"}
-                    startAccessor={"start"}
-                    timeslots={12}
-                    step={5}
-                    min={new Date(1, 1, 1, 8)}
-                    max={new Date(1, 1, 1, 22)}
-                    components={{
-                        event: ((event: EventProps) => EventCard(event)),
-                        eventContainerWrapper:
-                            (props) => <>{props.children}</>
-                    }}
-                />
+
+                <React.Fragment>
+                    <Calendar
+                        localizer={localizer}
+                        events={transformedEvents}
+                        defaultView={"week"}
+                        views={["day", "week"]}
+                        endAccessor={"end"}
+                        startAccessor={"start"}
+                        timeslots={12}
+                        step={5}
+                        min={new Date(1, 1, 1, 8)}
+                        max={new Date(1, 1, 1, 22)}
+                        components={{
+                            event: ((event: EventProps) => EventCard(event)),
+                        }}
+                    />
+                </React.Fragment>
             }
+
         </div>
     );
 };
