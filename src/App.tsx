@@ -6,7 +6,6 @@ import {HwrNavbar} from "./components/HwrNavbar";
 import Homepage from "./components/Homepage";
 import CarouselWrapper, {CarouselContextProvider} from "./components/CarouselWrapper";
 import {BrowserRouter, Route} from "react-router-dom";
-import WetherDisplay from "./components/WetherDisplay";
 
 const carouselContent = [
     <Homepage/>,

@@ -1,6 +1,9 @@
-import React, {ReactElement, useEffect, useState} from 'react';
-import {DailyWether, DailyWetherMeta, DarkSideWether} from "../model/DarkSideWether";
+import React, {ReactElement} from 'react';
+import {DailyWether, DailyWetherMeta} from "../model/DarkSideWether";
 import {useCalendarContext} from "../model/DateContextProvider";
+// @ts-ignore
+import Skycons from "react-skycons"
+
 
 interface WetherInformation {
     tHeight: number,
@@ -10,22 +13,26 @@ interface WetherInformation {
 
 const WetherDisplay = () => {
     const {
-        isLoading,
         wetherData,
-        setWetherData,
-        setIsLoading
     } = useCalendarContext();
+
+
+    const skycons = new Skycons({color: "white"});
 
     const parseWetherInformation = (dailyWether: DailyWether): ReactElement[] => {
         return dailyWether.data.map((item: DailyWetherMeta, day: number) => {
             const data: WetherInformation = {
                 tHeight: item.temperatureHigh,
                 tLow: item.temperatureLow,
-                icon: <>{item.icon}</>
+                icon: <Skycons
+                    icon={item.icon.toUpperCase()}
+                    color={"white"}
+                    autoplay
+                />
             };
             return (
                 <React.Fragment key={day}>
-                    <span>{data.icon} Hoch:{data.tHeight} Tief: {data.tLow}</span>
+                    {data.icon} Hoch:{data.tHeight} Tief: {data.tLow}
                 </React.Fragment>
             )
         })

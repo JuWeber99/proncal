@@ -1,6 +1,5 @@
 import React, {Dispatch, FunctionComponent, ReactElement, SetStateAction, useContext, useState} from 'react';
 import {Carousel} from "react-bootstrap";
-import {CarouselEnum} from "../model/CarouselEnum";
 
 interface CarouselWrapperProps {
     content: ReactElement[]

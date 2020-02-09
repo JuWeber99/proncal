@@ -1,5 +1,5 @@
 import React from 'react';
-import {Button, Navbar, NavbarBrand, NavLink, Nav} from "react-bootstrap";
+import {Button, Nav, Navbar} from "react-bootstrap";
 import hwrLogo from "../resources/hwr-logo-alt.svg";
 import {useCarouselContext} from "./CarouselWrapper";
 import {CarouselEnum} from "../model/CarouselEnum";
@@ -14,14 +14,12 @@ export const HwrNavbar = () => {
                 style={{
                     padding: "1rem",
                     boxShadow: "0 0.2rem 0.3rem 0 "
-                }}
-        >
+                }}>
             <Navbar.Brand onClick={
                 () => {
                     if (index === CarouselEnum.CALENDAR)
                         setIndex(index - 1)
-                }
-            }>
+                }}>
                 <img
                     alt="failed to load logo"
                     src={hwrLogo}

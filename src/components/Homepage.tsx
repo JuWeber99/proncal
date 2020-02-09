@@ -6,7 +6,6 @@ import {CarouselEnum} from "../model/CarouselEnum";
 
 const Homepage = () => {
     const {setIndex, index} = useCarouselContext();
-    const test = document.getElementById("homepage-presentment-button");
 
     return (
         <Jumbotron className={"home-container"}>

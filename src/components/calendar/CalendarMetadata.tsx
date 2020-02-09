@@ -8,16 +8,6 @@ export const CalendarMetadata = () => {
     const [semesterEnd, setSemesterEnd] = useState<Moment>();
     const [semesterTimeLeft, setSemesterTimeLeft] = useState<string>();
 
-    const calculateWeeklyHours = (): number => {
-        let weekMinutes: number = 0;
-        for (let i = 1; i < eventData.length; i++) {
-            if (moment(eventData[i].dtend).isoWeek() === moment(eventData[i - 1].dtstart).isoWeek()) {
-                const duration = (moment.duration(moment(eventData[i - 1].dtend).diff(eventData[i - 1].dtstart)).asHours())
-            }
-        }
-        return weekMinutes / 60;
-    };
-
     useEffect(() => {
         if (eventData[0] !== undefined) {
             setSemesterStart(moment(eventData[0].dtstart));
