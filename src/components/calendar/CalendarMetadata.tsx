@@ -28,8 +28,6 @@ export const CalendarMetadata = () => {
 
     return (
         <div>
-            {console.log("paint meta")}
-            {console.log(semesterTimeLeft)}
             {
                 (!isLoading && semesterEnd !== undefined && semesterStart !== undefined) &&
                 <div className={"calendar-metadata-container"}>

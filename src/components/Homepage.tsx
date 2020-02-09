@@ -8,13 +8,12 @@ const Homepage = () => {
     const {setIndex, index} = useCarouselContext();
     const test = document.getElementById("homepage-presentment-button");
 
-    console.log(test?.classList.contains("hover"));
     return (
         <Jumbotron className={"home-container"}>
             <Col className={"homepage-presentment-container"}>
                 <div id={"homepage-presentment-text"}>
-                    <h1>Hwr - Kalendar</h1>
-                    <h4> Ihr moderner Stundenplan </h4>
+                    <h1>HWR - Kalender</h1>
+                    <h4> Dein moderner Stundenplan </h4>
                     <h5> Immer, Überall </h5>
                 </div>
                 <div id={"homepage-presentment-button"}

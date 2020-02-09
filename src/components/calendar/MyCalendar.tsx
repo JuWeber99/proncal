@@ -8,6 +8,8 @@ import "moment/locale/de"
 import "../../styles/app.sass"
 import {EventService} from "../../service/EventService";
 import {EventCard} from "./EventCard";
+import WetherDisplay from "../WetherDisplay";
+
 
 export const MyCalendar: FunctionComponent = () => {
     const {eventData} = useCalendarContext();
@@ -22,7 +24,6 @@ export const MyCalendar: FunctionComponent = () => {
         <div>
             {
                 transformedEvents &&
-
                 <React.Fragment>
                     <Calendar
                         localizer={localizer}
@@ -37,6 +38,7 @@ export const MyCalendar: FunctionComponent = () => {
                         max={new Date(1, 1, 1, 22)}
                         components={{
                             event: ((event: EventProps) => EventCard(event)),
+                            dateCellWrapper: () => <WetherDisplay/>
                         }}
                     />
                 </React.Fragment>

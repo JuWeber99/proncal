@@ -1,5 +1,6 @@
 import React, {Dispatch, FunctionComponent, ReactElement, SetStateAction, useContext, useState} from 'react';
 import {Carousel} from "react-bootstrap";
+import {CarouselEnum} from "../model/CarouselEnum";
 
 interface CarouselWrapperProps {
     content: ReactElement[]
@@ -38,24 +39,24 @@ export const CarouselContextProvider: FunctionComponent<{ children: ReactElement
 };
 
 const CarouselWrapper: FunctionComponent<CarouselWrapperProps> = ({content}) => {
-
     const {index} = useCarouselContext();
 
     return (
         <Carousel className={"carousel"}
-            activeIndex={index}
-            interval={null}
-            prevIcon={null}
-            nextIcon={null}
-            indicators={false}
-            controls={false}
-            touch={true}
+                  activeIndex={index}
+                  onSelect={() => {}}
+                  interval={null}
+                  prevIcon={null}
+                  nextIcon={null}
+                  indicators={false}
+                  controls={false}
+                  touch={true}
         >
             {
                 content.map(
                     (item: ReactElement, index: number) => {
                         return (
-                            <Carousel.Item>
+                            <Carousel.Item key={index}>
                                 {item}
                             </Carousel.Item>
                         )
