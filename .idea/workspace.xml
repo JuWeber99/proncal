@@ -2,17 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6308aefc-c47f-44cb-877c-3b6bb05d24de" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/CarouselWrapper.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Homepage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Homepage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/HwrNavbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/HwrNavbar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/calendar/EventCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/calendar/EventCard.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/calendar/MyCalendar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/calendar/MyCalendar.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/styles/app.sass" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/app.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/customCalendar.sass" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/customCalendar.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -146,7 +138,7 @@
       <workItem from="1580989617066" duration="13863000" />
       <workItem from="1581038270348" duration="8862000" />
       <workItem from="1581078125376" duration="17653000" />
-      <workItem from="1581159788866" duration="33106000" />
+      <workItem from="1581159788866" duration="35386000" />
     </task>
     <task id="LOCAL-00001" summary="ez">
       <created>1580841777541</created>
@@ -274,7 +266,14 @@
       <option name="project" value="LOCAL" />
       <updated>1581193219817</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="slider + design">
+      <created>1581203204479</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1581203204479</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -303,7 +302,9 @@
     <MESSAGE value="metadata component in progress" />
     <MESSAGE value="fixed control flow" />
     <MESSAGE value="styling and icons" />
-    <option name="LAST_COMMIT_MESSAGE" value="styling and icons" />
+    <MESSAGE value="slider and doom doom design" />
+    <MESSAGE value="slider + design" />
+    <option name="LAST_COMMIT_MESSAGE" value="slider + design" />
   </component>
   <component name="WindowStateProjectService">
     <state x="254" y="86" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1580801554379">
@@ -323,11 +324,11 @@
       <screen x="0" y="42" width="1920" height="1038" />
     </state>
     <state x="638" y="248" key="#npm_start/0.42.1920.1038/1920.0.1920.1080@0.42.1920.1038" timestamp="1580840931652" />
-    <state x="524" y="102" key="CommitChangelistDialog2" timestamp="1581193219764">
+    <state x="524" y="102" key="CommitChangelistDialog2" timestamp="1581203204376">
       <screen x="0" y="42" width="1920" height="1038" />
     </state>
     <state x="337" y="50" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1581094650537" />
-    <state x="524" y="102" key="CommitChangelistDialog2/0.42.1920.1038/1920.0.1920.1080@0.42.1920.1038" timestamp="1581193219764" />
+    <state x="524" y="102" key="CommitChangelistDialog2/0.42.1920.1038/1920.0.1920.1080@0.42.1920.1038" timestamp="1581203204376" />
     <state x="83" y="80" width="1435" height="699" key="DiffContextDialog" timestamp="1581077508778">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -366,11 +367,11 @@
       <screen x="0" y="42" width="1920" height="1038" />
     </state>
     <state x="833" y="478" key="VCS.EditChangelistDialog/0.42.1920.1038/1920.0.1920.1080@0.42.1920.1038" timestamp="1581177783743" />
-    <state x="559" y="297" key="Vcs.Push.Dialog.v2" timestamp="1581188739222">
+    <state x="559" y="297" key="Vcs.Push.Dialog.v2" timestamp="1581203205714">
       <screen x="0" y="42" width="1920" height="1038" />
     </state>
     <state x="466" y="211" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1581087959933" />
-    <state x="559" y="297" key="Vcs.Push.Dialog.v2/0.42.1920.1038/1920.0.1920.1080@0.42.1920.1038" timestamp="1581188739222" />
+    <state x="559" y="297" key="Vcs.Push.Dialog.v2/0.42.1920.1038/1920.0.1920.1080@0.42.1920.1038" timestamp="1581203205714" />
     <state x="99" y="138" width="1722" height="843" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1581039914307">
       <screen x="0" y="42" width="1920" height="1038" />
     </state>
