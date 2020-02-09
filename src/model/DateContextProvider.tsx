@@ -1,19 +1,8 @@
 import moment, {Moment} from "moment";
-import React, {
-    Dispatch,
-    FunctionComponent,
-    ReactNode,
-    SetStateAction,
-    useContext,
-    useEffect,
-    useState,
-    Suspense
-} from "react";
-import {dummyData} from "../resources/hwr-wi-b-6";
-import {HwrCalendarFormat, MyEvent} from "./EventModel";
+import React, {Dispatch, FunctionComponent, ReactNode, SetStateAction, useContext, useEffect, useState} from "react";
+import {MyEvent} from "./EventModel";
 import axios, {AxiosError, AxiosResponse} from "axios";
 import {EventService} from "../service/EventService";
-import {ProgressBar} from "react-bootstrap";
 
 export interface CalendarContext {
     isLoading: boolean

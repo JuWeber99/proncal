@@ -4,7 +4,6 @@ import {DateContextProvider} from "./model/DateContextProvider";
 import {CalendarMetadata} from "./components/calendar/CalendarMetadata";
 import {HwrNavbar} from "./components/HwrNavbar";
 import Homepage from "./components/Homepage";
-import {Carousel} from "react-bootstrap";
 import CarouselWrapper, {CarouselContextProvider} from "./components/CarouselWrapper";
 
 const carouselContent = [

@@ -1,6 +1,8 @@
 @import "src/styles/customCalendar"
 
 $bg-color: rgba(166, 184, 209, 0.26)
+$hwr-dark-red: rgba(104, 12, 9, 0.73)
+
 body
   background-color: $bg-color
 
@@ -25,11 +27,9 @@ body
     margin: 0 2vmin
 
 .calendar-icon
-  &:hover
-    cursor: pointer
-    transform: scale(1.1)
-    border-radius: 5rem
-    border: 1px dashed white
+  margin: 0 3rem
+  width: 20rem
+  height: 10rem
 
 .event-card
   display: inline-flex
@@ -38,7 +38,8 @@ body
   height: 95%
   text-align: center
 
-.homepage-presentment-text-container
+.homepage-presentment-container
+  display: flex
   width: 100vw
   align-self: center
   justify-content: center
@@ -52,3 +53,26 @@ body
   border-radius: 15px
   padding: 5rem
   color: white
+  background-color: $hwr-dark-red
+  #homepage-presentment-text
+    border-radius: 15px
+    padding: 5rem 2rem
+    background-color: $hwr-dark-red
+    box-shadow: $hwr-dark-red 0 0 1rem 1rem
+   #homepage-presentment-button
+    &:hover
+      cursor: pointer
+      transform: scale(1.2)
+      border-radius: 30px
+      padding: 1rem
+      background-color: $hwr-dark-red
+      box-shadow: $hwr-dark-red 0 0 1rem 1rem
+      border: 2px $border-color solid
+      &:after
+        content: "=> Zum Kalendar"
+        color: black
+        border: 1px solid white
+        position: absolute
+        right: 0
+        z-index: 999
+        display: block

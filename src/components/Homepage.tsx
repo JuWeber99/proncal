@@ -1,5 +1,5 @@
 import React from 'react';
-import {Col, Jumbotron, Row} from "react-bootstrap";
+import {Col, Jumbotron} from "react-bootstrap";
 import calendar from "../resources/calendar.png"
 import {useCarouselContext} from "./CarouselWrapper";
 
@@ -13,20 +13,21 @@ const Homepage = () => {
             justifyContent: "center",
             alignItems: "center",
             backgroundColor: "#D50C2F"
-        }}><Col className={"homepage-presentment-text-container"}>
-                <div>
-                    <h1>Hwr - Kalendar</h1>
-                    <h5> Ihr moderner Stundenplan </h5>
-                    <h6> Immer, Überall </h6>
-                </div>
-            <img
-                src={calendar}
-                alt={"Fehler beim laden des logos"}
-                height={"100rem"}
-                width={"100rem"}
-                className={"calendar-icon"}
-                onClick={() => setIndex(index + 1)}
-            />
+        }}><Col className={"homepage-presentment-container"}>
+            <div id={"homepage-presentment-text"}>
+                <h1>Hwr - Kalendar</h1>
+                <h4> Ihr moderner Stundenplan </h4>
+                <h5> Immer, Überall </h5>
+            </div>
+            <div id={"homepage-presentment-button"}>
+                <h4>Zum Kalendar</h4>
+                <img
+                    src={calendar}
+                    alt={"Fehler beim laden des logos"}
+                    className={"calendar-icon"}
+                    onClick={() => setIndex(index + 1)}
+                />
+            </div>
         </Col>
         </Jumbotron>
     );

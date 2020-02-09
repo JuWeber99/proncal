@@ -1,4 +1,4 @@
-import React, {Dispatch, FunctionComponent, ReactElement, ReactNode, SetStateAction, useContext, useState} from 'react';
+import React, {Dispatch, FunctionComponent, ReactElement, SetStateAction, useContext, useState} from 'react';
 import {Carousel} from "react-bootstrap";
 
 interface CarouselWrapperProps {

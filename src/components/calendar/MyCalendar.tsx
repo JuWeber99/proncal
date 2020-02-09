@@ -8,7 +8,6 @@ import "moment/locale/de"
 import "../../styles/app.sass"
 import {EventService} from "../../service/EventService";
 import {EventCard} from "./EventCard";
-import {CalendarMetadata} from "./CalendarMetadata";
 
 export const MyCalendar: FunctionComponent = () => {
     const {eventData} = useCalendarContext();
