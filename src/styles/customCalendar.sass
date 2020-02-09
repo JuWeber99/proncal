@@ -1,9 +1,10 @@
 @import 'node_modules/react-big-calendar/lib/sass/styles'
 
-$hwr-color: #D50C2F
-$hwr-color-active: rgba(0, 0, 135, 0.71)
+$hwr-color: rgba(213, 12, 47, 0.76)
+$hwr-color-active-small-transparency: rgba(0, 0, 135, 0.71)
+$hwr-color-active: rgba(0, 0, 135, 1)
 $dark-bt-color: #343a40
-$custom-yellow: rgba(245, 222, 179, 0.47)
+$custom-yellow: rgba(245, 222, 179, 0.43)
 
 h5
   margin-bottom: 0!important
@@ -26,7 +27,7 @@ h5
   background-color: rgba(245, 222, 179, 0.47)
 
 .rbc-event.rbc-selected
-  background-color: $hwr-color-active
+  background-color: $hwr-color-active-small-transparency
   font-size: 0.8rem
   z-index: 9999
 
@@ -35,7 +36,7 @@ h5
   border-top: 0.3rem white solid
   font-weight: bolder!important
   color: whitesmoke
-  background-color: $hwr-color-active
+  background-color: $hwr-color-active-small-transparency
   padding: 0.8rem
 
 .rbc-btn-group
@@ -45,7 +46,14 @@ h5
     background-color: $hwr-color
     color: white
   button.rbc-active
-    background-color: $hwr-color-active
+    background-color: $hwr-color-active-small-transparency
 
 .rbc-current-time-indicator
   background-color: $dark-bt-color
+
+.navbar-brand
+  &:hover
+    cursor: pointer
+    background-color: #9a9a9a
+    border-radius: 10px
+    margin: 0!important

@@ -42,7 +42,7 @@ const CarouselWrapper: FunctionComponent<CarouselWrapperProps> = ({content}) => 
     const {index} = useCarouselContext();
 
     return (
-        <Carousel
+        <Carousel className={"carousel"}
             activeIndex={index}
             interval={null}
             prevIcon={null}
