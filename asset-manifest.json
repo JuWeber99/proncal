@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/proncal/static/css/main.f6328670.chunk.css",
-    "main.js": "/proncal/static/js/main.e0328e57.chunk.js",
-    "main.js.map": "/proncal/static/js/main.e0328e57.chunk.js.map",
+    "main.js": "/proncal/static/js/main.6dbeaba0.chunk.js",
+    "main.js.map": "/proncal/static/js/main.6dbeaba0.chunk.js.map",
     "runtime-main.js": "/proncal/static/js/runtime-main.8e2600f6.js",
     "runtime-main.js.map": "/proncal/static/js/runtime-main.8e2600f6.js.map",
     "static/css/2.25b83785.chunk.css": "/proncal/static/css/2.25b83785.chunk.css",
     "static/js/2.6015e0fd.chunk.js": "/proncal/static/js/2.6015e0fd.chunk.js",
     "static/js/2.6015e0fd.chunk.js.map": "/proncal/static/js/2.6015e0fd.chunk.js.map",
     "index.html": "/proncal/index.html",
-    "precache-manifest.6b25590badda2c14fe51a295e8ece593.js": "/proncal/precache-manifest.6b25590badda2c14fe51a295e8ece593.js",
+    "precache-manifest.a6810e780dd4b615a3bde7621867eeb1.js": "/proncal/precache-manifest.a6810e780dd4b615a3bde7621867eeb1.js",
     "service-worker.js": "/proncal/service-worker.js",
     "static/css/2.25b83785.chunk.css.map": "/proncal/static/css/2.25b83785.chunk.css.map",
     "static/css/main.f6328670.chunk.css.map": "/proncal/static/css/main.f6328670.chunk.css.map",
@@ -23,6 +23,6 @@
     "static/css/2.25b83785.chunk.css",
     "static/js/2.6015e0fd.chunk.js",
     "static/css/main.f6328670.chunk.css",
-    "static/js/main.e0328e57.chunk.js"
+    "static/js/main.6dbeaba0.chunk.js"
   ]
 }
