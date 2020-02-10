@@ -2,15 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6308aefc-c47f-44cb-877c-3b6bb05d24de" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/Wether/TemperatureDisplay.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Wether/WetherIcon.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/CarouselWrapper.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CarouselWrapper.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Homepage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Homepage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/HwrNavbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/HwrNavbar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/WetherDisplay.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/WetherDisplay.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/calendar/CalendarMetadata.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/calendar/CalendarMetadata.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/WetherDisplay.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Wether/WetherDisplay.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/calendar/MyCalendar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/calendar/MyCalendar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/app.sass" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/app.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/customCalendar.sass" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/customCalendar.sass" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,8 +34,8 @@
       <list>
         <option value="JavaScript File" />
         <option value="Sass File" />
-        <option value="TypeScript JSX File" />
         <option value="TypeScript File" />
+        <option value="TypeScript JSX File" />
       </list>
     </option>
   </component>
@@ -84,16 +82,16 @@
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/resources" />
-      <recent name="C:\Users\JuWeber\IdeaProjects\resch1\src\components\calendar" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/components/Wether" />
       <recent name="$PROJECT_DIR$/src/styles" />
       <recent name="$PROJECT_DIR$/src/service" />
       <recent name="$PROJECT_DIR$/src/components/calendar" />
       <recent name="C:\Users\JuWeber\IdeaProjects\resch1\src\service" />
-      <recent name="$PROJECT_DIR$/src/old" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/resources" />
+      <recent name="C:\Users\JuWeber\IdeaProjects\resch1\src\components\calendar" />
     </key>
   </component>
   <component name="RunManager" selected="npm.start">
@@ -147,7 +145,7 @@
       <workItem from="1581078125376" duration="17653000" />
       <workItem from="1581159788866" duration="45361000" />
       <workItem from="1581273088864" duration="16219000" />
-      <workItem from="1581289633767" duration="265000" />
+      <workItem from="1581289633767" duration="4779000" />
     </task>
     <task id="LOCAL-00001" summary="ez">
       <created>1580841777541</created>
@@ -324,7 +322,14 @@
       <option name="project" value="LOCAL" />
       <updated>1581287711110</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="deploy">
+      <created>1581290007606</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1581290007606</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -376,40 +381,40 @@
       <screen x="0" y="42" width="1920" height="1038" />
     </state>
     <state x="638" y="248" key="#npm_start/0.42.1920.1038/1920.0.1920.1080@0.42.1920.1038" timestamp="1580840931652" />
-    <state x="524" y="102" key="CommitChangelistDialog2" timestamp="1581287710969">
+    <state x="524" y="102" key="CommitChangelistDialog2" timestamp="1581290007498">
       <screen x="0" y="42" width="1920" height="1038" />
     </state>
     <state x="337" y="50" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1581094650537" />
-    <state x="524" y="102" key="CommitChangelistDialog2/0.42.1920.1038/1920.0.1920.1080@0.42.1920.1038" timestamp="1581287710969" />
+    <state x="524" y="102" key="CommitChangelistDialog2/0.42.1920.1038/1920.0.1920.1080@0.42.1920.1038" timestamp="1581290007498" />
     <state x="2444" y="62" key="CommitChangelistDialog2/0.42.1920.1038/1920.0.1920.1080@1920.0.1920.1080" timestamp="1581226999704" />
     <state x="83" y="80" width="1435" height="699" key="DiffContextDialog" timestamp="1581077508778">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="83" y="80" width="1435" height="699" key="DiffContextDialog/0.0.1600.860@0.0.1600.860" timestamp="1581077508778" />
     <state x="99" y="138" width="1722" height="843" key="DiffContextDialog/0.42.1920.1038/1920.0.1920.1080@0.42.1920.1038" timestamp="1581039871678" />
-    <state width="1874" height="275" key="GridCell.Tab.0.bottom" timestamp="1581289998698">
+    <state width="1874" height="275" key="GridCell.Tab.0.bottom" timestamp="1581294509584">
       <screen x="0" y="42" width="1920" height="1038" />
     </state>
     <state width="1559" height="222" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1581094303672" />
-    <state width="1874" height="275" key="GridCell.Tab.0.bottom/0.42.1920.1038/1920.0.1920.1080@0.42.1920.1038" timestamp="1581289998698" />
+    <state width="1874" height="275" key="GridCell.Tab.0.bottom/0.42.1920.1038/1920.0.1920.1080@0.42.1920.1038" timestamp="1581294509584" />
     <state width="1874" height="289" key="GridCell.Tab.0.bottom/0.42.1920.1038/1920.0.1920.1080@1920.0.1920.1080" timestamp="1581226575058" />
-    <state width="1874" height="275" key="GridCell.Tab.0.center" timestamp="1581289998698">
+    <state width="1874" height="275" key="GridCell.Tab.0.center" timestamp="1581294509584">
       <screen x="0" y="42" width="1920" height="1038" />
     </state>
     <state width="1559" height="222" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1581094303672" />
-    <state width="1874" height="275" key="GridCell.Tab.0.center/0.42.1920.1038/1920.0.1920.1080@0.42.1920.1038" timestamp="1581289998698" />
+    <state width="1874" height="275" key="GridCell.Tab.0.center/0.42.1920.1038/1920.0.1920.1080@0.42.1920.1038" timestamp="1581294509584" />
     <state width="1874" height="289" key="GridCell.Tab.0.center/0.42.1920.1038/1920.0.1920.1080@1920.0.1920.1080" timestamp="1581226575058" />
-    <state width="1874" height="275" key="GridCell.Tab.0.left" timestamp="1581289998698">
+    <state width="1874" height="275" key="GridCell.Tab.0.left" timestamp="1581294509584">
       <screen x="0" y="42" width="1920" height="1038" />
     </state>
     <state width="1559" height="222" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1581094303672" />
-    <state width="1874" height="275" key="GridCell.Tab.0.left/0.42.1920.1038/1920.0.1920.1080@0.42.1920.1038" timestamp="1581289998698" />
+    <state width="1874" height="275" key="GridCell.Tab.0.left/0.42.1920.1038/1920.0.1920.1080@0.42.1920.1038" timestamp="1581294509584" />
     <state width="1874" height="289" key="GridCell.Tab.0.left/0.42.1920.1038/1920.0.1920.1080@1920.0.1920.1080" timestamp="1581226575058" />
-    <state width="1874" height="275" key="GridCell.Tab.0.right" timestamp="1581289998698">
+    <state width="1874" height="275" key="GridCell.Tab.0.right" timestamp="1581294509584">
       <screen x="0" y="42" width="1920" height="1038" />
     </state>
     <state width="1559" height="222" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1581094303672" />
-    <state width="1874" height="275" key="GridCell.Tab.0.right/0.42.1920.1038/1920.0.1920.1080@0.42.1920.1038" timestamp="1581289998698" />
+    <state width="1874" height="275" key="GridCell.Tab.0.right/0.42.1920.1038/1920.0.1920.1080@0.42.1920.1038" timestamp="1581294509584" />
     <state width="1874" height="289" key="GridCell.Tab.0.right/0.42.1920.1038/1920.0.1920.1080@1920.0.1920.1080" timestamp="1581226575058" />
     <state x="669" y="278" key="MultipleFileMergeDialog" timestamp="1581217625899">
       <screen x="0" y="42" width="1920" height="1038" />
@@ -448,11 +453,11 @@
       <screen x="0" y="42" width="1920" height="1038" />
     </state>
     <state x="736" y="481" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.42.1920.1038/1920.0.1920.1080@0.42.1920.1038" timestamp="1581273103719" />
-    <state x="562" y="250" width="797" height="623" key="find.popup" timestamp="1581287433000">
+    <state x="562" y="250" width="797" height="623" key="find.popup" timestamp="1581293655157">
       <screen x="0" y="42" width="1920" height="1038" />
     </state>
     <state x="468" y="172" width="664" height="516" key="find.popup/0.0.1600.860@0.0.1600.860" timestamp="1581095766078" />
-    <state x="562" y="250" width="797" height="623" key="find.popup/0.42.1920.1038/1920.0.1920.1080@0.42.1920.1038" timestamp="1581287433000" />
+    <state x="562" y="250" width="797" height="623" key="find.popup/0.42.1920.1038/1920.0.1920.1080@0.42.1920.1038" timestamp="1581293655157" />
     <state x="2482" y="216" width="797" height="649" key="find.popup/0.42.1920.1038/1920.0.1920.1080@1920.0.1920.1080" timestamp="1581225152148" />
     <state x="547" y="277" width="672" height="677" key="run.anything.popup" timestamp="1581171421633">
       <screen x="0" y="42" width="1920" height="1038" />
@@ -464,5 +469,17 @@
     </state>
     <state x="463" y="180" width="672" height="678" key="search.everywhere.popup/0.0.1600.860@0.0.1600.860" timestamp="1581078016287" />
     <state x="556" y="259" width="807" height="819" key="search.everywhere.popup/0.42.1920.1038/1920.0.1920.1080@0.42.1920.1038" timestamp="1581278625279" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/components/Wether/TemperatureDisplay.tsx</url>
+          <line>24</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
