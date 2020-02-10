@@ -31,7 +31,7 @@ const WetherIcon: FunctionComponent<WetherIconProps> = ({label, date}) => {
     return (
         <div className={"rbc-header" }>
             {label}
-            {parseWetherInformation(wetherData.daily)}
+            {parseWetherInformation(wetherData.daily)[0]}
         </div>
     );
 };
