@@ -46,7 +46,8 @@ export const MyCalendar: FunctionComponent = () => {
                                         <TemperatureDisplay/>
                                     </div>
                             },
-                        }}
+                        }
+                        }
                     />
                 </React.Fragment>
             }
