@@ -9,7 +9,7 @@ $bg-color: rgba(166, 184, 209, 0.26)
 $hwr-dark-red: rgba(104, 12, 9, 0.73)
 
 h5
-  margin-bottom: 0!important
+  margin-bottom: 0 !important
 
 .rbc-day-slot .rbc-event
   border: 0.1rem white solid
@@ -21,12 +21,12 @@ h5
   word-break: break-word
   font-size: 0.7rem
   font-weight: bolder
-  align-items: center!important
-  justify-content: center!important
-  min-height: 5%!important
+  align-items: center !important
+  justify-content: center !important
+  min-height: 5% !important
 
 .rbc-today
-  background-color: rgba(245, 222, 179, 0.47)
+  background-color: rgba(0, 0, 135, 0.15)
 
 .rbc-event.rbc-selected
   background-color: $hwr-color-active-small-transparency
@@ -36,7 +36,7 @@ h5
 
 .rbc-toolbar
   border-top: 0.3rem white solid
-  font-weight: bolder!important
+  font-weight: bolder !important
   color: whitesmoke
   background-color: $hwr-color-active-small-transparency
   padding: 0.8rem
@@ -44,10 +44,12 @@ h5
 
 .rbc-btn-group
   margin: 0 1rem
+
   button
     border-radius: 10px
     background-color: $hwr-color
     color: white
+
   button.rbc-active
     background-color: $hwr-color-active-small-transparency
 
@@ -55,21 +57,27 @@ h5
   background-color: $dark-bt-color
 
 .navbar
-  background-color: $dark-bt-color!important
+  background-color: $dark-bt-color !important
+
 .navbar-brand
   &:hover
     cursor: pointer
     background-color: #9a9a9a
     border-radius: 10px
-    margin: 0!important
+    margin: 0 !important
 
 .rbc-time-header-gutter
   min-width: 3.1rem
   background-color: $bg-color
 
 .rbc-time-header-content
-  display: block!important
+  display: block !important
   border-left: 2px white solid
+
+.rbc-time-column
+  border: 1px $dark-bt-color solid
+  border-top: none
+  border-bottom: none
 
 .rbc-time-header
   padding-top: 15px
@@ -78,3 +86,12 @@ h5
 
 .rbc-row-content
   background-color: rgba(128, 128, 128, 0.24)
+
+.rbc-day-bg
+  border-left: 1px solid $dark-bt-color
+  border-right: 1px solid $dark-bt-color
+
+.rbc-row.rbc-time-header-cell
+  > *
+    border: 1px solid $dark-bt-color
+    border-bottom: none
