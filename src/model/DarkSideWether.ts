@@ -10,6 +10,9 @@ type DarksideIcon =
     | "partly-cloudy-day"
     | "partly-cloudy-night"
 
+export type DarkSideWetherResponse = DarkSideWether
+
+
 export interface DarkSideWether {
     latitude: number,
     longitude: number,
@@ -53,6 +56,27 @@ export interface DailyWether {
     summary: string,
     icon: DarksideIcon,
     data: DailyWetherMeta[]
+}
+
+export interface CurrentWeatherMeta {
+    time: number,
+    summary: string,
+    icon: DarksideIcon,
+    precipIntensity: number,
+    precipProbability: number,
+    precipType: DarksideIcon
+    temperature: number,
+    apparentTemperature: number,
+    dewPoint: number,
+    humidity: number,
+    pressure: number,
+    windSpeed: number,
+    windGust: number,
+    windBearing: number,
+    cloudCover: number,
+    uvIndex: number,
+    visibility: number,
+    ozone: number
 }
 
 export interface DailyWetherMeta {

@@ -3,17 +3,20 @@ import {DailyWether, DailyWetherMeta} from "../../model/DarkSideWether";
 import {useCalendarContext} from "../../model/DateContextProvider";
 // @ts-ignore
 import Skycons from "react-skycons"
+import moment from "moment";
 
 interface WetherIconProps {
     label: string,
+    date: Date
 }
 
-const WetherIcon: FunctionComponent<WetherIconProps> = ({label}) => {
+const WetherIcon: FunctionComponent<WetherIconProps> = ({label, date}) => {
 
     const {wetherData} = useCalendarContext();
 
     const parseWetherInformation = (dailyWether: DailyWether): ReactElement[] => {
-        return dailyWether.data.map((item: DailyWetherMeta, day: number) => {
+       return  dailyWether.data.filter((item) => moment(item.time).date() !== moment(date).date())
+           .map((item: DailyWetherMeta, day: number) => {
             return (
                 <React.Fragment key={day}>
                     <Skycons
@@ -23,13 +26,12 @@ const WetherIcon: FunctionComponent<WetherIconProps> = ({label}) => {
                         autoplay
                     />
                 </React.Fragment>
-            )
-        });
+            )})
     };
     return (
         <div className={"rbc-header" }>
             {label}
-            {parseWetherInformation(wetherData.daily)[0]}
+            {parseWetherInformation(wetherData.daily)}
         </div>
     );
 };

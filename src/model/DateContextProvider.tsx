@@ -3,7 +3,7 @@ import React, {Dispatch, FunctionComponent, ReactNode, SetStateAction, useContex
 import {MyEvent} from "./EventModel";
 import axios, {AxiosError, AxiosResponse} from "axios";
 import {EventService} from "../service/EventService";
-import {DarkSideWether} from "./DarkSideWether";
+import {DarkSideWether, DarkSideWetherResponse} from "./DarkSideWether";
 import {dummyWether} from "./dummyWether";
 
 export interface CalendarContext {
@@ -13,7 +13,7 @@ export interface CalendarContext {
     today: number
     month: number
     year: number
-    wetherData: DarkSideWether
+    wetherData: DarkSideWetherResponse
 
     setIsLoading: Dispatch<SetStateAction<boolean>>
     setEventData: Dispatch<SetStateAction<MyEvent[]>>
@@ -21,7 +21,7 @@ export interface CalendarContext {
     setToday: Dispatch<SetStateAction<number>>
     setYear: Dispatch<SetStateAction<number>>
     setMonth: Dispatch<SetStateAction<number>>
-    setWetherData: Dispatch<SetStateAction<DarkSideWether>>
+    setWetherData: Dispatch<SetStateAction<DarkSideWetherResponse>>
 }
 
 const momentProvider = moment();
@@ -64,7 +64,7 @@ export const DateContextProvider: FunctionComponent<{ children: ReactNode }> = (
     const [month, setMonth] = useState<number>(momentProvider.month() + 1);
     const [year, setYear] = useState<number>(momentProvider.year());
     const [isLoading, setIsLoading] = useState<boolean>(false);
-    const [wetherData, setWetherData] = useState<DarkSideWether>(dummyWether);
+    const [wetherData, setWetherData] = useState<DarkSideWetherResponse>(dummyWether);
 
     const state = {
         isLoading,
@@ -101,18 +101,21 @@ export const DateContextProvider: FunctionComponent<{ children: ReactNode }> = (
             setEventData(EventService.mergeAssociatedEvents(response.data));
         }
 
-        fetchDataEventData().catch((error: AxiosError) => {
-            console.log(error)
-        });
-
         async function fetchWetherData() {
-            const response: AxiosResponse<any> = await axios.get("http://localhost:8080/api/weather/forecast");
+            const response: AxiosResponse<DarkSideWetherResponse> = await axios.request<DarkSideWetherResponse>({
+                url: "http://localhost:8080/api/weather/forecast",
+                method: "GET"
+            });
             console.log(response.data);
             setWetherData(response.data)
         }
-        fetchWetherData().catch((error: AxiosError) => {
-            console.log(error)
-        });
+
+       /* Promise.all([fetchDataEventData(), fetchWetherData()])*/
+            fetchDataEventData().catch((error: AxiosError) => {
+                console.log(error)
+            }).then(() => fetchWetherData().catch((error: AxiosError) => {
+                console.log(error)
+            }));
     }, []);
 
     return (

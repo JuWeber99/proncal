@@ -44,7 +44,7 @@ export const MyCalendar: FunctionComponent = () => {
                                     if (moment(props.date).week() === dateContext.week()) {
                                         return (
                                             <div className={"rbc-header"}>
-                                                <WetherIcon label={props.label}/>
+                                                <WetherIcon label={props.label} date={props.date}/>
                                                 <TemperatureDisplay/>
                                             </div>
                                         )
@@ -52,7 +52,6 @@ export const MyCalendar: FunctionComponent = () => {
                                         return (
                                             <div className={"rbc-header"}>
                                                 {props.label}
-                                               {/* <p>{moment(props.date).diff(dateContext.date(), "days")}</p>*/}
                                                 <p style={{color: "blue", fontWeight: "bolder"}}>Wettervoraussage in: {moment.duration(moment(props.date).diff(dateContext)).asDays().toFixed(0)+" "}
                                                 Tagen
                                                 </p>
