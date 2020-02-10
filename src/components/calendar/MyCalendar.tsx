@@ -39,8 +39,13 @@ export const MyCalendar: FunctionComponent = () => {
                         max={new Date(1, 1, 1, 22)}
                         components={{
                             event: ((event: EventProps) => EventCard(event)),
-                            dateCellWrapper: () => <TemperatureDisplay/>,
-                            week: {header: (label: any) => <WetherIcon label={label.label}/>},
+                            week: {
+                                header: (props: any) =>
+                                    <div className={"rbc-header"}>
+                                        <WetherIcon date={props.date} label={props.label}/>
+                                        <TemperatureDisplay/>
+                                    </div>
+                            },
                         }}
                     />
                 </React.Fragment>

@@ -39,7 +39,7 @@ const TemperatureDisplay = () => {
     };
 
     return (
-        <div className={"rbc-header"}>
+        <div className={"rbc-header temperature-display"}>
             {parseWetherInformation(wetherData.daily)[0]}
         </div>
     );
