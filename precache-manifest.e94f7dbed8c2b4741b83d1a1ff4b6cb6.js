@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "d318e763524b3047e04c417f2218b98f",
+    "revision": "69a6a4c77ee9acecd54313b754aed6b9",
     "url": "/proncal/index.html"
   },
   {
@@ -8,8 +8,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/proncal/static/css/2.25b83785.chunk.css"
   },
   {
-    "revision": "c69dbca776a288530e15",
-    "url": "/proncal/static/css/main.4570f8d0.chunk.css"
+    "revision": "5b9193d57fb2bbd51926",
+    "url": "/proncal/static/css/main.8deafb32.chunk.css"
   },
   {
     "revision": "66d50258bc52bebace86",
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/proncal/static/js/2.866152a7.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "c69dbca776a288530e15",
-    "url": "/proncal/static/js/main.61a6def1.chunk.js"
+    "revision": "5b9193d57fb2bbd51926",
+    "url": "/proncal/static/js/main.1a91ac7e.chunk.js"
   },
   {
     "revision": "ef3d7f944abe2cdb9766",
@@ -36,7 +36,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/proncal/static/media/calendar.cd46548e.png"
   },
   {
-    "revision": "244061df689dc8336afb6e0308fb4c45",
-    "url": "/proncal/static/media/hwr-logo-alt.244061df.svg"
+    "revision": "b4976ea60eb4ddcdd2e7026796c4d339",
+    "url": "/proncal/static/media/hwr-logo-alt.b4976ea6.svg"
   }
 ]);
