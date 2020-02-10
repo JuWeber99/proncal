@@ -29,12 +29,12 @@ export const HwrNavbar = () => {
                 />
                 HWR Berlin - Stundenplan
             </Navbar.Brand>
-            {
+           {/* {
                 index === CarouselEnum.CALENDAR &&
                 <Nav.Link>
-                    <Button onClick={() => setIndex(index-1)}>Zurück</Button>
+                    <Button onClick={() => setIndex(index-1)}>  </Button>
                 </Nav.Link>
-            }
+            }*/}
         </Navbar>
     );
 };

@@ -13,7 +13,7 @@ import WetherIcon from "../Wether/WetherIcon";
 
 
 export const MyCalendar: FunctionComponent = () => {
-    const {eventData} = useCalendarContext();
+    const {eventData, dateContext, today} = useCalendarContext();
     const localizer = momentLocalizer(moment);
     const [transformedEvents, setTransformedEvent] = useState<Event[] | undefined>(undefined);
 
@@ -40,11 +40,26 @@ export const MyCalendar: FunctionComponent = () => {
                         components={{
                             event: ((event: EventProps) => EventCard(event)),
                             week: {
-                                header: (props: any) =>
-                                    <div className={"rbc-header"}>
-                                        <WetherIcon date={props.date} label={props.label}/>
-                                        <TemperatureDisplay/>
-                                    </div>
+                                header: (props: any) => {
+                                    if (moment(props.date).week() === dateContext.week()) {
+                                        return (
+                                            <div className={"rbc-header"}>
+                                                <WetherIcon label={props.label}/>
+                                                <TemperatureDisplay/>
+                                            </div>
+                                        )
+                                    } else {
+                                        return (
+                                            <div className={"rbc-header"}>
+                                                {props.label}
+                                               {/* <p>{moment(props.date).diff(dateContext.date(), "days")}</p>*/}
+                                                <p style={{color: "blue", fontWeight: "bolder"}}>Wettervoraussage in: {moment.duration(moment(props.date).diff(dateContext)).asDays().toFixed(0)+" "}
+                                                Tagen
+                                                </p>
+                                            </div>
+                                        )
+                                    }
+                                }
                             },
                         }
                         }

@@ -7,13 +7,11 @@ import moment from "moment";
 
 interface WetherIconProps {
     label: string,
-    date: Date
 }
 
-const WetherIcon: FunctionComponent<WetherIconProps> = ({label, date}) => {
+const WetherIcon: FunctionComponent<WetherIconProps> = ({label}) => {
 
-    let [active, setActive] = useState(false);
-    const {wetherData, dateContext} = useCalendarContext();
+    const {wetherData} = useCalendarContext();
 
     const parseWetherInformation = (dailyWether: DailyWether): ReactElement[] => {
         return dailyWether.data.map((item: DailyWetherMeta, day: number) => {
