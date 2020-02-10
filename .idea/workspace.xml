@@ -4,7 +4,6 @@
     <list default="true" id="6308aefc-c47f-44cb-877c-3b6bb05d24de" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/styles/app.sass" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/app.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/customCalendar.sass" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/customCalendar.sass" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,6 +52,18 @@
     <option name="toolchainHomeDirectory" value="/usr/bin" />
     <option name="version" value="2" />
   </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -86,7 +97,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
@@ -109,21 +122,25 @@
       <screen x="0" y="42" width="1920" height="1038" />
     </state>
     <state x="99" y="138" width="1722" height="843" key="DiffContextDialog/0.42.1920.1038/1920.0.1920.1080@0.42.1920.1038" timestamp="1581307476404" />
-    <state width="1874" height="275" key="GridCell.Tab.0.bottom" timestamp="1581309382887">
-      <screen x="0" y="42" width="1920" height="1038" />
+    <state width="1559" height="221" key="GridCell.Tab.0.bottom" timestamp="1581310797706">
+      <screen x="0" y="0" width="1600" height="860" />
     </state>
+    <state width="1559" height="221" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1581310797706" />
     <state width="1874" height="275" key="GridCell.Tab.0.bottom/0.42.1920.1038/1920.0.1920.1080@0.42.1920.1038" timestamp="1581309382887" />
-    <state width="1874" height="275" key="GridCell.Tab.0.center" timestamp="1581309382886">
-      <screen x="0" y="42" width="1920" height="1038" />
+    <state width="1559" height="221" key="GridCell.Tab.0.center" timestamp="1581310797706">
+      <screen x="0" y="0" width="1600" height="860" />
     </state>
+    <state width="1559" height="221" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1581310797706" />
     <state width="1874" height="275" key="GridCell.Tab.0.center/0.42.1920.1038/1920.0.1920.1080@0.42.1920.1038" timestamp="1581309382886" />
-    <state width="1874" height="275" key="GridCell.Tab.0.left" timestamp="1581309382886">
-      <screen x="0" y="42" width="1920" height="1038" />
+    <state width="1559" height="221" key="GridCell.Tab.0.left" timestamp="1581310797706">
+      <screen x="0" y="0" width="1600" height="860" />
     </state>
+    <state width="1559" height="221" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1581310797706" />
     <state width="1874" height="275" key="GridCell.Tab.0.left/0.42.1920.1038/1920.0.1920.1080@0.42.1920.1038" timestamp="1581309382886" />
-    <state width="1874" height="275" key="GridCell.Tab.0.right" timestamp="1581309382886">
-      <screen x="0" y="42" width="1920" height="1038" />
+    <state width="1559" height="221" key="GridCell.Tab.0.right" timestamp="1581310797706">
+      <screen x="0" y="0" width="1600" height="860" />
     </state>
+    <state width="1559" height="221" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1581310797706" />
     <state width="1874" height="275" key="GridCell.Tab.0.right/0.42.1920.1038/1920.0.1920.1080@0.42.1920.1038" timestamp="1581309382886" />
     <state x="559" y="297" key="Vcs.Push.Dialog.v2" timestamp="1581308931576">
       <screen x="0" y="42" width="1920" height="1038" />
@@ -133,5 +150,13 @@
       <screen x="0" y="42" width="1920" height="1038" />
     </state>
     <state x="736" y="481" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.42.1920.1038/1920.0.1920.1080@0.42.1920.1038" timestamp="1581306542284" />
+    <state x="456" y="195" key="run.anything.popup" timestamp="1581310463907">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="456" y="195" key="run.anything.popup/0.0.1600.860@0.0.1600.860" timestamp="1581310463907" />
+    <state x="463" y="180" width="672" height="678" key="search.everywhere.popup" timestamp="1581310703930">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="463" y="180" width="672" height="678" key="search.everywhere.popup/0.0.1600.860@0.0.1600.860" timestamp="1581310703930" />
   </component>
 </project>

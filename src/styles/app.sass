@@ -2,8 +2,8 @@
 
 #root
   @media screen and (width: 301px)
-   *
-    font-size: 5px!important
+    *
+      font-size: 5px !important
 
 body
   background-color: $bg-color
@@ -24,6 +24,7 @@ body
   color: $dark-bt-color
   font-weight: bolder
   align-content: center
+
   h5
     margin: 0 2vmin
 
@@ -49,11 +50,13 @@ body
   margin-right: 5%
   padding: 5%
   color: white
+
   #homepage-presentment-text
     border-radius: 15px
     padding: 5% 2%
     background-color: $hwr-color
     min-width: 40%
+
   #homepage-presentment-button
     margin-left: 5%
     transition: ease-in-out all 0.5s
@@ -62,22 +65,26 @@ body
     padding: 2%
     max-width: 20%
     background-color: rgba(21, 22, 31, 0.56)
+
     img
       width: 80% !important
       height: 80% !important
+
     &:hover
       transition: all 0.5s ease-in
       cursor: pointer
       transform: scale(1.2)
       border: rgba(245, 245, 245, 0.51) 1px solid
       border-radius: 30px
+
       *
         transition: 1.5s all ease-in-out
-        transform: scale(0.5) rotateX(360deg)
+        transform: scale(1.2) rotateX(360deg)
         border-radius: 20px
         border: 1px solid rgba(245, 245, 245, 0.39)
         box-shadow: black 0 10px 2vmin 1vmin
         background-color: $hwr-color-active-small-transparency
+
 .home-container
   display: flex
   justify-content: center
@@ -88,14 +95,15 @@ body
   background-blend-mode: color
 
 .weather-icon
-  display: inline-flex
+  display: block!important
 
 .carouselA
   display: flex
+
   .carousel-inner
     width: 100vw
 
 .temperature-display
-  display: flex!important
+  display: block !important
   flex: 1 0
   flex-flow: wrap
