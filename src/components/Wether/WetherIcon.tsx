@@ -1,18 +1,24 @@
-import React, {FunctionComponent, ReactElement} from 'react';
+import React, {FunctionComponent, ReactElement, useState} from 'react';
 import {DailyWether, DailyWetherMeta} from "../../model/DarkSideWether";
 import {useCalendarContext} from "../../model/DateContextProvider";
 // @ts-ignore
 import Skycons from "react-skycons"
+import moment from "moment";
 
-const WetherIcon: FunctionComponent<{label: string}> = ({label}) => {
+interface WetherIconProps {
+    label: string,
+    date: Date
+}
 
-    const {wetherData} = useCalendarContext();
+const WetherIcon: FunctionComponent<WetherIconProps> = ({label, date}) => {
+
+    let [active, setActive] = useState(false);
+    const {wetherData, dateContext} = useCalendarContext();
 
     const parseWetherInformation = (dailyWether: DailyWether): ReactElement[] => {
         return dailyWether.data.map((item: DailyWetherMeta, day: number) => {
             return (
                 <React.Fragment key={day}>
-                    {label}
                     <Skycons
                         className={"weather-icon"}
                         icon={item.icon.toUpperCase().replace(new RegExp("-", "g"), "_")}
@@ -24,7 +30,8 @@ const WetherIcon: FunctionComponent<{label: string}> = ({label}) => {
         });
     };
     return (
-        <div className={"rbc-header"}>
+        <div className={"rbc-header" }>
+            {label}
             {parseWetherInformation(wetherData.daily)[0]}
         </div>
     );
