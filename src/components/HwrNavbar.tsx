@@ -1,5 +1,5 @@
 import React from 'react';
-import {Button, Nav, Navbar} from "react-bootstrap";
+import {Navbar} from "react-bootstrap";
 import hwrLogo from "../resources/hwr-logo-alt.svg";
 import {useCarouselContext} from "./CarouselWrapper";
 import {CarouselEnum} from "../model/CarouselEnum";

@@ -13,7 +13,7 @@ import WetherIcon from "../Wether/WetherIcon";
 
 
 export const MyCalendar: FunctionComponent = () => {
-    const {eventData, dateContext, today} = useCalendarContext();
+    const {eventData, dateContext} = useCalendarContext();
     const localizer = momentLocalizer(moment);
     const [transformedEvents, setTransformedEvent] = useState<Event[] | undefined>(undefined);
 

@@ -1,9 +1,8 @@
-import React, {FunctionComponent, ReactElement, useState} from 'react';
+import React, {FunctionComponent, ReactElement} from 'react';
 import {DailyWether, DailyWetherMeta} from "../../model/DarkSideWether";
 import {useCalendarContext} from "../../model/DateContextProvider";
 // @ts-ignore
 import Skycons from "react-skycons"
-import moment from "moment";
 
 interface WetherIconProps {
     label: string,
