@@ -104,19 +104,17 @@ export const DateContextProvider: FunctionComponent<{ children: ReactNode }> = (
 
         async function fetchWetherData() {
             const response: AxiosResponse<DarkSideWetherResponse> = await axios.request<DarkSideWetherResponse>({
-                url: "http://localhost:8080/api/weather/forecast",
+                url: "http://138.68.108.152:8080/api/weather/forecast",
                 method: "GET",
             });
             console.log(response.data);
             setWetherData(response.data)
         }
 
-       /* Promise.all([fetchDataEventData(), fetchWetherData()])*/
-            fetchDataEventData().catch((error: AxiosError) => {
+        Promise.all([fetchDataEventData(), fetchWetherData()])
+            .catch((error: AxiosError) => {
                 console.log(error)
-            }).then(() => fetchWetherData().catch((error: AxiosError) => {
-                console.log(error)
-            }));
+            })
     }, []);
 
     return (
