@@ -101,10 +101,11 @@ export const DateContextProvider: FunctionComponent<{ children: ReactNode }> = (
             setEventData(EventService.mergeAssociatedEvents(response.data));
         }
 
+
         async function fetchWetherData() {
             const response: AxiosResponse<DarkSideWetherResponse> = await axios.request<DarkSideWetherResponse>({
                 url: "http://localhost:8080/api/weather/forecast",
-                method: "GET"
+                method: "GET",
             });
             console.log(response.data);
             setWetherData(response.data)
