@@ -41,7 +41,7 @@ const CarouselWrapper: FunctionComponent<CarouselWrapperProps> = ({content}) => 
     const {index} = useCarouselContext();
 
     return (
-        <Carousel className={"carousel"}
+        <Carousel className={"carouselA"}
                   activeIndex={index}
                   onSelect={() => {}}
                   interval={null}

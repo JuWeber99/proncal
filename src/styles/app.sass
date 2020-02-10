@@ -3,10 +3,14 @@
 $bg-color: rgba(166, 184, 209, 0.26)
 $hwr-dark-red: rgba(104, 12, 9, 0.73)
 
+#root
+  @media screen and (width: 301px)
+   *
+    font-size: 5px!important
+
 body
   background-color: $bg-color
   height: 100vh
-
 
 .calendar-metadata-container
   display: flex
@@ -17,7 +21,7 @@ body
   flex-grow: 2
   justify-content: center
   border-radius: 10px
-  margin-bottom: 0.3rem
+  margin-bottom: 0.3%
   padding: 1vmin 0
   background-color: rgba(245, 222, 179, 1)
   color: $dark-bt-color
@@ -27,9 +31,9 @@ body
     margin: 0 2vmin
 
 .calendar-icon
-  margin: 0 3rem
-  width: 10rem
-  height: 10rem
+  margin: 0 3%
+  width: 10%
+  height: 10%
 
 .event-card
   display: inline-flex
@@ -40,47 +44,56 @@ body
 
 .homepage-presentment-container
   display: flex
-  width: 100vw
   align-self: center
   justify-content: center
   align-items: center
   text-align: center
   font-weight: bolder
-  margin-right: 5rem
-  padding: 5rem
+  margin-right: 5%
+  padding: 5%
   color: white
   #homepage-presentment-text
     border-radius: 15px
-    padding: 5rem 2rem
+    padding: 5% 2%
     background-color: $hwr-color
-    box-shadow: white -1px 0 1rem 1px
+    min-width: 40%
   #homepage-presentment-button
-    margin-left: 5rem
+    margin-left: 5%
     transition: ease-in-out all 0.5s
     transform: rotateY(180deg)
-    border-radius: 5rem
-    background-color: rgba(245, 222, 179, 0.43)
+    border-radius: 20px
+    padding: 2%
+    max-width: 20%
+    background-color: rgba(21, 22, 31, 0.56)
+    img
+      width: 80% !important
+      height: 80% !important
     &:hover
       transition: all 0.5s ease-in
       cursor: pointer
-      transform: scale(1.2) translateZ(5rem) translateX(1rem)
-      box-shadow: whitesmoke -0.5rem 0.4rem 1px 0.1rem
+      transform: scale(1.2)
+      border: rgba(245, 245, 245, 0.51) 1px solid
       border-radius: 30px
-      background-color: $hwr-color-active-small-transparency
       *
         transition: 1.5s all ease-in-out
         transform: scale(0.5) rotateX(360deg)
         border-radius: 20px
-
+        border: 1px solid rgba(245, 245, 245, 0.39)
+        box-shadow: black 0 10px 2vmin 1vmin
+        background-color: $hwr-color-active-small-transparency
 .home-container
   display: flex
   justify-content: center
   align-items: center
   background-image: url("../resources/bg2.jpg")
-  background-size: contain
+  background-size: cover
   background-color: rgba(0, 0, 0, 0.76)
   background-blend-mode: color
 
 .weather-icon
-  background-color: #5e65ff
-  display: block!important
+  display: inline-flex
+
+.carouselA
+  display: flex
+  .carousel-inner
+    width: 100vw

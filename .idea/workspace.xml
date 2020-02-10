@@ -2,11 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6308aefc-c47f-44cb-877c-3b6bb05d24de" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/Wether/TemperatureDisplay.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Wether/WetherIcon.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/WetherDisplay.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Wether/WetherDisplay.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/CarouselWrapper.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CarouselWrapper.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Homepage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Homepage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Wether/TemperatureDisplay.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Wether/TemperatureDisplay.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Wether/WetherIcon.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Wether/WetherIcon.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/calendar/EventCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/calendar/EventCard.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/calendar/MyCalendar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/calendar/MyCalendar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/DateContextProvider.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/DateContextProvider.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/dummyWether.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/dummyWether.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/flash.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/flash.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/next-icon.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/next-icon.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/sunny.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/sunny.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/umbrella.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/umbrella.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/setupTests.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/setupTests.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/styles/app.sass" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/app.sass" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/styles/customCalendar.sass" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/customCalendar.sass" afterDir="false" />
     </list>
@@ -387,34 +397,34 @@
     <state x="337" y="50" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1581094650537" />
     <state x="524" y="102" key="CommitChangelistDialog2/0.42.1920.1038/1920.0.1920.1080@0.42.1920.1038" timestamp="1581290007498" />
     <state x="2444" y="62" key="CommitChangelistDialog2/0.42.1920.1038/1920.0.1920.1080@1920.0.1920.1080" timestamp="1581226999704" />
-    <state x="83" y="80" width="1435" height="699" key="DiffContextDialog" timestamp="1581077508778">
-      <screen x="0" y="0" width="1600" height="860" />
+    <state x="99" y="138" width="1722" height="843" key="DiffContextDialog" timestamp="1581294860897">
+      <screen x="0" y="42" width="1920" height="1038" />
     </state>
     <state x="83" y="80" width="1435" height="699" key="DiffContextDialog/0.0.1600.860@0.0.1600.860" timestamp="1581077508778" />
-    <state x="99" y="138" width="1722" height="843" key="DiffContextDialog/0.42.1920.1038/1920.0.1920.1080@0.42.1920.1038" timestamp="1581039871678" />
-    <state width="1874" height="275" key="GridCell.Tab.0.bottom" timestamp="1581294509584">
+    <state x="99" y="138" width="1722" height="843" key="DiffContextDialog/0.42.1920.1038/1920.0.1920.1080@0.42.1920.1038" timestamp="1581294860897" />
+    <state width="1874" height="275" key="GridCell.Tab.0.bottom" timestamp="1581299518787">
       <screen x="0" y="42" width="1920" height="1038" />
     </state>
     <state width="1559" height="222" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1581094303672" />
-    <state width="1874" height="275" key="GridCell.Tab.0.bottom/0.42.1920.1038/1920.0.1920.1080@0.42.1920.1038" timestamp="1581294509584" />
+    <state width="1874" height="275" key="GridCell.Tab.0.bottom/0.42.1920.1038/1920.0.1920.1080@0.42.1920.1038" timestamp="1581299518787" />
     <state width="1874" height="289" key="GridCell.Tab.0.bottom/0.42.1920.1038/1920.0.1920.1080@1920.0.1920.1080" timestamp="1581226575058" />
-    <state width="1874" height="275" key="GridCell.Tab.0.center" timestamp="1581294509584">
+    <state width="1874" height="275" key="GridCell.Tab.0.center" timestamp="1581299518786">
       <screen x="0" y="42" width="1920" height="1038" />
     </state>
     <state width="1559" height="222" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1581094303672" />
-    <state width="1874" height="275" key="GridCell.Tab.0.center/0.42.1920.1038/1920.0.1920.1080@0.42.1920.1038" timestamp="1581294509584" />
+    <state width="1874" height="275" key="GridCell.Tab.0.center/0.42.1920.1038/1920.0.1920.1080@0.42.1920.1038" timestamp="1581299518786" />
     <state width="1874" height="289" key="GridCell.Tab.0.center/0.42.1920.1038/1920.0.1920.1080@1920.0.1920.1080" timestamp="1581226575058" />
-    <state width="1874" height="275" key="GridCell.Tab.0.left" timestamp="1581294509584">
+    <state width="1874" height="275" key="GridCell.Tab.0.left" timestamp="1581299518786">
       <screen x="0" y="42" width="1920" height="1038" />
     </state>
     <state width="1559" height="222" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1581094303672" />
-    <state width="1874" height="275" key="GridCell.Tab.0.left/0.42.1920.1038/1920.0.1920.1080@0.42.1920.1038" timestamp="1581294509584" />
+    <state width="1874" height="275" key="GridCell.Tab.0.left/0.42.1920.1038/1920.0.1920.1080@0.42.1920.1038" timestamp="1581299518786" />
     <state width="1874" height="289" key="GridCell.Tab.0.left/0.42.1920.1038/1920.0.1920.1080@1920.0.1920.1080" timestamp="1581226575058" />
-    <state width="1874" height="275" key="GridCell.Tab.0.right" timestamp="1581294509584">
+    <state width="1874" height="275" key="GridCell.Tab.0.right" timestamp="1581299518786">
       <screen x="0" y="42" width="1920" height="1038" />
     </state>
     <state width="1559" height="222" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1581094303672" />
-    <state width="1874" height="275" key="GridCell.Tab.0.right/0.42.1920.1038/1920.0.1920.1080@0.42.1920.1038" timestamp="1581294509584" />
+    <state width="1874" height="275" key="GridCell.Tab.0.right/0.42.1920.1038/1920.0.1920.1080@0.42.1920.1038" timestamp="1581299518786" />
     <state width="1874" height="289" key="GridCell.Tab.0.right/0.42.1920.1038/1920.0.1920.1080@1920.0.1920.1080" timestamp="1581226575058" />
     <state x="669" y="278" key="MultipleFileMergeDialog" timestamp="1581217625899">
       <screen x="0" y="42" width="1920" height="1038" />
@@ -453,22 +463,22 @@
       <screen x="0" y="42" width="1920" height="1038" />
     </state>
     <state x="736" y="481" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.42.1920.1038/1920.0.1920.1080@0.42.1920.1038" timestamp="1581273103719" />
-    <state x="562" y="250" width="797" height="623" key="find.popup" timestamp="1581293655157">
+    <state x="562" y="250" width="797" height="623" key="find.popup" timestamp="1581298361485">
       <screen x="0" y="42" width="1920" height="1038" />
     </state>
     <state x="468" y="172" width="664" height="516" key="find.popup/0.0.1600.860@0.0.1600.860" timestamp="1581095766078" />
-    <state x="562" y="250" width="797" height="623" key="find.popup/0.42.1920.1038/1920.0.1920.1080@0.42.1920.1038" timestamp="1581293655157" />
+    <state x="562" y="250" width="797" height="623" key="find.popup/0.42.1920.1038/1920.0.1920.1080@0.42.1920.1038" timestamp="1581298361485" />
     <state x="2482" y="216" width="797" height="649" key="find.popup/0.42.1920.1038/1920.0.1920.1080@1920.0.1920.1080" timestamp="1581225152148" />
     <state x="547" y="277" width="672" height="677" key="run.anything.popup" timestamp="1581171421633">
       <screen x="0" y="42" width="1920" height="1038" />
     </state>
     <state x="456" y="195" key="run.anything.popup/0.0.1600.860@0.0.1600.860" timestamp="1581091940065" />
     <state x="547" y="277" width="672" height="677" key="run.anything.popup/0.42.1920.1038/1920.0.1920.1080@0.42.1920.1038" timestamp="1581171421633" />
-    <state x="556" y="259" width="807" height="819" key="search.everywhere.popup" timestamp="1581278625280">
+    <state x="556" y="259" width="807" height="819" key="search.everywhere.popup" timestamp="1581296465185">
       <screen x="0" y="42" width="1920" height="1038" />
     </state>
     <state x="463" y="180" width="672" height="678" key="search.everywhere.popup/0.0.1600.860@0.0.1600.860" timestamp="1581078016287" />
-    <state x="556" y="259" width="807" height="819" key="search.everywhere.popup/0.42.1920.1038/1920.0.1920.1080@0.42.1920.1038" timestamp="1581278625279" />
+    <state x="556" y="259" width="807" height="819" key="search.everywhere.popup/0.42.1920.1038/1920.0.1920.1080@0.42.1920.1038" timestamp="1581296465185" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

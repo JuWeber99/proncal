@@ -14,8 +14,9 @@ const WetherIcon: FunctionComponent<{label: string}> = ({label}) => {
                 <React.Fragment key={day}>
                     {label}
                     <Skycons
+                        className={"weather-icon"}
                         icon={item.icon.toUpperCase().replace(new RegExp("-", "g"), "_")}
-                        color={"white"}
+                        color={"black"}
                         autoplay
                     />
                 </React.Fragment>

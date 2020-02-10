@@ -1,6 +1,6 @@
 import React from 'react';
-import {Col, Jumbotron} from "react-bootstrap";
-import calendar from "../resources/calendar2.svg"
+import {Col} from "react-bootstrap";
+import calendar from "../resources/calendar.png"
 import {useCarouselContext} from "./CarouselWrapper";
 import {CarouselEnum} from "../model/CarouselEnum";
 
@@ -8,7 +8,7 @@ const Homepage = () => {
     const {setIndex, index} = useCarouselContext();
 
     return (
-        <Jumbotron className={"home-container"}>
+        <Col className={"home-container"}>
             <Col className={"homepage-presentment-container"}>
                 <div id={"homepage-presentment-text"}>
                     <h1>HWR - Kalender</h1>
@@ -29,7 +29,7 @@ const Homepage = () => {
                     />
                 </div>
             </Col>
-        </Jumbotron>
+        </Col>
     );
 };
 export default Homepage

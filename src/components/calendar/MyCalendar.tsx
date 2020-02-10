@@ -8,7 +8,6 @@ import "moment/locale/de"
 import "../../styles/app.sass"
 import {EventService} from "../../service/EventService";
 import {EventCard} from "./EventCard";
-import WetherDisplay from "../Wether/WetherDisplay";
 import TemperatureDisplay from "../Wether/TemperatureDisplay";
 import WetherIcon from "../Wether/WetherIcon";
 
@@ -41,7 +40,7 @@ export const MyCalendar: FunctionComponent = () => {
                         components={{
                             event: ((event: EventProps) => EventCard(event)),
                             dateCellWrapper: () => <TemperatureDisplay/>,
-                            week: {header: (label: any) =>  <><WetherIcon label={label.label}/></>}
+                            week: {header: (label: any) => <WetherIcon label={label.label}/>},
                         }}
                     />
                 </React.Fragment>
