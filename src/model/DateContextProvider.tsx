@@ -108,7 +108,7 @@ export const DateContextProvider: FunctionComponent<{ children: ReactNode }> = (
         async function fetchWetherData() {
             const response: AxiosResponse<DarkSideWether> = await axios.request<DarkSideWether>({
                 method: "GET",
-                url: "https://api.darksky.net/forecast/343201781aa363c6c7b72159954bcd8a/52.5,13.41667",
+                url: "http://aaaapi.darksky.net/forecast/343201781aa363c6c7b72159954bcd8a/52.5,13.41667",
             });
             console.log(response);
             setWetherData(response.data)
