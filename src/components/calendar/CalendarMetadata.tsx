@@ -21,8 +21,8 @@ export const CalendarMetadata = () => {
             {
                 (!isLoading && semesterEnd !== undefined && semesterStart !== undefined) &&
                 <div className={"calendar-metadata-container"}>
-                    <h5>Semesterstart: <b>{semesterStart?.format("DD.MM.YYYY")}</b></h5> |
-                    <h5>Semesterende: <b>{semesterEnd?.format("DD.MM.YYYY")}</b></h5> |
+                    <h5>Semesterstart: <b>{semesterStart?.format("DD.MM.YYYY")}</b></h5>
+                    <h5>Semesterende: <b>{semesterEnd?.format("DD.MM.YYYY")}</b></h5>
                     <h5>Zeit bis zum Semesterende: <b>{semesterTimeLeft}</b></h5>
                     {/*<p>{moment.duration(moment(eventData[0].dtend).diff(eventData[0].dtstart)).asHours()}</p>*/}
                 </div>

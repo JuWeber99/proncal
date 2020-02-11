@@ -1,5 +1,5 @@
 import React from 'react';
-import {Navbar} from "react-bootstrap";
+import {Nav, Navbar} from "react-bootstrap";
 import hwrLogo from "../resources/hwr-logo-alt.svg";
 import {useCarouselContext} from "./CarouselWrapper";
 import {CarouselEnum} from "../model/CarouselEnum";
@@ -11,7 +11,7 @@ export const HwrNavbar = () => {
         <Navbar bg="dark" variant="dark"
                 sticky={"top"}
                 as={"div"}
-             >
+        >
             <Navbar.Brand onClick={
                 () => {
                     if (index === CarouselEnum.CALENDAR)
@@ -26,12 +26,10 @@ export const HwrNavbar = () => {
                 />
                 HWR Berlin - Stundenplan
             </Navbar.Brand>
-           {/* {
-                index === CarouselEnum.CALENDAR &&
-                <Nav.Link>
-                    <Button onClick={() => setIndex(index-1)}>  </Button>
-                </Nav.Link>
-            }*/}
+            {index === CarouselEnum.CALENDAR &&
+            <Nav.Link
+                style={{color: "lightgray"}}
+                onClick={() => setIndex(index - 1)}>Zurück</Nav.Link>}
         </Navbar>
     );
 };

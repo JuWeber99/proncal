@@ -4,7 +4,7 @@ $hwr-color: rgb(213, 34, 55)
 $hwr-color-active-small-transparency: rgba(26, 8, 93, 0.71)
 $hwr-color-active: rgba(0, 0, 135, 1)
 $dark-bt-color: #15161f
-$custom-yellow: rgba(180, 141, 245, 0.43)
+$today-indicator-color: rgba(180, 141, 245, 0.43)
 $bg-color: rgba(166, 184, 209, 0.26)
 $hwr-dark-red: rgba(104, 12, 9, 0.73)
 
@@ -49,18 +49,22 @@ h5
       font-size: 60%
 
 .rbc-btn-group
-  margin: 0 1rem
-
   button
     border-radius: 10px
-    background-color: $hwr-color
-    color: white
-
+    background-color: rgb(201, 201, 201)
+    color: $hwr-color-active-small-transparency
+    font-weight: bold !important
+    &:focus, &:active, &:hover
+      background-color: $hwr-color-active-small-transparency
+      color: whitesmoke
+      border: 1px solid whitesmoke
   button.rbc-active
     background-color: $hwr-color-active-small-transparency
+    color: whitesmoke
+
 
 .rbc-current-time-indicator
-  background-color: $dark-bt-color
+  background-color: $today-indicator-color
 
 .navbar
   background-color: $dark-bt-color !important
@@ -94,12 +98,12 @@ h5
   border-top: 1px rgba(211, 211, 211, 0.36) solid
 
 .rbc-allday-cell
-  max-height: 10px
+  display: none
 
 .rbc-timeslot-group
   *
     background-color: $dark-bt-color
-    border: none!important
+    border: none !important
 
 .rbc-time-view
   > *
