@@ -4,7 +4,7 @@ import {DailyWetherMeta, DarkSideWetherResponse} from "../../model/DarkSideWethe
 import moment from "moment";
 import axios from "axios"
 import {Spinner} from 'react-bootstrap';
-import TemperatureDisplay from "./TemperatureDisplay";
+import {TemperatureDisplay} from "./TemperatureDisplay";
 import {WeatherIcon} from "./WeatherIcon";
 
 
@@ -28,7 +28,7 @@ export const WeatherInformation: FunctionComponent<WeatherHeaderProps> = ({label
         }
 
         fetchData().catch((error) => console.log(error)).finally(() => setIsLoading(false));
-    }, [date]);
+    }, []);
 
 
     return (
