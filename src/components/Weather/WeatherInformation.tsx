@@ -1,11 +1,11 @@
 import React, {FunctionComponent, useEffect, useState} from 'react';
-import {DailyWetherMeta, DarkSideWetherResponse} from "../../model/DarkSideWether";
+import {DailyWetherMeta, DarkSideWetherResponse} from "../../types/DarkSideWether";
 import moment from "moment";
 import axios, {AxiosError} from "axios"
 import {Spinner} from 'react-bootstrap';
 import {TemperatureDisplay} from "./TemperatureDisplay";
 import {WeatherIcon} from "./WeatherIcon";
-import {FetchingError} from "../FetchingError";
+import {FetchingError} from "../ui/FetchingError";
 
 
 export interface WeatherHeaderProps {
@@ -36,11 +36,17 @@ export const WeatherInformation: FunctionComponent<WeatherHeaderProps> = ({label
     return (
         <div>
             {isLoading && todayWeather === undefined ?
-                <Spinner animation={"grow"} variant={"light"}/>
+                <React.Fragment>
+                    {label}
+                    <Spinner animation={"grow"} variant={"light"}/>
+                </React.Fragment>
                 :
                 (
                     isError ?
-                        <FetchingError/>
+                        <React.Fragment>
+                            {label}
+                            <FetchingError/>
+                        </React.Fragment>
                         :
                         <React.Fragment>
                             <div

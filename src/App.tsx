@@ -1,19 +1,19 @@
 import React from 'react';
 import {MyCalendar} from "./components/calendar/MyCalendar";
-import {DateContextProvider} from "./model/DateContextProvider";
+import {CalendarContextProvider} from "./components/calendar/CalendarContextProvider";
 import {CalendarMetadata} from "./components/calendar/CalendarMetadata";
-import {HwrNavbar} from "./components/HwrNavbar";
-import Homepage from "./components/Homepage";
-import CarouselWrapper, {CarouselContextProvider} from "./components/CarouselWrapper";
+import {HwrNavbar} from "./components/ui/HwrNavbar";
+import Homepage from "./components/ui/Homepage";
+import CarouselWrapper, {CarouselContextProvider} from "./components/ui/CarouselWrapper";
 import {BrowserRouter, Route} from "react-router-dom";
 import "./styles/media-queries.sass"
 
 const carouselContent = [
     <Homepage/>,
-    <DateContextProvider>
+    <CalendarContextProvider>
         <MyCalendar/>
         <CalendarMetadata/>
-    </DateContextProvider>
+    </CalendarContextProvider>
 ];
 
 const App = () => {

@@ -1,4 +1,4 @@
-import {MyEvent} from "../model/EventModel";
+import {MyEvent} from "../types/Event";
 import axios from "axios";
 import {json2csv} from "json-2-csv";
 

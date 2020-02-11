@@ -1,8 +1,8 @@
 import moment, {Moment} from "moment";
 import React, {Dispatch, FunctionComponent, ReactNode, SetStateAction, useContext, useEffect, useState} from "react";
-import {MyEvent} from "./EventModel";
+import {MyEvent} from "../../types/Event";
 import axios, {AxiosError, AxiosResponse} from "axios";
-import {EventService} from "../service/EventService";
+import {EventService} from "../../service/EventService";
 
 export interface CalendarContext {
     isLoading: boolean
@@ -48,7 +48,7 @@ const initalContext: CalendarContext = {
 
 export const CalendarContext = React.createContext<CalendarContext>(initalContext);
 
-export const DateContextProvider: FunctionComponent<{ children: ReactNode }> = ({children}) => {
+export const CalendarContextProvider: FunctionComponent<{ children: ReactNode }> = ({children}) => {
 
     const [eventData, setEventData] = useState<MyEvent[]>([]);
     const [dateContext, setDateContext] = useState<Moment>(momentProvider);

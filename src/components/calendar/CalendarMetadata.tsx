@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import {useCalendarContext} from "../../model/DateContextProvider";
+import {useCalendarContext} from "./CalendarContextProvider";
 import moment, {Moment} from "moment";
 
 export const CalendarMetadata = () => {

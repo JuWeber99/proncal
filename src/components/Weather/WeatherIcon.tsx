@@ -1,4 +1,4 @@
-import {DarksideIcon} from "../../model/DarkSideWether";
+import {DarksideIcon} from "../../types/DarkSideWether";
 import React, {FunctionComponent} from "react";
 // @ts-ignore
 import Skycons from "react-skycons"

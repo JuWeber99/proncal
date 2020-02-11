@@ -2,7 +2,7 @@ import React, {FunctionComponent, useEffect, useState} from 'react';
 import {Calendar, Event, EventProps, momentLocalizer} from "react-big-calendar";
 import moment from "moment";
 import "react-big-calendar/lib/css/react-big-calendar.css"
-import {useCalendarContext} from "../../model/DateContextProvider";
+import {useCalendarContext} from "./CalendarContextProvider";
 import "../../styles/customCalendar.sass"
 import "moment/locale/de"
 import "../../styles/app.sass"

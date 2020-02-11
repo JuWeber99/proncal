@@ -1,8 +1,8 @@
 import React from 'react';
 import {Col} from "react-bootstrap";
-import calendar from "../resources/calendar.png"
+import calendar from "../../resources/calendar.png"
 import {useCarouselContext} from "./CarouselWrapper";
-import {CarouselEnum} from "../model/CarouselEnum";
+import {CarouselEnum} from "../../types/CarouselEnum";
 
 const Homepage = () => {
     const {setIndex, index} = useCarouselContext();

@@ -1,6 +1,6 @@
 import moment from "moment";
 import {Event} from "react-big-calendar";
-import {MyEvent} from "../model/EventModel";
+import {MyEvent} from "../types/Event";
 
 export class EventService {
 

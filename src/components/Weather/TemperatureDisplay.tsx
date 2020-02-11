@@ -1,5 +1,5 @@
 import React, {FunctionComponent} from 'react';
-import {DailyWetherMeta} from "../../model/DarkSideWether";
+import {DailyWetherMeta} from "../../types/DarkSideWether";
 import he from "he";
 
 interface TemperatureInformation {

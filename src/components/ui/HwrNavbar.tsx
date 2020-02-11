@@ -1,8 +1,8 @@
 import React from 'react';
 import {Nav, Navbar} from "react-bootstrap";
-import hwrLogo from "../resources/hwr-logo-alt.svg";
+import hwrLogo from "../../resources/hwr-logo-alt.svg";
 import {useCarouselContext} from "./CarouselWrapper";
-import {CarouselEnum} from "../model/CarouselEnum";
+import {CarouselEnum} from "../../types/CarouselEnum";
 
 export const HwrNavbar = () => {
     const {index, setIndex} = useCarouselContext();
