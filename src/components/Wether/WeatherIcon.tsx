@@ -1,55 +1,67 @@
-import React, {FunctionComponent, ReactElement, useEffect} from 'react';
-import {DailyWether, DailyWetherMeta} from "../../model/DarkSideWether";
-import {useCalendarContext} from "../../model/DateContextProvider";
+import React, {FunctionComponent, ReactElement, useEffect, useState} from 'react';
+import {DailyWetherMeta, DarkSideWetherResponse} from "../../model/DarkSideWether";
 // @ts-ignore
 import Skycons from "react-skycons"
 import moment from "moment";
 import axios from "axios"
+import {Spinner} from 'react-bootstrap';
+import TemperatureDisplay from "./TemperatureDisplay";
 
 
-interface WetherIconProps {
+export interface WeatherHeaderProps {
     label: string,
     date: Date
 }
 
-const WeatherIcon: FunctionComponent<WetherIconProps> = ({label, date}) => {
+const WeatherIcon: FunctionComponent<WeatherHeaderProps> = ({label, date}) => {
 
-    const {wetherData} = useCalendarContext();
+    const [todayWeather, setTodayWeather] = useState<undefined | DailyWetherMeta[]>();
+    const [isLoading, setIsLoading] = useState<boolean>(true);
 
-/*    useEffect(() => {
+    useEffect(() => {
+        async function fetchData() {
+            const response = await axios.get<DarkSideWetherResponse>(
+                "https://proncal-weather-api.dns-cloud.net/" + moment(date).unix()
+            );
+            setTodayWeather(response.data.daily.data);
+            console.log(response.data.daily)
+        }
 
-        axios.get(
-            "https://proncal-weather-api.dns-cloud.net/api/weather/forecast/"+moment(date).unix()
+        fetchData().catch((error) => console.log(error)).finally(() => setIsLoading(false));
+    }, [date]);
+
+
+    function displayWeatherHeading(dailyWether: DailyWetherMeta[]): ReactElement {
+        return (
+            <React.Fragment>
+                <Skycons
+                    className={"weather-icon"}
+                    icon={dailyWether[0].icon.toUpperCase().replace(new RegExp("-", "g"), "_")}
+                    color={"white"}
+                    autoplay
+                />
+            </React.Fragment>
         )
-    });*/
+    }
 
-
-    const parseWetherInformation = (dailyWether: DailyWether): ReactElement[] => {
-        return dailyWether.data.filter((item) => moment(item.time).date() !== moment(date).date())
-            .map((item: DailyWetherMeta, day: number) => {
-                return (
-                    <React.Fragment key={day}>
-                        <Skycons
-                            className={"weather-icon"}
-                            icon={item.icon.toUpperCase().replace(new RegExp("-", "g"), "_")}
-                            color={"white"}
-                            autoplay
-                        />
-                    </React.Fragment>
-                )
-            })
-    };
     return (
         <div>
-            <div
-            style={{
-                display: "inline-block",
-                flexDirection: "row",
-                margin: "5px"
-            }}
-            >{label}
-                {parseWetherInformation(wetherData.daily)[0]}
-            </div>
+            {isLoading && todayWeather === undefined ?
+                <Spinner animation={"grow"} variant={"light"}/>
+                :
+                <React.Fragment>
+                    <div
+                        style={{
+                            display: "inline-block",
+                            flexDirection: "row",
+                            margin: "5px"
+                        }}
+                    >{label}
+                        {displayWeatherHeading(todayWeather as DailyWetherMeta[])}
+                    </div>
+                   <TemperatureDisplay todayWeather={todayWeather as DailyWetherMeta[]}/>
+                </React.Fragment>
+            }
         </div>
     );
 };

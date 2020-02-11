@@ -19,7 +19,9 @@ const Homepage = () => {
                      onClick={
                          () => {
                              if (index === CarouselEnum.HOMEPAGE)
-                                 setIndex(index + 1)
+                                 setTimeout(() => {
+                                     setIndex(index + 1)
+                                 }, 1000)
                          }
                      }>
                     <img

@@ -45,9 +45,7 @@ export const MyCalendar: FunctionComponent = () => {
                                     if (moment(props.date).week() === dateContext.week()) {
                                         return (
                                             <div className={"rbc-header"}>
-                                                {console.log(moment(props.date).unix())}
                                                 <WeatherIcon label={props.label} date={props.date}/>
-                                                <TemperatureDisplay/>
                                             </div>
                                         )
                                     } else {
