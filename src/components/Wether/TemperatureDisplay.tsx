@@ -20,16 +20,12 @@ const TemperatureDisplay = () => {
             };
             return (
                 <React.Fragment key={day}>
-                    <p style={{
-                        borderRadius: "10px",
-                        fontSize: "0.8rem",
-                        backgroundColor: "rgba(245, 245, 245, 0.56)"
-                    }}>
-                        <span style={{color: "red"}}>
+                    <p>
+                        <span style={{color: "rgba(255,91,107,0.71)"}}>
                             Hoch:{data.tHeight}C{he.decode("&deg")}
                         </span>
                         <br/>
-                        <span style={{color: "blue"}}>
+                        <span style={{color: "rgba(79,141,255,0.85)"}}>
                             Tief: {data.tLow}C{he.decode("&deg")}
                         </span>
                     </p>
@@ -39,7 +35,7 @@ const TemperatureDisplay = () => {
     };
 
     return (
-        <div className={"rbc-header temperature-display"}>
+        <div className={"temperature-display"}>
             {parseWetherInformation(wetherData.daily)[0]}
         </div>
     );

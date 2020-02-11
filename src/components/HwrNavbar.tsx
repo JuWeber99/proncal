@@ -11,10 +11,7 @@ export const HwrNavbar = () => {
         <Navbar bg="dark" variant="dark"
                 sticky={"top"}
                 as={"div"}
-                style={{
-                    padding: "1rem",
-                    boxShadow: "0 0.2rem 0.3rem 0 "
-                }}>
+             >
             <Navbar.Brand onClick={
                 () => {
                     if (index === CarouselEnum.CALENDAR)

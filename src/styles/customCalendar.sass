@@ -1,10 +1,10 @@
 @import 'node_modules/react-big-calendar/lib/sass/styles'
 
-$hwr-color: rgba(213, 12, 47, 0.76)
-$hwr-color-active-small-transparency: rgba(0, 0, 93, 0.71)
+$hwr-color: rgb(213, 34, 55)
+$hwr-color-active-small-transparency: rgba(26, 8, 93, 0.71)
 $hwr-color-active: rgba(0, 0, 135, 1)
 $dark-bt-color: #15161f
-$custom-yellow: rgba(245, 222, 179, 0.43)
+$custom-yellow: rgba(180, 141, 245, 0.43)
 $bg-color: rgba(166, 184, 209, 0.26)
 $hwr-dark-red: rgba(104, 12, 9, 0.73)
 
@@ -12,21 +12,23 @@ h5
   margin-bottom: 0 !important
 
 .rbc-day-slot .rbc-event
-  border: 0.1rem white solid
+  border: 1px #7cd469 solid
 
 .rbc-event
-  background-color: $hwr-color
+  background-color: rgb(213, 34, 55)
   box-shadow: 0px 0px 2px 1px #748296
   color: rgb(255, 255, 255)
-  word-break: break-word
+  word-break: break-all
   font-size: 0.7rem
   font-weight: bolder
-  align-items: center !important
-  justify-content: center !important
   min-height: 5% !important
 
+@media (max-width: 900px)
+  .rbc-event
+    justify-content: start
+
 .rbc-today
-  background-color: rgba(251, 201, 201, 0.48)
+  background-color: rgba(77, 218, 255, 0.11)
 
 .rbc-event.rbc-selected
   background-color: $hwr-color-active-small-transparency
@@ -35,12 +37,16 @@ h5
 
 
 .rbc-toolbar
-  border-top: 0.3rem white solid
+  border-top: 1px rgba(211, 211, 211, 0.36) solid
   font-weight: bolder !important
-  color: whitesmoke
   background-color: $hwr-color-active-small-transparency
-  padding: 0.8rem
+  padding: 1%
   margin-bottom: 0
+
+@media (max-width: 900px)
+  .rbc-toolbar
+    > *
+      font-size: 60%
 
 .rbc-btn-group
   margin: 0 1rem
@@ -67,12 +73,16 @@ h5
     margin: 0 !important
 
 .rbc-time-header-gutter
-  min-width: 3.1rem
-  background-color: $bg-color
+  min-width: 3.1%
+  max-width: 3.1%
+  background-color: $dark-bt-color
+
+.rbc-header
+  border-bottom: none
 
 .rbc-time-header-content
   display: block !important
-  border-left: 2px white solid
+  border-left: 1px rgba(211, 211, 211, 0.36) solid
 
 .rbc-time-column
   border: 1px $dark-bt-color solid
@@ -81,17 +91,16 @@ h5
 
 .rbc-time-header
   padding-top: 15px
-  border-top: 3px $hwr-color-active solid
-  border-bottom: 3px $hwr-color-active solid
+  border-top: 1px rgba(211, 211, 211, 0.36) solid
 
-.rbc-row-content
-  background-color: rgba(128, 128, 128, 0.24)
+.rbc-allday-cell
+  max-height: 10px
 
-.rbc-day-bg
-  border-left: 1px solid $dark-bt-color
-  border-right: 1px solid $dark-bt-color
+.rbc-timeslot-group
+  *
+    background-color: $dark-bt-color
+    border: none!important
 
-.rbc-row.rbc-time-header-cell
+.rbc-time-view
   > *
-    border: 1px solid $dark-bt-color
-    border-bottom: none
+    background-color: transparent !important

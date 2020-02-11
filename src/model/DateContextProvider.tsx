@@ -104,7 +104,7 @@ export const DateContextProvider: FunctionComponent<{ children: ReactNode }> = (
 
         async function fetchWetherData() {
             const response: AxiosResponse<DarkSideWetherResponse> = await axios.request<DarkSideWetherResponse>({
-                url: "http://138.68.108.152:8080/api/weather/forecast",
+                url: "https://proncal-weather-api.dns-cloud.net/api/weather/forecast",
                 method: "GET",
             });
             console.log(response.data);

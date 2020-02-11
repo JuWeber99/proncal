@@ -9,7 +9,7 @@ import "../../styles/app.sass"
 import {EventService} from "../../service/EventService";
 import {EventCard} from "./EventCard";
 import TemperatureDisplay from "../Wether/TemperatureDisplay";
-import WetherIcon from "../Wether/WetherIcon";
+import WeatherIcon from "../Wether/WeatherIcon";
 
 
 export const MyCalendar: FunctionComponent = () => {
@@ -39,20 +39,21 @@ export const MyCalendar: FunctionComponent = () => {
                         max={new Date(1, 1, 1, 22)}
                         components={{
                             event: ((event: EventProps) => EventCard(event)),
+                            timeGutterHeader: () => null,
                             week: {
                                 header: (props: any) => {
                                     if (moment(props.date).week() === dateContext.week()) {
                                         return (
                                             <div className={"rbc-header"}>
-                                                <WetherIcon label={props.label} date={props.date}/>
+                                                <WeatherIcon label={props.label} date={props.date}/>
                                                 <TemperatureDisplay/>
                                             </div>
                                         )
                                     } else {
                                         return (
-                                            <div className={"rbc-header"}>
+                                            <div >
                                                 {props.label}
-                                                <p style={{color: "blue", fontWeight: "bolder"}}>Wettervoraussage in: {moment.duration(moment(props.date).diff(dateContext)).asDays().toFixed(0)+" "}
+                                                <p className={"weather-forecast-not"}>Wettervoraussage in: {moment.duration(moment(props.date).diff(dateContext)).asDays().toFixed(0)+" "}
                                                 Tagen
                                                 </p>
                                             </div>

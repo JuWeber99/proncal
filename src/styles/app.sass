@@ -1,13 +1,32 @@
 @import "src/styles/customCalendar"
 
+$border-coloring: rgba(245, 245, 245, 0.51)
+
+@keyframes fadein
+  from
+    opacity: 0
+  to
+    opacity: 1
+
+body
+  background-color: #15161f
+  -webkit-animation: fadein 2s /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadein 2s /* Firefox < 16 */
+  -o-animation: fadein 2s /* Opera < 12.1 */
+  animation: fadein 2s
+
 #root
+  height: 100%
+  margin: 0
+  padding: 0
+  color: whitesmoke
   @media screen and (width: 301px)
     *
       font-size: 5px !important
 
-body
-  background-color: $bg-color
-  height: 100vh
+#footer
+  background-color: $dark-bt-color
+  min-height: inherit
 
 .calendar-metadata-container
   display: flex
@@ -15,13 +34,9 @@ body
   bottom: 0
   left: 0
   right: 0
-  flex-grow: 2
   justify-content: center
-  border-radius: 10px
-  margin-bottom: 0.3%
   padding: 1vmin 0
-  background-color: rgba(245, 222, 179, 1)
-  color: $dark-bt-color
+  background-color: $hwr-color
   font-weight: bolder
   align-content: center
 
@@ -54,7 +69,7 @@ body
   #homepage-presentment-text
     border-radius: 15px
     padding: 5% 2%
-    background-color: $hwr-color
+    background-color: rgba(213, 34, 65, 0.5)
     min-width: 40%
 
   #homepage-presentment-button
@@ -64,7 +79,7 @@ body
     border-radius: 20px
     padding: 2%
     max-width: 20%
-    background-color: rgba(21, 22, 31, 0.56)
+    background-color: rgba(21, 22, 31, 0.51)
 
     img
       width: 80% !important
@@ -74,23 +89,27 @@ body
       transition: all 0.5s ease-in
       cursor: pointer
       transform: scale(1.2)
-      border: rgba(245, 245, 245, 0.51) 1px solid
+      border: $border-coloring 1px solid
       border-radius: 30px
 
       *
-        transition: 1.5s all ease-in-out
-        transform: scale(1.2) rotateX(360deg)
+        transition: 1s all ease-in-out
+        transform: scale(1.1) rotateX(360deg)
         border-radius: 20px
         border: 1px solid rgba(245, 245, 245, 0.39)
         box-shadow: black 0 10px 2vmin 1vmin
-        background-color: $hwr-color-active-small-transparency
+        background-color: $border-coloring
+@media(max-width: 1000px)
+  h1,h2,h3,h4,h5,h6
+    font-size: 1.5rem!important
 
 .home-container
+  margin-top: 3%
   display: flex
   justify-content: center
   align-items: center
   background-image: url("../resources/bg2.jpg")
-  background-size: cover
+  background-size: 50% 100%
   background-color: rgba(0, 0, 0, 0.76)
   background-blend-mode: color
 
@@ -107,3 +126,27 @@ body
   display: block !important
   flex: 1 0
   flex-flow: wrap
+  *
+    text-shadow: 0 0 3px rgba(255, 255, 255, 0.25)
+@media (max-width: 900px)
+  .temperature-display
+    *
+      font-size: 90%!important
+
+.weather-forecast-not
+  background-color: rgba(154, 170, 191, 0.38)
+  @media (max-width: 900px)
+    font-size: 80%
+  @media (max-width: 400px)
+    font-size: 60%
+canvas
+  max-height: 40px
+  max-width: 40px
+  margin-top: 10px
+  margin-right: auto
+  margin-left: auto
+@media (max-width: 900px)
+  canvas
+    max-width: 20px
+    max-height: 20px
+

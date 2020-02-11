@@ -2,8 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6308aefc-c47f-44cb-877c-3b6bb05d24de" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/styles/media-queries.sass" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Wether/WetherIcon.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Wether/WetherIcon.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/HwrNavbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/HwrNavbar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Wether/TemperatureDisplay.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Wether/TemperatureDisplay.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Wether/WetherIcon.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Wether/WeatherIcon.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/calendar/MyCalendar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/calendar/MyCalendar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/DateContextProvider.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/DateContextProvider.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/app.sass" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/app.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/customCalendar.sass" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/customCalendar.sass" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +33,13 @@
     <expand />
     <select />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Sass File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
@@ -36,11 +52,29 @@
   <component name="MacroExpansionManager">
     <option name="directoryName" value="vzsQlWql" />
   </component>
+  <component name="ProjectId" id="1XdKHvTnPn8VOb1d8Fk4bL0Albg" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="list.type.of.created.stylesheet" value="Sass" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="yarn" />
+    <property name="settings.editor.selected.configurable" value="settings.github" />
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
+  </component>
+  <component name="RestServicesNavigator">
+    <treeState>
+      <expand />
+      <select />
+    </treeState>
   </component>
   <component name="RunManager">
     <configuration name="start" type="js.build_tools.npm" nameIsGenerated="true">
@@ -60,7 +94,12 @@
       <list>
         <serviceView>
           <treeState>
-            <expand />
+            <expand>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="weatherDocker" type="9fbbdea:ServiceModel$ServiceNode" />
+              </path>
+            </expand>
             <select />
           </treeState>
         </serviceView>
@@ -120,8 +159,34 @@
       <option name="project" value="LOCAL" />
       <updated>1581346200245</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="adding weather api consumenting">
+      <created>1581356195466</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1581356195466</updated>
+    </task>
+    <task id="LOCAL-00009" summary="adding weather api consumenting">
+      <created>1581369491089</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1581369491089</updated>
+    </task>
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6308aefc-c47f-44cb-877c-3b6bb05d24de" name="Default Changelist" comment="" />
+      <created>1581370446742</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1581370446742</updated>
+      <workItem from="1581370450812" duration="735000" />
+      <workItem from="1581377934310" duration="12599000" />
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -147,44 +212,63 @@
       <screen x="0" y="42" width="1920" height="1038" />
     </state>
     <state x="423" y="219" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.42.1920.1038/1920.0.1920.1080@0.42.1920.1038" timestamp="1581308913441" />
-    <state x="524" y="102" key="CommitChangelistDialog2" timestamp="1581346200133">
-      <screen x="0" y="42" width="1920" height="1038" />
+    <state x="2444" y="62" key="CommitChangelistDialog2" timestamp="1581369491043">
+      <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="437" y="50" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1581315286611" />
     <state x="524" y="102" key="CommitChangelistDialog2/0.42.1920.1038/1920.0.1920.1080@0.42.1920.1038" timestamp="1581346200133" />
+    <state x="2444" y="62" key="CommitChangelistDialog2/0.42.1920.1038/1920.0.1920.1080@1920.0.1920.1080" timestamp="1581369491043" />
     <state x="99" y="138" width="1722" height="843" key="DiffContextDialog" timestamp="1581307476404">
       <screen x="0" y="42" width="1920" height="1038" />
     </state>
     <state x="99" y="138" width="1722" height="843" key="DiffContextDialog/0.42.1920.1038/1920.0.1920.1080@0.42.1920.1038" timestamp="1581307476404" />
-    <state width="1874" height="276" key="GridCell.Tab.0.bottom" timestamp="1581346242962">
+    <state width="1874" height="395" key="GridCell.Tab.0.bottom" timestamp="1581390233500">
       <screen x="0" y="42" width="1920" height="1038" />
     </state>
     <state width="1559" height="530" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1581315634327" />
-    <state width="1874" height="276" key="GridCell.Tab.0.bottom/0.42.1920.1038/1920.0.1920.1080@0.42.1920.1038" timestamp="1581346242962" />
-    <state width="1874" height="276" key="GridCell.Tab.0.center" timestamp="1581346242962">
+    <state width="1874" height="395" key="GridCell.Tab.0.bottom/0.42.1920.1038/1920.0.1920.1080@0.42.1920.1038" timestamp="1581390233500" />
+    <state width="1874" height="86" key="GridCell.Tab.0.bottom/0.42.1920.1038/1920.0.1920.1080@1920.0.1920.1080" timestamp="1581381589910" />
+    <state width="1874" height="395" key="GridCell.Tab.0.center" timestamp="1581390233499">
       <screen x="0" y="42" width="1920" height="1038" />
     </state>
     <state width="1559" height="530" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1581315634327" />
-    <state width="1874" height="276" key="GridCell.Tab.0.center/0.42.1920.1038/1920.0.1920.1080@0.42.1920.1038" timestamp="1581346242962" />
-    <state width="1874" height="276" key="GridCell.Tab.0.left" timestamp="1581346242962">
+    <state width="1874" height="395" key="GridCell.Tab.0.center/0.42.1920.1038/1920.0.1920.1080@0.42.1920.1038" timestamp="1581390233499" />
+    <state width="1874" height="86" key="GridCell.Tab.0.center/0.42.1920.1038/1920.0.1920.1080@1920.0.1920.1080" timestamp="1581381589910" />
+    <state width="1874" height="395" key="GridCell.Tab.0.left" timestamp="1581390233499">
       <screen x="0" y="42" width="1920" height="1038" />
     </state>
     <state width="1559" height="530" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1581315634327" />
-    <state width="1874" height="276" key="GridCell.Tab.0.left/0.42.1920.1038/1920.0.1920.1080@0.42.1920.1038" timestamp="1581346242962" />
-    <state width="1874" height="276" key="GridCell.Tab.0.right" timestamp="1581346242962">
+    <state width="1874" height="395" key="GridCell.Tab.0.left/0.42.1920.1038/1920.0.1920.1080@0.42.1920.1038" timestamp="1581390233499" />
+    <state width="1874" height="86" key="GridCell.Tab.0.left/0.42.1920.1038/1920.0.1920.1080@1920.0.1920.1080" timestamp="1581381589910" />
+    <state width="1874" height="395" key="GridCell.Tab.0.right" timestamp="1581390233499">
       <screen x="0" y="42" width="1920" height="1038" />
     </state>
     <state width="1559" height="530" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1581315634327" />
-    <state width="1874" height="276" key="GridCell.Tab.0.right/0.42.1920.1038/1920.0.1920.1080@0.42.1920.1038" timestamp="1581346242962" />
-    <state x="559" y="297" key="Vcs.Push.Dialog.v2" timestamp="1581346203331">
-      <screen x="0" y="42" width="1920" height="1038" />
+    <state width="1874" height="395" key="GridCell.Tab.0.right/0.42.1920.1038/1920.0.1920.1080@0.42.1920.1038" timestamp="1581390233499" />
+    <state width="1874" height="86" key="GridCell.Tab.0.right/0.42.1920.1038/1920.0.1920.1080@1920.0.1920.1080" timestamp="1581381589910" />
+    <state x="2373" y="175" key="SettingsEditor" timestamp="1581370268044">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2373" y="175" key="SettingsEditor/0.42.1920.1038/1920.0.1920.1080@1920.0.1920.1080" timestamp="1581370268044" />
+    <state x="2479" y="265" key="Vcs.Push.Dialog.v2" timestamp="1581369492758">
+      <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="466" y="211" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1581315289147" />
     <state x="559" y="297" key="Vcs.Push.Dialog.v2/0.42.1920.1038/1920.0.1920.1080@0.42.1920.1038" timestamp="1581346203331" />
+    <state x="2479" y="265" key="Vcs.Push.Dialog.v2/0.42.1920.1038/1920.0.1920.1080@1920.0.1920.1080" timestamp="1581369492758" />
+    <state x="2540" y="366" key="com.intellij.ide.util.TipDialog" timestamp="1581370458014">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2540" y="366" key="com.intellij.ide.util.TipDialog/0.42.1920.1038/1920.0.1920.1080@1920.0.1920.1080" timestamp="1581370458014" />
     <state x="736" y="481" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1581306542284">
       <screen x="0" y="42" width="1920" height="1038" />
     </state>
     <state x="736" y="481" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.42.1920.1038/1920.0.1920.1080@0.42.1920.1038" timestamp="1581306542284" />
+    <state x="608" y="277" width="703" height="586" key="find.popup" timestamp="1581386173746">
+      <screen x="0" y="42" width="1920" height="1038" />
+    </state>
+    <state x="608" y="277" width="703" height="586" key="find.popup/0.42.1920.1038/1920.0.1920.1080@0.42.1920.1038" timestamp="1581386173746" />
+    <state x="2528" y="245" width="703" height="586" key="find.popup/0.42.1920.1038/1920.0.1920.1080@1920.0.1920.1080" timestamp="1581381835259" />
     <state x="456" y="195" key="run.anything.popup" timestamp="1581310463907">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
