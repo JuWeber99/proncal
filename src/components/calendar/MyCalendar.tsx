@@ -45,16 +45,18 @@ export const MyCalendar: FunctionComponent = () => {
                                     if (moment(props.date).week() === dateContext.week()) {
                                         return (
                                             <div className={"rbc-header"}>
+                                                {console.log(moment(props.date).unix())}
                                                 <WeatherIcon label={props.label} date={props.date}/>
                                                 <TemperatureDisplay/>
                                             </div>
                                         )
                                     } else {
                                         return (
-                                            <div >
+                                            <div>
                                                 {props.label}
-                                                <p className={"weather-forecast-not"}>Wettervoraussage in: {moment.duration(moment(props.date).diff(dateContext)).asDays().toFixed(0)+" "}
-                                                Tagen
+                                                <p className={"weather-forecast-not"}>Wettervoraussage
+                                                    in: {moment.duration(moment(props.date).diff(dateContext)).asDays().toFixed(0) + " "}
+                                                    Tagen
                                                 </p>
                                             </div>
                                         )
