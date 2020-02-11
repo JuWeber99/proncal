@@ -1,11 +1,11 @@
-import React, {FunctionComponent, ReactElement, useEffect, useState} from 'react';
+import React, {FunctionComponent, useEffect, useState} from 'react';
 import {DailyWetherMeta, DarkSideWetherResponse} from "../../model/DarkSideWether";
-// @ts-ignore
-import Skycons from "react-skycons"
+
 import moment from "moment";
 import axios from "axios"
 import {Spinner} from 'react-bootstrap';
 import TemperatureDisplay from "./TemperatureDisplay";
+import {WeatherIcon} from "./WeatherIcon";
 
 
 export interface WeatherHeaderProps {
@@ -13,7 +13,7 @@ export interface WeatherHeaderProps {
     date: Date
 }
 
-const WeatherIcon: FunctionComponent<WeatherHeaderProps> = ({label, date}) => {
+export const WeatherInformation: FunctionComponent<WeatherHeaderProps> = ({label, date}) => {
 
     const [todayWeather, setTodayWeather] = useState<undefined | DailyWetherMeta[]>();
     const [isLoading, setIsLoading] = useState<boolean>(true);
@@ -31,19 +31,6 @@ const WeatherIcon: FunctionComponent<WeatherHeaderProps> = ({label, date}) => {
     }, [date]);
 
 
-    function displayWeatherHeading(dailyWether: DailyWetherMeta[]): ReactElement {
-        return (
-            <React.Fragment>
-                <Skycons
-                    className={"weather-icon"}
-                    icon={dailyWether[0].icon.toUpperCase().replace(new RegExp("-", "g"), "_")}
-                    color={"white"}
-                    autoplay
-                />
-            </React.Fragment>
-        )
-    }
-
     return (
         <div>
             {isLoading && todayWeather === undefined ?
@@ -57,7 +44,7 @@ const WeatherIcon: FunctionComponent<WeatherHeaderProps> = ({label, date}) => {
                             margin: "5px"
                         }}
                     >{label}
-                        {displayWeatherHeading(todayWeather as DailyWetherMeta[])}
+                        <WeatherIcon icon={(todayWeather as DailyWetherMeta[])[0].icon}/>
                     </div>
                    <TemperatureDisplay todayWeather={todayWeather as DailyWetherMeta[]}/>
                 </React.Fragment>
@@ -65,5 +52,3 @@ const WeatherIcon: FunctionComponent<WeatherHeaderProps> = ({label, date}) => {
         </div>
     );
 };
-
-export default WeatherIcon;

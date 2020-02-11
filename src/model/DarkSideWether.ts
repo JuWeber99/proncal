@@ -1,4 +1,4 @@
-type DarksideIcon =
+export type DarksideIcon =
     "clear-day"
     | "clear-night"
     | "rain"

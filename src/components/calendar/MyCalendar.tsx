@@ -8,8 +8,7 @@ import "moment/locale/de"
 import "../../styles/app.sass"
 import {EventService} from "../../service/EventService";
 import {EventCard} from "./EventCard";
-import TemperatureDisplay from "../Wether/TemperatureDisplay";
-import WeatherIcon from "../Wether/WeatherIcon";
+import {WeatherInformation} from "../Weather/WeatherInformation";
 
 
 export const MyCalendar: FunctionComponent = () => {
@@ -45,7 +44,7 @@ export const MyCalendar: FunctionComponent = () => {
                                     if (moment(props.date).week() === dateContext.week()) {
                                         return (
                                             <div className={"rbc-header"}>
-                                                <WeatherIcon label={props.label} date={props.date}/>
+                                                <WeatherInformation label={props.label} date={props.date}/>
                                             </div>
                                         )
                                     } else {

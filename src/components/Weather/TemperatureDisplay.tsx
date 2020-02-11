@@ -1,16 +1,12 @@
-import React, {FunctionComponent, ReactElement} from 'react';
-import {useCalendarContext} from "../../model/DateContextProvider";
-import {DailyWether, DailyWetherMeta} from "../../model/DarkSideWether";
+import React, {FunctionComponent} from 'react';
+import {DailyWetherMeta} from "../../model/DarkSideWether";
 import he from "he";
-import {WeatherHeaderProps} from "./WeatherIcon";
 
 interface TemperatureInformation {
-
     todayWeather: DailyWetherMeta[]
 }
 
-
-const TemperatureDisplay: FunctionComponent<TemperatureInformation> = ( {todayWeather }) => {
+export const TemperatureDisplay: FunctionComponent<TemperatureInformation> = ({todayWeather}) => {
 
     return (
         <div className={"temperature-display"}>
@@ -26,5 +22,3 @@ const TemperatureDisplay: FunctionComponent<TemperatureInformation> = ( {todayWe
         </div>
     );
 };
-
-export default TemperatureDisplay;

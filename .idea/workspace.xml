@@ -2,14 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6308aefc-c47f-44cb-877c-3b6bb05d24de" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/Weather/WeatherIcon.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Homepage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Homepage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Wether/TemperatureDisplay.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Wether/TemperatureDisplay.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Wether/WeatherIcon.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Wether/WeatherIcon.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Wether/TemperatureDisplay.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Weather/TemperatureDisplay.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Wether/WeatherIcon.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Weather/WeatherInformation.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/calendar/CalendarMetadata.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/calendar/CalendarMetadata.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/calendar/MyCalendar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/calendar/MyCalendar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/DateContextProvider.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/DateContextProvider.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/app.sass" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/app.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/customCalendar.sass" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/customCalendar.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/DarkSideWether.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/DarkSideWether.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,6 +33,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Sass File" />
+        <option value="TypeScript JSX File" />
       </list>
     </option>
   </component>
@@ -175,7 +175,7 @@
       <workItem from="1581377934310" duration="12816000" />
       <workItem from="1581390890696" duration="163000" />
       <workItem from="1581424721563" duration="4587000" />
-      <workItem from="1581433272327" duration="4862000" />
+      <workItem from="1581433272327" duration="5449000" />
     </task>
     <task id="LOCAL-00010" summary="finalizing design - darker">
       <created>1581390725750</created>
@@ -198,7 +198,14 @@
       <option name="project" value="LOCAL" />
       <updated>1581433298284</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="weather displaying">
+      <created>1581439284230</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1581439284230</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -223,7 +230,8 @@
     <MESSAGE value="adding weather api consumenting" />
     <MESSAGE value="finalizing design - darker" />
     <MESSAGE value="unix timestamp" />
-    <option name="LAST_COMMIT_MESSAGE" value="unix timestamp" />
+    <MESSAGE value="weather displaying" />
+    <option name="LAST_COMMIT_MESSAGE" value="weather displaying" />
   </component>
   <component name="WindowStateProjectService">
     <state x="423" y="219" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1581308913441">
@@ -238,11 +246,11 @@
       <screen x="0" y="42" width="1920" height="1038" />
     </state>
     <state x="697" y="310" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.42.1920.1038/1920.0.1920.1080@0.42.1920.1038" timestamp="1581438190668" />
-    <state x="524" y="102" key="CommitChangelistDialog2" timestamp="1581433298125">
+    <state x="524" y="102" key="CommitChangelistDialog2" timestamp="1581439284182">
       <screen x="0" y="42" width="1920" height="1038" />
     </state>
     <state x="437" y="50" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1581315286611" />
-    <state x="524" y="102" key="CommitChangelistDialog2/0.42.1920.1038/1920.0.1920.1080@0.42.1920.1038" timestamp="1581433298125" />
+    <state x="524" y="102" key="CommitChangelistDialog2/0.42.1920.1038/1920.0.1920.1080@0.42.1920.1038" timestamp="1581439284182" />
     <state x="2444" y="62" key="CommitChangelistDialog2/0.42.1920.1038/1920.0.1920.1080@1920.0.1920.1080" timestamp="1581369491043" />
     <state x="99" y="138" width="1722" height="843" key="DiffContextDialog" timestamp="1581307476404">
       <screen x="0" y="42" width="1920" height="1038" />
