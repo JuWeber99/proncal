@@ -3,8 +3,6 @@ import React, {Dispatch, FunctionComponent, ReactNode, SetStateAction, useContex
 import {MyEvent} from "./EventModel";
 import axios, {AxiosError, AxiosResponse} from "axios";
 import {EventService} from "../service/EventService";
-import {DarkSideWether, DarkSideWetherResponse} from "./DarkSideWether";
-import {dummyWether} from "./dummyWether";
 
 export interface CalendarContext {
     isLoading: boolean
@@ -13,7 +11,6 @@ export interface CalendarContext {
     today: number
     month: number
     year: number
-    wetherData: DarkSideWetherResponse
 
     setIsLoading: Dispatch<SetStateAction<boolean>>
     setEventData: Dispatch<SetStateAction<MyEvent[]>>
@@ -21,7 +18,6 @@ export interface CalendarContext {
     setToday: Dispatch<SetStateAction<number>>
     setYear: Dispatch<SetStateAction<number>>
     setMonth: Dispatch<SetStateAction<number>>
-    setWetherData: Dispatch<SetStateAction<DarkSideWetherResponse>>
 }
 
 const momentProvider = moment();
@@ -35,7 +31,6 @@ const initalContext: CalendarContext = {
     today: momentProvider.date(),
     month: momentProvider.month() + 1,
     year: momentProvider.year(),
-    wetherData: dummyWether,
 
     setIsLoading: newLoadingState => {
     },
@@ -49,9 +44,6 @@ const initalContext: CalendarContext = {
     },
     setYear: newYear => {
     },
-    setWetherData: newWetherData => {
-
-    }
 };
 
 export const CalendarContext = React.createContext<CalendarContext>(initalContext);
@@ -64,7 +56,6 @@ export const DateContextProvider: FunctionComponent<{ children: ReactNode }> = (
     const [month, setMonth] = useState<number>(momentProvider.month() + 1);
     const [year, setYear] = useState<number>(momentProvider.year());
     const [isLoading, setIsLoading] = useState<boolean>(false);
-    const [wetherData, setWetherData] = useState<DarkSideWetherResponse>(dummyWether);
 
     const state = {
         isLoading,
@@ -73,7 +64,6 @@ export const DateContextProvider: FunctionComponent<{ children: ReactNode }> = (
         today,
         month,
         year,
-        wetherData
     };
 
 
@@ -84,15 +74,13 @@ export const DateContextProvider: FunctionComponent<{ children: ReactNode }> = (
         setToday,
         setMonth,
         setYear,
-        setWetherData
     };
 
     const value = {...state, ...dispatch};
 
 
     useEffect(() => {
-        //TODO generify
-        async function fetchDataEventData() {
+        async function fetchEventData() {
             const response: AxiosResponse<MyEvent[]> = await axios.request<MyEvent[]>({
                 method: "GET",
                 url: "https://hwr-wi-204.sagebiels.org/api/v1/events",
@@ -101,17 +89,7 @@ export const DateContextProvider: FunctionComponent<{ children: ReactNode }> = (
             setEventData(EventService.mergeAssociatedEvents(response.data));
         }
 
-
-        async function fetchWetherData() {
-            const response: AxiosResponse<DarkSideWetherResponse> = await axios.request<DarkSideWetherResponse>({
-                url: "https://proncal-weather-api.dns-cloud.net/",
-                method: "GET",
-            });
-            console.log(response.data);
-            setWetherData(response.data)
-        }
-
-        Promise.all([fetchDataEventData(), fetchWetherData()])
+        fetchEventData()
             .catch((error: AxiosError) => {
                 console.log(error)
             })

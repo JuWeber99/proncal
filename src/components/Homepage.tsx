@@ -21,7 +21,7 @@ const Homepage = () => {
                              if (index === CarouselEnum.HOMEPAGE)
                                  setTimeout(() => {
                                      setIndex(index + 1)
-                                 }, 400)
+                                 }, 300)
                          }
                      }>
                     <img

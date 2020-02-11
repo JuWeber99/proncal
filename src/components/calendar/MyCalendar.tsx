@@ -9,6 +9,7 @@ import "../../styles/app.sass"
 import {EventService} from "../../service/EventService";
 import {EventCard} from "./EventCard";
 import {WeatherInformation} from "../Weather/WeatherInformation";
+import {ProgressBar} from "react-bootstrap";
 
 
 export const MyCalendar: FunctionComponent = () => {
@@ -23,47 +24,47 @@ export const MyCalendar: FunctionComponent = () => {
     return (
         <div>
             {
-                transformedEvents &&
-                <React.Fragment>
-                    <Calendar
-                        localizer={localizer}
-                        events={transformedEvents}
-                        defaultView={"week"}
-                        views={["day", "week"]}
-                        endAccessor={"end"}
-                        startAccessor={"start"}
-                        timeslots={12}
-                        step={5}
-                        min={new Date(1, 1, 1, 8)}
-                        max={new Date(1, 1, 1, 22)}
-                        components={{
-                            event: ((event: EventProps) => EventCard(event)),
-                            timeGutterHeader: () => null,
-                            week: {
-                                header: (props: any) => {
-                                    if (moment(props.date).week() === dateContext.week()) {
-                                        return (
-                                            <div className={"rbc-header"}>
-                                                <WeatherInformation label={props.label} date={props.date}/>
-                                            </div>
-                                        )
-                                    } else {
-                                        return (
-                                            <div>
-                                                {props.label}
-                                                <p className={"weather-forecast-not"}>Wettervoraussage
-                                                    in: {moment.duration(moment(props.date).diff(dateContext)).asDays().toFixed(0) + " "}
-                                                    Tagen
-                                                </p>
-                                            </div>
-                                        )
-                                    }
+                transformedEvents ?
+                <Calendar
+                    localizer={localizer}
+                    events={transformedEvents}
+                    defaultView={"week"}
+                    views={["day", "week"]}
+                    endAccessor={"end"}
+                    startAccessor={"start"}
+                    timeslots={12}
+                    step={5}
+                    min={new Date(1, 1, 1, 8)}
+                    max={new Date(1, 1, 1, 22)}
+                    components={{
+                        event: ((event: EventProps) => EventCard(event)),
+                        timeGutterHeader: () => null,
+                        week: {
+                            header: (props: any) => {
+                                if (moment(props.date).week() === dateContext.week()) {
+                                    return (
+                                        <div className={"rbc-header"}>
+                                            <WeatherInformation label={props.label} date={props.date}/>
+                                        </div>
+                                    )
+                                } else {
+                                    return (
+                                        <div>
+                                            {props.label}
+                                            <p className={"weather-forecast-not"}>Wettervoraussage
+                                                in: {moment.duration(moment(props.date).diff(dateContext)).asDays().toFixed(0) + " "}
+                                                Tagen
+                                            </p>
+                                        </div>
+                                    )
                                 }
-                            },
-                        }
-                        }
-                    />
-                </React.Fragment>
+                            }
+                        },
+                    }}/>
+                    :
+                    <ProgressBar variant={"info"} animated/>
+
+
             }
 
         </div>

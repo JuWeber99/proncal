@@ -1,11 +1,11 @@
 import React, {FunctionComponent, useEffect, useState} from 'react';
 import {DailyWetherMeta, DarkSideWetherResponse} from "../../model/DarkSideWether";
-
 import moment from "moment";
-import axios from "axios"
+import axios, {AxiosError} from "axios"
 import {Spinner} from 'react-bootstrap';
 import {TemperatureDisplay} from "./TemperatureDisplay";
 import {WeatherIcon} from "./WeatherIcon";
+import {FetchingError} from "../FetchingError";
 
 
 export interface WeatherHeaderProps {
@@ -17,6 +17,7 @@ export const WeatherInformation: FunctionComponent<WeatherHeaderProps> = ({label
 
     const [todayWeather, setTodayWeather] = useState<undefined | DailyWetherMeta[]>();
     const [isLoading, setIsLoading] = useState<boolean>(true);
+    const [isError, setIsError] = useState<boolean>(false);
 
     useEffect(() => {
         async function fetchData() {
@@ -24,11 +25,12 @@ export const WeatherInformation: FunctionComponent<WeatherHeaderProps> = ({label
                 "https://proncal-weather-api.dns-cloud.net/" + moment(date).unix()
             );
             setTodayWeather(response.data.daily.data);
-            console.log(response.data.daily)
         }
 
-        fetchData().catch((error) => console.log(error)).finally(() => setIsLoading(false));
-    }, []);
+        fetchData()
+            .catch((error: AxiosError) => setIsError(error.isAxiosError))
+            .finally(() => setIsLoading(false));
+    }, [date]);
 
 
     return (
@@ -36,18 +38,23 @@ export const WeatherInformation: FunctionComponent<WeatherHeaderProps> = ({label
             {isLoading && todayWeather === undefined ?
                 <Spinner animation={"grow"} variant={"light"}/>
                 :
-                <React.Fragment>
-                    <div
-                        style={{
-                            display: "inline-block",
-                            flexDirection: "row",
-                            margin: "5px"
-                        }}
-                    >{label}
-                        <WeatherIcon icon={(todayWeather as DailyWetherMeta[])[0].icon}/>
-                    </div>
-                   <TemperatureDisplay todayWeather={todayWeather as DailyWetherMeta[]}/>
-                </React.Fragment>
+                (
+                    isError ?
+                        <FetchingError/>
+                        :
+                        <React.Fragment>
+                            <div
+                                style={{
+                                    display: "inline-block",
+                                    flexDirection: "row",
+                                    margin: "5px"
+                                }}>
+                                {label}
+                                <WeatherIcon icon={(todayWeather as DailyWetherMeta[])[0].icon}/>
+                            </div>
+                            <TemperatureDisplay todayWeather={todayWeather as DailyWetherMeta[]}/>
+                        </React.Fragment>
+                )
             }
         </div>
     );
