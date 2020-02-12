@@ -13,7 +13,7 @@ export const WeatherIcon: FunctionComponent<WeatherIconProps> = ({icon}) =>  {
             <Skycons
                 className={"weather-icon"}
                 icon={icon.toUpperCase().replace(new RegExp("-", "g"), "_")}
-                color={"white"}
+                color={"grey"}
                 autoplay
             />
         </React.Fragment>

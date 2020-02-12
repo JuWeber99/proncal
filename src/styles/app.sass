@@ -9,7 +9,7 @@ $border-coloring: rgba(245, 245, 245, 0.51)
     opacity: 1
 
 body
-  background-color: #15161f
+  background-color: white
   -webkit-animation: fadein 2s /* Safari, Chrome and Opera > 12.1 */
   -moz-animation: fadein 2s /* Firefox < 16 */
   -o-animation: fadein 2s /* Opera < 12.1 */
@@ -19,7 +19,7 @@ body
   height: 100%
   margin: 0
   padding: 0
-  color: whitesmoke
+  color: black
   @media screen and (width: 301px)
     *
       font-size: 5px !important
@@ -30,14 +30,15 @@ body
 
 
 .calendar-metadata-container
+  color: white
   display: flex
   position: absolute
   bottom: 0
   left: 0
   right: 0
   justify-content: center
-  padding: 1vmin 0
-  background-color: $hwr-color-active
+  padding: 1% 0
+  background-color: $hwr-color-active-small-transparency
   font-weight: bolder
   align-content: center
 
@@ -76,7 +77,6 @@ body
   #homepage-presentment-button
     margin-left: 5%
     transition: ease-in-out all 0.5s
-    transform: rotateY(180deg)
     border-radius: 20px
     padding: 2%
     max-width: 20%
@@ -93,7 +93,7 @@ body
       border: $border-coloring 1px solid
       border-radius: 30px
 
-      *
+      img
         transition: 1s all ease-in-out
         transform: scale(1.1) rotateX(360deg)
         border-radius: 20px
