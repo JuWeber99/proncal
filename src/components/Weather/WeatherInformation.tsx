@@ -38,7 +38,7 @@ export const WeatherInformation: FunctionComponent<WeatherHeaderProps> = ({label
             {isLoading && todayWeather === undefined ?
                 <React.Fragment>
                     {label}
-                    <Spinner animation={"grow"} variant={"light"}/>
+                    <Spinner animation={"grow"} variant={"dark"}/>
                 </React.Fragment>
                 :
                 (

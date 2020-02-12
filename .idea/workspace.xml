@@ -3,9 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="6308aefc-c47f-44cb-877c-3b6bb05d24de" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Weather/WeatherIcon.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Weather/WeatherIcon.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Weather/WeatherInformation.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Weather/WeatherInformation.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/calendar/MyCalendar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/calendar/MyCalendar.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/styles/app.sass" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/app.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/customCalendar.sass" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/customCalendar.sass" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -226,7 +226,14 @@
       <option name="project" value="LOCAL" />
       <updated>1581444213671</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="fixing annoying animation">
+      <created>1581503781304</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1581503781304</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -253,7 +260,8 @@
     <MESSAGE value="unix timestamp" />
     <MESSAGE value="weather displaying" />
     <MESSAGE value="error displaying" />
-    <option name="LAST_COMMIT_MESSAGE" value="error displaying" />
+    <MESSAGE value="fixing annoying animation" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixing annoying animation" />
   </component>
   <component name="WindowStateProjectService">
     <state x="423" y="219" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1581308913441">
@@ -268,10 +276,10 @@
       <screen x="0" y="42" width="1920" height="1038" />
     </state>
     <state x="697" y="310" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.42.1920.1038/1920.0.1920.1080@0.42.1920.1038" timestamp="1581438190668" />
-    <state x="524" y="102" key="CommitChangelistDialog2" timestamp="1581444213550">
-      <screen x="0" y="42" width="1920" height="1038" />
+    <state x="437" y="50" key="CommitChangelistDialog2" timestamp="1581503780177">
+      <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="437" y="50" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1581315286611" />
+    <state x="437" y="50" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1581503780177" />
     <state x="524" y="102" key="CommitChangelistDialog2/0.42.1920.1038/1920.0.1920.1080@0.42.1920.1038" timestamp="1581444213550" />
     <state x="2444" y="62" key="CommitChangelistDialog2/0.42.1920.1038/1920.0.1920.1080@1920.0.1920.1080" timestamp="1581369491043" />
     <state x="99" y="138" width="1722" height="843" key="DiffContextDialog" timestamp="1581307476404">
@@ -282,28 +290,28 @@
       <screen x="0" y="42" width="1920" height="1038" />
     </state>
     <state x="747" y="333" key="FileChooserDialogImpl/0.42.1920.1038/1920.0.1920.1080@0.42.1920.1038" timestamp="1581391003875" />
-    <state width="1559" height="215" key="GridCell.Tab.0.bottom" timestamp="1581503757715">
+    <state width="1559" height="215" key="GridCell.Tab.0.bottom" timestamp="1581508918178">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1559" height="215" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1581503757715" />
+    <state width="1559" height="215" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1581508918178" />
     <state width="1874" height="246" key="GridCell.Tab.0.bottom/0.42.1920.1038/1920.0.1920.1080@0.42.1920.1038" timestamp="1581445223731" />
     <state width="1874" height="86" key="GridCell.Tab.0.bottom/0.42.1920.1038/1920.0.1920.1080@1920.0.1920.1080" timestamp="1581381589910" />
-    <state width="1559" height="215" key="GridCell.Tab.0.center" timestamp="1581503757714">
+    <state width="1559" height="215" key="GridCell.Tab.0.center" timestamp="1581508918178">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1559" height="215" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1581503757714" />
+    <state width="1559" height="215" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1581508918178" />
     <state width="1874" height="246" key="GridCell.Tab.0.center/0.42.1920.1038/1920.0.1920.1080@0.42.1920.1038" timestamp="1581445223731" />
     <state width="1874" height="86" key="GridCell.Tab.0.center/0.42.1920.1038/1920.0.1920.1080@1920.0.1920.1080" timestamp="1581381589910" />
-    <state width="1559" height="215" key="GridCell.Tab.0.left" timestamp="1581503757714">
+    <state width="1559" height="215" key="GridCell.Tab.0.left" timestamp="1581508918178">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1559" height="215" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1581503757714" />
+    <state width="1559" height="215" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1581508918178" />
     <state width="1874" height="246" key="GridCell.Tab.0.left/0.42.1920.1038/1920.0.1920.1080@0.42.1920.1038" timestamp="1581445223731" />
     <state width="1874" height="86" key="GridCell.Tab.0.left/0.42.1920.1038/1920.0.1920.1080@1920.0.1920.1080" timestamp="1581381589910" />
-    <state width="1559" height="215" key="GridCell.Tab.0.right" timestamp="1581503757715">
+    <state width="1559" height="215" key="GridCell.Tab.0.right" timestamp="1581508918178">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1559" height="215" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1581503757715" />
+    <state width="1559" height="215" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1581508918178" />
     <state width="1874" height="246" key="GridCell.Tab.0.right/0.42.1920.1038/1920.0.1920.1080@0.42.1920.1038" timestamp="1581445223731" />
     <state width="1874" height="86" key="GridCell.Tab.0.right/0.42.1920.1038/1920.0.1920.1080@1920.0.1920.1080" timestamp="1581381589910" />
     <state x="693" y="222" key="RollbackChangesDialog" timestamp="1581440571655">
@@ -315,10 +323,10 @@
     </state>
     <state x="453" y="210" key="SettingsEditor/0.42.1920.1038/1920.0.1920.1080@0.42.1920.1038" timestamp="1581391017653" />
     <state x="2373" y="175" key="SettingsEditor/0.42.1920.1038/1920.0.1920.1080@1920.0.1920.1080" timestamp="1581370268044" />
-    <state x="559" y="297" key="Vcs.Push.Dialog.v2" timestamp="1581444317993">
-      <screen x="0" y="42" width="1920" height="1038" />
+    <state x="466" y="211" key="Vcs.Push.Dialog.v2" timestamp="1581503786779">
+      <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="466" y="211" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1581315289147" />
+    <state x="466" y="211" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1581503786779" />
     <state x="559" y="297" key="Vcs.Push.Dialog.v2/0.42.1920.1038/1920.0.1920.1080@0.42.1920.1038" timestamp="1581444317993" />
     <state x="2479" y="265" key="Vcs.Push.Dialog.v2/0.42.1920.1038/1920.0.1920.1080@1920.0.1920.1080" timestamp="1581369492758" />
     <state x="620" y="394" key="com.intellij.ide.util.TipDialog" timestamp="1581442360633">
@@ -326,14 +334,15 @@
     </state>
     <state x="620" y="394" key="com.intellij.ide.util.TipDialog/0.42.1920.1038/1920.0.1920.1080@0.42.1920.1038" timestamp="1581442360633" />
     <state x="2540" y="366" key="com.intellij.ide.util.TipDialog/0.42.1920.1038/1920.0.1920.1080@1920.0.1920.1080" timestamp="1581370458014" />
-    <state x="736" y="481" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1581391025599">
-      <screen x="0" y="42" width="1920" height="1038" />
-    </state>
-    <state x="736" y="481" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.42.1920.1038/1920.0.1920.1080@0.42.1920.1038" timestamp="1581391025599" />
-    <state x="507" y="195" width="664" height="516" key="find.popup" timestamp="1581503008842">
+    <state x="613" y="364" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1581508842850">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="507" y="195" width="664" height="516" key="find.popup/0.0.1600.860@0.0.1600.860" timestamp="1581503008842" />
+    <state x="613" y="364" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1600.860@0.0.1600.860" timestamp="1581508842850" />
+    <state x="736" y="481" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.42.1920.1038/1920.0.1920.1080@0.42.1920.1038" timestamp="1581391025599" />
+    <state x="507" y="195" width="664" height="516" key="find.popup" timestamp="1581508590617">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="507" y="195" width="664" height="516" key="find.popup/0.0.1600.860@0.0.1600.860" timestamp="1581508590617" />
     <state x="608" y="277" width="703" height="586" key="find.popup/0.42.1920.1038/1920.0.1920.1080@0.42.1920.1038" timestamp="1581444100009" />
     <state x="2528" y="245" width="703" height="586" key="find.popup/0.42.1920.1038/1920.0.1920.1080@1920.0.1920.1080" timestamp="1581381835259" />
     <state x="456" y="195" key="run.anything.popup" timestamp="1581310463907">

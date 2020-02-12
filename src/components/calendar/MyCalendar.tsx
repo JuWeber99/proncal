@@ -51,7 +51,7 @@ export const MyCalendar: FunctionComponent = () => {
                                     return (
                                         <div>
                                             {props.label}
-                                            <p className={"weather-forecast-not"}>Wettervoraussage
+                                            <p className={"weather-forecast-not"}>Voraussage
                                                 in: {moment.duration(moment(props.date).diff(dateContext)).asDays().toFixed(0) + " "}
                                                 Tagen
                                             </p>
