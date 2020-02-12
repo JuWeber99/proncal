@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "9e9d6e067b9099f898591179a8303ed5",
+    "revision": "1306efdc436747165fd08ac495f09736",
     "url": "/proncal/index.html"
   },
   {
@@ -8,8 +8,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/proncal/static/css/2.25b83785.chunk.css"
   },
   {
-    "revision": "2833ddd14131dd45fd56",
-    "url": "/proncal/static/css/main.99dbe705.chunk.css"
+    "revision": "3ebbdc831dcabf36d79c",
+    "url": "/proncal/static/css/main.91c5403f.chunk.css"
   },
   {
     "revision": "a4b1bac21ea68487a3ed",
@@ -20,16 +20,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/proncal/static/js/2.9b237f30.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "2833ddd14131dd45fd56",
-    "url": "/proncal/static/js/main.23728635.chunk.js"
+    "revision": "3ebbdc831dcabf36d79c",
+    "url": "/proncal/static/js/main.b95c1e71.chunk.js"
   },
   {
     "revision": "ef3d7f944abe2cdb9766",
     "url": "/proncal/static/js/runtime-main.8e2600f6.js"
-  },
-  {
-    "revision": "a2c28bb3e2c15a43bfb78e19d4712a85",
-    "url": "/proncal/static/media/bg2.a2c28bb3.jpg"
   },
   {
     "revision": "a509dfef90dbe60b9caf8259ed0c17bd",
