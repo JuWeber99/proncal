@@ -3,6 +3,7 @@ import {Nav, Navbar} from "react-bootstrap";
 import hwrLogo from "../../resources/hwr-logo-alt.svg";
 import {useCarouselContext} from "./CarouselWrapper";
 import {CarouselEnum} from "../../types/CarouselEnum";
+import darkSkyLogo from "../../resources/darkskylogo.png"
 
 export const HwrNavbar = () => {
     const {index, setIndex} = useCarouselContext();
@@ -12,24 +13,33 @@ export const HwrNavbar = () => {
                 sticky={"top"}
                 as={"div"}
         >
-            <Navbar.Brand onClick={
-                () => {
-                    if (index === CarouselEnum.CALENDAR)
-                        setIndex(index - 1)
-                }}>
+            <Nav>
+                <Navbar.Brand onClick={
+                    () => {
+                        if (index === CarouselEnum.CALENDAR)
+                            setIndex(index - 1)
+                    }}>
+                    <img
+                        alt="failed to load logo"
+                        src={hwrLogo}
+                        width="30"
+                        height="30"
+                        className="d-inline-block align-top mr-4"
+                    />
+                    HWR Berlin - Stundenplan
+                </Navbar.Brand>
+                {index === CarouselEnum.CALENDAR &&
+                <Nav.Link
+                    style={{color: "lightgray"}}
+                    onClick={() => setIndex(index - 1)}>Zurück</Nav.Link>}
+            </Nav>
+            <div className={"trademark"} style={{color: "white"}}>
+                <em>Wetterabfrage - Powered by Dark Sky</em>
                 <img
-                    alt="failed to load logo"
-                    src={hwrLogo}
-                    width="30"
-                    height="30"
-                    className="d-inline-block align-top mr-4"
+                    src={darkSkyLogo}
+                    alt={"Fehler"}
                 />
-                HWR Berlin - Stundenplan
-            </Navbar.Brand>
-            {index === CarouselEnum.CALENDAR &&
-            <Nav.Link
-                style={{color: "lightgray"}}
-                onClick={() => setIndex(index - 1)}>Zurück</Nav.Link>}
+            </div>
         </Navbar>
     );
 };

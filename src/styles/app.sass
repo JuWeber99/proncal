@@ -2,17 +2,18 @@
 
 $border-coloring: rgba(245, 245, 245, 0.51)
 
+
 @keyframes fadein
   from
     opacity: 0
   to
     opacity: 1
 
-body
+body > *
   background-color: white
-  -webkit-animation: fadein 2s /* Safari, Chrome and Opera > 12.1 */
-  -moz-animation: fadein 2s /* Firefox < 16 */
-  -o-animation: fadein 2s /* Opera < 12.1 */
+  -webkit-animation: fadein 2s
+  -moz-animation: fadein 2s
+  -o-animation: fadein 2s
   animation: fadein 2s
 
 #root
@@ -24,15 +25,19 @@ body
     *
       font-size: 5px !important
 
-#footer
-  background-color: $dark-bt-color
-  min-height: inherit
-
+#fetching-error
+  -webkit-animation: fadein 1s
+  /* Safari, Chrome and Opera > 11.1 */
+  -moz-animation: fadein 1s
+  /* Firefox < 16 */
+  -o-animation: fadein 1s
+  /* Opera < 11.1 */
+  animation: fadein 1s
 
 .calendar-metadata-container
   color: white
   display: flex
-  position: absolute
+  position: relative
   bottom: 0
   left: 0
   right: 0
@@ -57,97 +62,49 @@ body
   height: 95%
   text-align: center
 
-.homepage-presentment-container
-  display: flex
-  align-self: center
-  justify-content: center
-  align-items: center
-  text-align: center
-  font-weight: bolder
-  margin-right: 5%
-  padding: 5%
-  color: white
-
-  #homepage-presentment-text
-    border-radius: 15px
-    padding: 5% 2%
-    background-color: rgba(213, 34, 65, 0.5)
-    min-width: 40%
-
-  #homepage-presentment-button
-    margin-left: 5%
-    transition: ease-in-out all 0.5s
-    border-radius: 20px
-    padding: 2%
-    max-width: 20%
-    background-color: rgba(21, 22, 31, 0.51)
-
-    img
-      width: 80% !important
-      height: 80% !important
-
-    &:hover
-      transition: all 0.5s ease-in
-      cursor: pointer
-      transform: scale(1.2)
-      border: $border-coloring 1px solid
-      border-radius: 30px
-
-      img
-        transition: 1s all ease-in-out
-        transform: scale(1.1) rotateX(360deg)
-        border-radius: 20px
-        border: 1px solid rgba(245, 245, 245, 0.39)
-        box-shadow: black 0 10px 2vmin 1vmin
-        background-color: $border-coloring
-@media(max-width: 1000px)
-  h1,h2,h3,h4,h5,h6
-    font-size: 1.5rem!important
-
-.home-container
-  margin-top: 3%
-  display: flex
-  justify-content: center
-  align-items: center
-  background-image: url("../resources/bg2.jpg")
-  background-size: 50% 100%
-  background-color: rgba(0, 0, 0, 0.76)
-  background-blend-mode: color
 
 .weather-icon
-  display: block!important
-
-.carouselA
-  display: flex
-
-  .carousel-inner
-    width: 100vw
+  display: block !important
 
 .temperature-display
   display: block !important
   flex: 1 0
   flex-flow: wrap
+
   *
     text-shadow: 0 0 3px rgba(255, 255, 255, 0.25)
+
 @media (max-width: 900px)
   .temperature-display
     *
-      font-size: 90%!important
+      font-size: 90% !important
 
 .weather-forecast-not
   background-color: rgba(154, 170, 191, 0.38)
   @media (max-width: 1200px)
     font-size: 70%
   @media (max-width: 500px)
-    display: none!important
+    display: none !important
+
 canvas
   max-height: 40px
   max-width: 40px
   margin-top: 10px
   margin-right: auto
   margin-left: auto
+
 @media (max-width: 900px)
   canvas
     max-width: 20px
     max-height: 20px
 
+.trademark
+  display: block
+  margin-left: auto
+  max-height: inherit
+  max-width: inherit
+
+  img
+    max-height: 20px
+    max-width: 20px
+    margin: 0 10px

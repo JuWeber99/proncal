@@ -17,15 +17,15 @@ export const CalendarMetadata = () => {
     }, [isLoading, eventData]);
 
     return (
-        <div>
+        <React.Fragment>
             {
                 (!isLoading && semesterEnd !== undefined && semesterStart !== undefined) &&
                 <div className={"calendar-metadata-container"}>
-                    <h6>Semesterstart: <b>{semesterStart?.format("DD.MM.YYYY")}</b></h6>
-                    <h6>Semesterende: <b>{semesterEnd?.format("DD.MM.YYYY")}</b></h6>
+                    <h6>Semesterstart: <b>{semesterStart?.format("DD.MM.YYYY")}</b> | </h6>
+                    <h6>Semesterende: <b>{semesterEnd?.format("DD.MM.YYYY")}</b> | </h6>
                     <h6>Zeit bis zum Semesterende: <b>{semesterTimeLeft}</b></h6>
                 </div>
             }
-        </div>
+        </React.Fragment>
     );
 };
