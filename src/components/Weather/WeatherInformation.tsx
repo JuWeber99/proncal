@@ -18,6 +18,7 @@ export const WeatherInformation: FunctionComponent<WeatherHeaderProps> = ({label
     const [todayWeather, setTodayWeather] = useState<undefined | DailyWetherMeta[]>();
     const [isLoading, setIsLoading] = useState<boolean>(true);
     const [isError, setIsError] = useState<boolean>(false);
+    const [requestCount, setRequestCount] = useState<number>(0); // for not passing the 1000 call limit
 
     useEffect(() => {
         async function fetchData() {
@@ -25,12 +26,18 @@ export const WeatherInformation: FunctionComponent<WeatherHeaderProps> = ({label
                 "https://proncal-weather-api.dns-cloud.net/" + moment(date).unix()
             );
             setTodayWeather(response.data.daily.data);
+            setRequestCount(Number(response.headers.get("X-Forecast-API-Calls")))
         }
 
-        fetchData()
-            .catch((error: AxiosError) => setIsError(error.isAxiosError))
-            .finally(() => setIsLoading(false));
-    }, [date]);
+        if (requestCount < 995) {
+            fetchData()
+                .catch((error: AxiosError) => setIsError(error.isAxiosError))
+                .finally(() => setIsLoading(false));
+        } else {
+            setIsError(true);
+            setIsLoading(false);
+        }
+    }, [requestCount, date]);
 
 
     return (

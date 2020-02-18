@@ -10,10 +10,12 @@ import {EventService} from "../../service/EventService";
 import {EventCard} from "./EventCard";
 import {WeatherInformation} from "../Weather/WeatherInformation";
 import {ProgressBar} from "react-bootstrap";
+import {FetchingError} from "../ui/FetchingError";
 
 
 export const MyCalendar: FunctionComponent = () => {
     const {eventData, dateContext} = useCalendarContext();
+    const {error} = useCalendarContext();
     const localizer = momentLocalizer(moment);
     const [transformedEvents, setTransformedEvent] = useState<Event[] | undefined>(undefined);
 
@@ -24,6 +26,9 @@ export const MyCalendar: FunctionComponent = () => {
     return (
         <div>
             {
+                error ?
+                <FetchingError/>
+                :
                 transformedEvents ?
                 <Calendar
                     localizer={localizer}
@@ -62,9 +67,7 @@ export const MyCalendar: FunctionComponent = () => {
                         },
                     }}/>
                     :
-                    <ProgressBar variant={"info"} animated/>
-
-
+                    <ProgressBar variant={"info"} animated={true}/>
             }
 
         </div>
