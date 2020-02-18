@@ -1,7 +1,7 @@
 import React, {FunctionComponent, useEffect, useState} from 'react';
 import {DailyWetherMeta, DarkSideWetherResponse} from "../../types/DarkSideWether";
 import moment from "moment";
-import axios, {AxiosError} from "axios"
+import Axios, {AxiosError} from "axios"
 import {Spinner} from 'react-bootstrap';
 import {TemperatureDisplay} from "./TemperatureDisplay";
 import {WeatherIcon} from "./WeatherIcon";
@@ -22,7 +22,7 @@ export const WeatherInformation: FunctionComponent<WeatherHeaderProps> = ({label
 
     useEffect(() => {
         async function fetchData() {
-            const response = await axios.get<DarkSideWetherResponse>(
+            const response = await Axios.get<DarkSideWetherResponse>(
                 "https://proncal-weather-api.dns-cloud.net/" + moment(date).unix()
             );
             setTodayWeather(response.data.daily.data);
