@@ -1,24 +1,15 @@
 import React from 'react';
 import {Nav, Navbar} from "react-bootstrap";
 import hwrLogo from "../../resources/hwr-logo-alt.svg";
-import {useCarouselContext} from "./CarouselWrapper";
-import {CarouselEnum} from "../../types/CarouselEnum";
 import darkSkyLogo from "../../resources/darkskylogo.png"
 
 export const HwrNavbar = () => {
-    const {index, setIndex} = useCarouselContext();
 
     return (
         <Navbar bg="dark" variant="dark"
-                sticky={"top"}
-                as={"div"}
-        >
+                sticky={"top"}>
             <Nav>
-                <Navbar.Brand onClick={
-                    () => {
-                        if (index === CarouselEnum.CALENDAR)
-                            setIndex(index - 1)
-                    }}>
+                <Navbar.Brand>
                     <img
                         alt="failed to load logo"
                         src={hwrLogo}
@@ -28,10 +19,6 @@ export const HwrNavbar = () => {
                     />
                     HWR Berlin - Stundenplan
                 </Navbar.Brand>
-                {index === CarouselEnum.CALENDAR &&
-                <Nav.Link
-                    style={{color: "lightgray"}}
-                    onClick={() => setIndex(index - 1)}>Zurück</Nav.Link>}
             </Nav>
             <div className={"trademark"} style={{color: "white"}}>
                 <em>Wetterabfrage - Powered by Dark Sky</em>

@@ -11,13 +11,11 @@ const App = () => {
     return (
         <BrowserRouter basename={process.env.PUBLIC_URL}>
             <Route exact path={"/"}>
-                <React.Fragment>
-                    <HwrNavbar/>
-                    <CalendarContextProvider>
-                        <MyCalendar/>
-                        <CalendarMetadata/>
-                    </CalendarContextProvider>
-                </React.Fragment>
+                <HwrNavbar/>
+                <CalendarContextProvider>
+                    <MyCalendar/>
+                    <CalendarMetadata/>
+                </CalendarContextProvider>
             </Route>
             <footer id={"footer"}/>
         </BrowserRouter>
